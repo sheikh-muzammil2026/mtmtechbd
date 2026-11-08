@@ -35,7 +35,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html
-      lang="en"
+      lang="bn"
       className={`${fontRoboto.variable} ${fontBornomala.variable} h-full antialiased scroll-smooth`}
     >
       <body className="min-h-full flex flex-col font-sans bg-[#0B0E17] text-white selection:bg-[#00E5FF]/20 selection:text-[#00E5FF]">
