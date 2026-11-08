@@ -8,8 +8,10 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-roboto), var(--font-bornomala), sans-serif;
+  --font-roboto: var(--font-roboto), sans-serif;
+  --font-bornomala: var(--font-bornomala), sans-serif;
+  --font-mono: var(--font-roboto), var(--font-bornomala), ui-monospace, SFMono-Regular, monospace;
   --color-brand-dark: #0B0E17;
   --color-brand-cyan: #00E5FF;
   --color-brand-blue: #0066FF;
@@ -19,12 +21,14 @@
 html {
   scroll-behavior: smooth;
   color-scheme: dark;
+  font-family: var(--font-roboto), var(--font-bornomala), sans-serif;
 }
 
 body {
   background-color: #0B0E17;
   color: #FFFFFF;
-  font-family: var(--font-geist-sans), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-family: var(--font-roboto), var(--font-bornomala), sans-serif;
+  font-display: swap;
   overflow-x: hidden;
 }
 
@@ -39,4 +43,20 @@ body {
 
 .text-glow-cyan {
   text-shadow: 0 0 16px rgba(0, 229, 255, 0.7);
+}
+
+/* Animations replicated from Farhana-portfolio */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
 }
