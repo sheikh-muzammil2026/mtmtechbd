@@ -26,10 +26,10 @@ const SERVICES_OPTIONS = [
 ];
 
 const BUDGET_OPTIONS = [
-  "< $3,000",
-  "$3,000 - $6,000",
-  "$6,000 - $12,000",
-  "$12,000+",
+  "< ৳3,000",
+  "৳3,000 - ৳6,000",
+  "৳6,000 - ৳12,000",
+  "৳12,000+",
 ];
 
 export default function Contact() {
@@ -86,7 +86,6 @@ export default function Contact() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
         {/* Section Header */}
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
           <motion.div
@@ -128,10 +127,8 @@ export default function Contact() {
 
         {/* 2-Column Layout */}
         <div className="mt-16 sm:mt-20 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-start">
-          
           {/* LEFT: Contact Coordinates & Guarantees */}
           <div className="lg:col-span-5 flex flex-col justify-between space-y-8">
-            
             {/* Tagline Card */}
             <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/[0.08] backdrop-blur-xl">
               <div className="flex items-center gap-2 text-xs font-semibold text-[#00E5FF] mb-2">
@@ -229,13 +226,11 @@ export default function Contact() {
                 <span>{dict.contact.ndaNotice}</span>
               </div>
             </div>
-
           </div>
 
           {/* RIGHT: Interactive Lead Form */}
           <div className="lg:col-span-7">
             <div className="relative rounded-3xl bg-[#0B0E17]/95 border border-white/[0.12] p-8 sm:p-10 backdrop-blur-2xl shadow-[0_20px_60px_rgba(0,0,0,0.8)]">
-              
               <AnimatePresence mode="wait">
                 {isSubmitted ? (
                   <motion.div
@@ -258,7 +253,12 @@ export default function Contact() {
                       type="button"
                       onClick={() => {
                         setIsSubmitted(false);
-                        setFormData({ name: "", email: "", company: "", message: "" });
+                        setFormData({
+                          name: "",
+                          email: "",
+                          company: "",
+                          message: "",
+                        });
                       }}
                       className="mt-8 px-6 py-2.5 rounded-full bg-white/[0.05] hover:bg-white/[0.1] border border-white/[0.1] text-xs font-semibold text-white transition-colors"
                     >
@@ -416,12 +416,9 @@ export default function Contact() {
                   </form>
                 )}
               </AnimatePresence>
-
             </div>
           </div>
-
         </div>
-
       </div>
     </section>
   );

@@ -17,11 +17,13 @@ const BASE_TIERS = [
   {
     nameEn: "Growth Web Platform",
     nameBn: "গ্রোথ ওয়েব প্ল্যাটফর্ম",
-    taglineEn: "Ideal for startups & businesses seeking a high-converting modern web presence.",
-    taglineBn: "স্টার্টআপ ও ব্যবসায়ের জন্য নিখুঁত, দ্রুত ও আধুনিক অনলাইন পরিচিতি।",
+    taglineEn:
+      "Ideal for startups & businesses seeking a high-converting modern web presence.",
+    taglineBn:
+      "স্টার্টআপ ও ব্যবসায়ের জন্য নিখুঁত, দ্রুত ও আধুনিক অনলাইন পরিচিতি।",
     popular: false,
-    projectPrice: "$2,499",
-    retainerPrice: "$1,899",
+    projectPrice: "৳11,499",
+    retainerPrice: "৳990",
     periodEn: "single delivery",
     periodBn: "এককালীন প্রজেক্ট",
     retainerPeriodEn: "/ month",
@@ -49,11 +51,13 @@ const BASE_TIERS = [
   {
     nameEn: "Scale-Up Full-Stack SaaS",
     nameBn: "স্কেল-আপ ফুল-স্ট্যাক SaaS",
-    taglineEn: "Engineered for high-growth tech companies and scalable digital products.",
-    taglineBn: "উচ্চ প্রবৃদ্ধিশীল টেক কোম্পানি ও স্কেলেবল ডিজিটাল প্রোডাক্টের জন্য নির্মিত।",
+    taglineEn:
+      "Engineered for high-growth tech companies and scalable digital products.",
+    taglineBn:
+      "উচ্চ প্রবৃদ্ধিশীল টেক কোম্পানি ও স্কেলেবল ডিজিটাল প্রোডাক্টের জন্য নির্মিত।",
     popular: true,
-    projectPrice: "$5,899",
-    retainerPrice: "$3,999",
+    projectPrice: "৳21,899",
+    retainerPrice: "৳1,999",
     periodEn: "turnkey project",
     periodBn: "টার্নকি প্রজেক্ট",
     retainerPeriodEn: "/ month",
@@ -83,8 +87,10 @@ const BASE_TIERS = [
   {
     nameEn: "Enterprise Dedicated Pod",
     nameBn: "এন্টারপ্রাইজ ডেডিকেটেড পড",
-    taglineEn: "Dedicated senior engineering team tailored to enterprise-grade compliance & scale.",
-    taglineBn: "এন্টারপ্রাইজ নিরাপত্তা ও স্কেলের জন্য ডেডিকেটেড সিনিয়র ইঞ্জিনিয়ারদের দল।",
+    taglineEn:
+      "Dedicated senior engineering team tailored to enterprise-grade compliance & scale.",
+    taglineBn:
+      "এন্টারপ্রাইজ নিরাপত্তা ও স্কেলের জন্য ডেডিকেটেড সিনিয়র ইঞ্জিনিয়ারদের দল।",
     popular: false,
     projectPrice: "Custom",
     retainerPrice: "Custom",
@@ -134,7 +140,6 @@ export default function Pricing() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
         {/* Section Header */}
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
           <motion.div
@@ -197,7 +202,9 @@ export default function Pricing() {
                   transition={{ type: "spring", stiffness: 400, damping: 30 }}
                 />
               )}
-              <span className="relative z-10">{dict.pricing.toggleProject}</span>
+              <span className="relative z-10">
+                {dict.pricing.toggleProject}
+              </span>
             </button>
 
             <button
@@ -216,7 +223,9 @@ export default function Pricing() {
                   transition={{ type: "spring", stiffness: 400, damping: 30 }}
                 />
               )}
-              <span className="relative z-10">{dict.pricing.toggleRetainer}</span>
+              <span className="relative z-10">
+                {dict.pricing.toggleRetainer}
+              </span>
             </button>
           </motion.div>
         </div>
@@ -233,16 +242,16 @@ export default function Pricing() {
                   ? dict.pricing.customPrice
                   : tier.projectPrice
                 : tier.retainerPrice === "Custom" && isBn
-                ? dict.pricing.customPrice
-                : tier.retainerPrice;
+                  ? dict.pricing.customPrice
+                  : tier.retainerPrice;
             const period =
               billingModel === "project"
                 ? isBn
                   ? tier.periodBn
                   : tier.periodEn
                 : isBn
-                ? tier.retainerPeriodBn
-                : tier.retainerPeriodEn;
+                  ? tier.retainerPeriodBn
+                  : tier.retainerPeriodEn;
             const features = isBn ? tier.featuresBn : tier.featuresEn;
             const cta = isBn ? tier.ctaBn : tier.ctaEn;
 
@@ -343,7 +352,6 @@ export default function Pricing() {
             );
           })}
         </div>
-
       </div>
     </section>
   );
