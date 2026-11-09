@@ -10,14 +10,17 @@ export function LanguageProvider({ children }) {
 
   // Read saved preference from localStorage on mount
   useEffect(() => {
-    try {
-      const savedLang = localStorage.getItem("mtm_lang");
-      if (savedLang === "en" || savedLang === "bn") {
-        setLanguageState(savedLang);
+    const frame = requestAnimationFrame(() => {
+      try {
+        const savedLang = localStorage.getItem("mtm_lang");
+        if (savedLang === "en" || savedLang === "bn") {
+          setLanguageState(savedLang);
+        }
+      } catch {
+        // Ignore if localStorage unavailable (e.g., SSR or private window)
       }
-    } catch {
-      // Ignore if localStorage unavailable (e.g., SSR or private window)
-    }
+    });
+    return () => cancelAnimationFrame(frame);
   }, []);
 
   const setLanguage = (lang) => {

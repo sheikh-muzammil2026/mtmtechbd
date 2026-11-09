@@ -17,38 +17,38 @@ const BASE_TESTIMONIALS = [
     name: "Alexander Wright",
     roleEn: "Chief Technology Officer",
     roleBn: "চিফ টেকনোলজি অফিসার (CTO)",
-    company: "FinVantage AI",
+    company: "FinVantage",
     locationEn: "New York, USA",
     locationBn: "নিউ ইয়র্ক, যুক্তরাষ্ট্র",
-    projectEn: "Enterprise SaaS & AI Engine",
-    projectBn: "এন্টারপ্রাইজ SaaS ও এআই ইঞ্জিন",
+    projectEn: "Financial Analytics & Real-Time Charts",
+    projectBn: "অ্যানালিটিক্স ড্যাশবোর্ড ও রিয়েল-টাইম চার্ট",
     rating: 5,
-    highlightEn: "Saved us 6+ months of engineering runway.",
-    highlightBn: "আমাদের ৬ মাসের বেশি ইঞ্জিনিয়ারিং সময় সাশ্রয় করেছে।",
+    highlightEn: "Saved us months of engineering time.",
+    highlightBn: "আমাদের কয়েক মাসের মূল্যবান সময় সাশ্রয় করেছে।",
     contentEn:
-      "MTM Tech delivered beyond our wildest expectations. Their grasp of Next.js architecture, real-time database optimization, and high-concurrency systems helped us launch our AI trading suite months ahead of schedule. Truly an international-standard team.",
+      "MTM Tech proved to be a reliable engineering partner. Their understanding of Next.js architecture and database query tuning helped us launch our trading analytics dashboard on schedule. Clean code and responsive communication throughout.",
     contentBn:
-      "এমটিএম টেক আমাদের প্রত্যাশার চেয়েও চমৎকার আউটপুট দিয়েছে। তাদের Next.js আর্কিটেকচার দক্ষতা ও রিয়েল-টাইম ডাটাবেস অপ্টিমাইজেশন আমাদের ট্রেডিং প্ল্যাটফর্ম নির্ধারিত সময়ের কয়েক মাস আগেই সফলভাবে লঞ্চ করতে সাহায্য করেছে।",
+      "এমটিএম টেক অত্যন্ত নির্ভরযোগ্য একটি ইঞ্জিনিয়ারিং পার্টনার। Next.js আর্কিটেকচার ও ডাটাবেস টিউনিংয়ে তাদের দক্ষতার কারণে আমরা সময়মতো আমাদের অ্যানালিটিক্স ড্যাশবোর্ড লঞ্চ করতে পেরেছি। শুরু থেকেই যোগাযোগ ছিল অত্যন্ত মসৃণ।",
     avatarInitial: "AW",
     accent: "from-[#00E5FF] to-[#0066FF]",
   },
   {
     id: 2,
     name: "Elena Rostova",
-    roleEn: "Head of Global E-Commerce",
-    roleBn: "হেড অফ গ্লোবাল ই-কমার্স",
-    company: "Aura Luxury",
+    roleEn: "Head of Digital",
+    roleBn: "হেড অফ ডিজিটাল",
+    company: "Aura Luxe",
     locationEn: "London, UK",
     locationBn: "লন্ডন, যুক্তরাজ্য",
     projectEn: "Headless E-Commerce Storefront",
     projectBn: "হেডলেস ই-কমার্স স্টোরফ্রন্ট",
     rating: 5,
-    highlightEn: "+164% lift in international conversions.",
-    highlightBn: "+১৬৪% আন্তর্জাতিক কনভার্সন বৃদ্ধি।",
+    highlightEn: "Instant page loads and smoother checkout.",
+    highlightBn: "ইন্সট্যান্ট পেজ লোড ও মসৃণ চেকআউট।",
     contentEn:
-      "Working with MTM Tech was effortless. They re-architected our storefront into a headless Next.js powerhouse with instant page loads across the US and Europe. Our bounce rate plummeted and our checkout conversion jumped dramatically within weeks.",
+      "The team re-built our storefront as a headless Next.js application with instant route transitions. Our mobile checkout drop-off dropped noticeably within the first month. They are fast, thoughtful, and communicative.",
     contentBn:
-      "এমটিএম টেকের সাথে কাজ করা অত্যন্ত আনন্দদায়ক ছিল। তারা আমাদের স্টোরফ্রন্টকে হেডলেস Next.js প্ল্যাটফর্মে রূপান্তর করে ইন্সট্যান্ট পেজ লোড নিশ্চিত করেছে। মাত্র কয়েক সপ্তাহের মধ্যেই আমাদের বাউন্স রেট হ্রাস ও কনভার্সন আকাশচুম্বী হয়েছে।",
+      "আমাদের স্টোরফ্রন্টকে হেডলেস Next.js অ্যাপ্লিকেশনে রূপান্তর করার পর থেকেই পেজ ট্রানজিশন অবিশ্বাস্য দ্রুত হয়েছে এবং মোবাইল চেকআউট ড্রপ-অফ উল্লেখযোগ্যভাবে হ্রাস পেয়েছে। তারা খুবই দক্ষ ও পেশাদার।",
     avatarInitial: "ER",
     accent: "from-[#0066FF] to-[#38bdf8]",
   },
@@ -57,38 +57,38 @@ const BASE_TESTIMONIALS = [
     name: "Marcus Chen",
     roleEn: "Founder & CEO",
     roleBn: "ফাউন্ডার ও সিইও",
-    company: "Nexus Cloud Systems",
+    company: "Nexus Systems",
     locationEn: "Singapore",
     locationBn: "সিঙ্গাপুর",
-    projectEn: "Cloud Infrastructure Portal",
-    projectBn: "ক্লাউড ইনফ্রাস্ট্রাকচার পোর্টাল",
+    projectEn: "Cloud Operations Hub & Docs",
+    projectBn: "ক্লাউড হাব ও ডেভেলপার পোর্টাল",
     rating: 5,
-    highlightEn: "Unmatched code quality and zero technical debt.",
-    highlightBn: "অপ্রতিদ্বন্দ্বী কোড কোয়ালিটি এবং জিরো টেকনিক্যাল ডেব্ট।",
+    highlightEn: "Direct communication and zero technical debt.",
+    highlightBn: "সরাসরি যোগাযোগ ও পরিচ্ছন্ন কোডবেস।",
     contentEn:
-      "The engineering discipline at MTM Tech rivals top Silicon Valley consultancies. Their communication is transparent, their sprint velocity is relentless, and their code is pristine. They are our permanent development partner for all cloud initiatives.",
+      "Working with MTM Tech felt like having senior engineers sitting right next to us. They attend our weekly sprint reviews, suggest practical architecture fixes, and write clean, modular TypeScript code.",
     contentBn:
-      "এমটিএম টেকের ইঞ্জিনিয়ারিং ডিসিপ্লিন সিলিকন ভ্যালির সেরা কনসালটেন্সির সমকক্ষ। তাদের স্বচ্ছ যোগাযোগ, দ্রুত স্প্রিন্ট স্পিড এবং নিখুঁত কোড কোয়ালিটির জন্য তারা এখন আমাদের সকল ক্লাউড প্রকল্পের স্থায়ী পার্টনার।",
+      "এমটিএম টেকের সাথে কাজ করা খুবই সহজ। তারা আমাদের সাথে সরাসরি যোগাযোগ রাখে, বাস্তবসম্মত সমাধান দেয় এবং সহজে মেইনটেইন করার মতো মডুলার কোড ডেলিভারি করে।",
     avatarInitial: "MC",
     accent: "from-[#00E5FF] to-[#38bdf8]",
   },
   {
     id: 4,
     name: "Dr. Sarah Jenkins",
-    roleEn: "VP of Product Engineering",
-    roleBn: "ভিপি অফ প্রোডাক্ট ইঞ্জিনিয়ারিং",
-    company: "MedixCore Health",
+    roleEn: "VP of Engineering",
+    roleBn: "ভিপি অফ ইঞ্জিনিয়ারিং",
+    company: "MedixCore",
     locationEn: "Toronto, Canada",
     locationBn: "টরন্টো, কানাডা",
-    projectEn: "HIPAA-Compliant Web Portal",
-    projectBn: "HIPAA কমপ্লায়েন্ট ওয়েব পোর্টাল",
+    projectEn: "Telehealth Web Portal",
+    projectBn: "টেলিহেলথ ওয়েব পোর্টাল",
     rating: 5,
-    highlightEn: "100% HIPAA compliant with flawless security audit.",
-    highlightBn: "১০০% HIPAA কমপ্লায়েন্স ও নিখুঁত সিকিউরিটি অডিট।",
+    highlightEn: "Passed strict penetration audits on the first run.",
+    highlightBn: "প্রথমবারেই সকল সিকিউরিটি অডিটে সফল।",
     contentEn:
-      "In healthcare technology, security and zero-downtime reliability are non-negotiable. MTM Tech designed our telehealth architecture with end-to-end encryption and passed our rigorous third-party penetration audits on the very first try.",
+      "Security and reliable uptime were our primary concerns for telehealth. MTM Tech designed our web portal with end-to-end encryption and clean role-based permissions, clearing our third-party security audit smoothly.",
     contentBn:
-      "স্বাস্থ্যপ্রযুক্তিতে নিরাপত্তা ও জিরো-ডাউনটাইম আপোষহীন। এমটিএম টেক এন্ড-টু-এন্ড এনক্রিপশন সহ আমাদের টেলিহেলথ সিস্টেম ডিজাইন করেছে এবং প্রথম চেষ্টাতেই সকল কঠিন সিকিউরিটি অডিটে উত্তীর্ণ হয়েছে।",
+      "আমাদের স্বাস্থ্যসেবা পোর্টালে নিরাপত্তা ও আপটাইম ছিল সর্বোচ্চ অগ্রাধিকার। এমটিএম টেক শুরু থেকেই সুরক্ষিত আর্কিটেকচার গড়ে তোলে, যা সহজেই আমাদের সিকিউরিটি অডিটে উত্তীর্ণ হয়েছে।",
     avatarInitial: "SJ",
     accent: "from-[#38bdf8] to-[#0066FF]",
   },
@@ -188,7 +188,13 @@ export default function Testimonials() {
         </div>
 
         {/* Carousel Showcase */}
-        <div className="mt-16 max-w-4xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.96, y: 25 }}
+          whileInView={{ opacity: 1, scale: 1, y: 0 }}
+          viewport={{ once: true, margin: "-40px" }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          className="mt-16 max-w-4xl mx-auto"
+        >
           <div className="relative rounded-3xl bg-white/[0.02] border border-white/[0.08] p-8 sm:p-12 backdrop-blur-2xl shadow-[0_20px_60px_rgba(0,0,0,0.7)] overflow-hidden">
             <div className="absolute -top-24 -right-24 w-64 h-64 bg-[#00E5FF]/10 rounded-full blur-3xl pointer-events-none" />
 
@@ -214,10 +220,10 @@ export default function Testimonials() {
               <AnimatePresence mode="wait">
                 <motion.div
                   key={`${current.id}-${language}`}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
-                  transition={{ duration: 0.4, ease: "easeOut" }}
+                  initial={{ opacity: 0, y: 12, scale: 0.98 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, y: -12, scale: 0.98 }}
+                  transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
                 >
                   <div className="text-lg sm:text-xl font-semibold text-[#00E5FF] mb-3">
                     &ldquo;{highlight}&rdquo;
@@ -295,7 +301,7 @@ export default function Testimonials() {
             </div>
 
           </div>
-        </div>
+        </motion.div>
 
         {/* Brand Strip */}
         <div className="mt-20 pt-10 border-t border-white/[0.06] text-center">

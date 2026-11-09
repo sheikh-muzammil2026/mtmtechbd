@@ -28,8 +28,8 @@ const fontBornomala = localFont({
 });
 
 export const metadata = {
-  title: "MTM Tech | Your Vision, Our Technology",
-  description: "International-standard modern web development, UI/UX design, and IT solutions for forward-thinking businesses.",
+  title: "MTM Tech | Full-Cycle Web & Cloud Engineering Studio",
+  description: "MTM Tech engineers high-performance web applications, custom SaaS platforms, and clean cloud systems for companies worldwide.",
 };
 
 export default function RootLayout({ children }) {

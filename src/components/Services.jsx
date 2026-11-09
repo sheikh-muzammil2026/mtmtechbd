@@ -80,10 +80,10 @@ export default function Services() {
             return (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 25 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.08 }}
+                initial={{ opacity: 0, y: 32, scale: 0.98 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ duration: 0.5, delay: idx * 0.08, ease: [0.21, 0.47, 0.32, 0.98] }}
                 className="group relative rounded-2xl bg-white/[0.02] border border-white/[0.08] hover:border-[#00E5FF]/40 p-8 backdrop-blur-xl transition-all duration-300 flex flex-col justify-between hover:shadow-[0_15px_40px_rgba(0,0,0,0.6)] hover:-translate-y-1 overflow-hidden"
               >
                 {/* Ambient Card Hover Glow */}
@@ -146,10 +146,10 @@ export default function Services() {
 
         {/* Bottom Banner: Consultation CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, y: 35, scale: 0.98 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          viewport={{ once: true, margin: "-40px" }}
+          transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
           className="mt-16 rounded-2xl bg-gradient-to-r from-white/[0.03] via-[#00E5FF]/[0.05] to-[#0066FF]/[0.05] border border-white/[0.1] p-8 sm:p-10 backdrop-blur-xl relative overflow-hidden"
         >
           <div className="absolute -top-12 -right-12 w-48 h-48 bg-[#00E5FF]/20 rounded-full blur-3xl pointer-events-none" />

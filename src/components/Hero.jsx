@@ -106,9 +106,9 @@ export default function Hero() {
             
             {/* Tagline / Announcement Pill */}
             <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+              initial={{ opacity: 0, y: -16, scale: 0.96 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
               whileHover={{ scale: 1.03 }}
               className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/[0.03] border border-[#00E5FF]/30 backdrop-blur-md shadow-[0_0_20px_rgba(0,229,255,0.15)] hover:border-[#00E5FF]/60 hover:shadow-[0_0_25px_rgba(0,229,255,0.35)] transition-all duration-300 mb-6 group cursor-default"
             >
@@ -127,7 +127,7 @@ export default function Hero() {
 
             {/* Main Headline */}
             <motion.h1
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
               className="text-4xl sm:text-6xl xl:text-7xl font-extrabold tracking-tight text-white leading-[1.1] sm:leading-[1.12]"
@@ -221,9 +221,9 @@ export default function Hero() {
 
             {/* Terminal Window */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.95, y: 30 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
+              initial={{ opacity: 0, scale: 0.94, x: 30 }}
+              animate={{ opacity: 1, scale: 1, x: 0 }}
+              transition={{ duration: 0.75, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
               className="relative w-full max-w-lg bg-[#0B0E17]/90 border border-white/[0.12] rounded-2xl p-5 sm:p-6 backdrop-blur-2xl shadow-[0_20px_60px_rgba(0,0,0,0.7)] hover:border-[#00E5FF]/40 hover:shadow-[0_20px_60px_rgba(0,229,255,0.18)] transition-all duration-500 group"
             >
               {/* Window Header */}
@@ -247,28 +247,25 @@ export default function Hero() {
               <div className="mt-4 font-mono text-xs sm:text-sm leading-relaxed text-slate-300 overflow-x-auto">
                 <p className="text-slate-500">{dict.hero.terminalComment}</p>
                 <p>
-                  <span className="text-[#00E5FF]">const</span>{" "}
-                  <span className="text-white font-semibold">solution</span> ={" "}
-                  <span className="text-[#0066FF]">await</span>{" "}
-                  <span className="text-amber-300">mtmTech</span>.
-                  <span className="text-[#00E5FF]">architect</span>({"{"}
+                  <span className="text-[#00E5FF]">export default</span>{" "}
+                  <span className="text-amber-300">defineConfig</span>({"{"}
                 </p>
                 <div className="pl-4 space-y-1">
                   <p>
-                    <span className="text-slate-400">clientVision:</span>{" "}
-                    <span className="text-emerald-400">&apos;Excellence&apos;</span>,
+                    <span className="text-slate-400">framework:</span>{" "}
+                    <span className="text-emerald-400">&apos;Next.js 16 (Turbopack)&apos;</span>,
                   </p>
                   <p>
-                    <span className="text-slate-400">performance:</span>{" "}
-                    <span className="text-emerald-400">&apos;Ultra-High (99+)&apos;</span>,
+                    <span className="text-slate-400">rendering:</span>{" "}
+                    <span className="text-emerald-400">&apos;Server Components &amp; Edge SSR&apos;</span>,
                   </p>
                   <p>
-                    <span className="text-slate-400">security:</span>{" "}
-                    <span className="text-emerald-400">&apos;Enterprise Grade&apos;</span>,
+                    <span className="text-slate-400">lighthouse:</span>{" "}
+                    <span className="text-[#00E5FF]">99</span>,
                   </p>
                   <p>
-                    <span className="text-slate-400">scalability:</span>{" "}
-                    <span className="text-[#00E5FF]">Infinity</span>,
+                    <span className="text-slate-400">ci_cd:</span>{" "}
+                    <span className="text-emerald-400">&apos;Automated Zero-Downtime&apos;</span>,
                   </p>
                 </div>
                 <p>{"});"}</p>
@@ -281,7 +278,7 @@ export default function Hero() {
 
               {/* Tech Badges Row */}
               <div className="mt-5 pt-4 border-t border-white/[0.08] flex flex-wrap gap-2">
-                {["Next.js 16", "React 19", "Tailwind CSS", "Cloud Native", "AI Ready"].map(
+                {["Next.js 16", "React 19", "TypeScript", "Tailwind CSS", "Node.js", "Docker"].map(
                   (tech) => (
                     <span
                       key={tech}
@@ -296,8 +293,8 @@ export default function Hero() {
 
             {/* Floating Live Metric Card 1 */}
             <motion.div
-              animate={{ y: [0, -10, 0] }}
-              transition={{ repeat: Infinity, duration: 4.5, ease: "easeInOut" }}
+              animate={{ y: [0, -8, 0] }}
+              transition={{ repeat: Infinity, duration: 4.2, ease: "easeInOut" }}
               whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
               className="absolute -top-6 -right-2 sm:-right-6 bg-[#0B0E17]/95 border border-[#00E5FF]/40 hover:border-[#00E5FF]/70 rounded-xl p-3 sm:p-4 backdrop-blur-xl shadow-[0_10px_30px_rgba(0,229,255,0.25)] hover:shadow-[0_15px_35px_rgba(0,229,255,0.4)] flex items-center gap-3 z-20 transition-all duration-300 cursor-default"
             >
@@ -315,8 +312,8 @@ export default function Hero() {
 
             {/* Floating Live Metric Card 2 */}
             <motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{ repeat: Infinity, duration: 5, ease: "easeInOut", delay: 1 }}
+              animate={{ y: [0, 8, 0] }}
+              transition={{ repeat: Infinity, duration: 4.8, ease: "easeInOut", delay: 0.6 }}
               whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
               className="absolute -bottom-6 -left-2 sm:-left-6 bg-[#0B0E17]/95 border border-white/[0.12] hover:border-emerald-500/50 rounded-xl p-3 sm:p-4 backdrop-blur-xl shadow-[0_15px_35px_rgba(0,0,0,0.6)] hover:shadow-[0_15px_35px_rgba(16,185,129,0.3)] flex items-center gap-3 z-20 transition-all duration-300 cursor-default"
             >
@@ -326,7 +323,7 @@ export default function Hero() {
               <div>
                 <div className="text-xs text-slate-400 font-medium">{dict.hero.metricConversion}</div>
                 <div className="text-base font-bold text-white flex items-center gap-1.5">
-                  <span className="text-[#00E5FF]">+140%</span>
+                  <span className="text-[#00E5FF]">Optimal</span>
                   <span className="text-[10px] text-slate-400 font-normal">{dict.hero.conversionSub}</span>
                 </div>
               </div>
@@ -340,13 +337,16 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.7, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
           className="mt-20 pt-10 border-t border-white/[0.08]"
         >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
             {dict.hero.stats.map((stat, idx) => (
-              <div
+              <motion.div
                 key={idx}
+                initial={{ opacity: 0, y: 22 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.55, delay: 0.45 + idx * 0.09, ease: [0.16, 1, 0.3, 1] }}
                 className="relative flex flex-col p-4 rounded-xl bg-white/[0.02] border border-white/[0.04] hover:border-[#00E5FF]/40 hover:shadow-[0_0_25px_rgba(0,229,255,0.2)] hover:scale-[1.03] backdrop-blur-xl transition-all duration-300 group cursor-default"
               >
                 <div className="text-3xl sm:text-4xl lg:text-5xl font-extrabold bg-gradient-to-r from-white via-slate-100 to-[#00E5FF] bg-clip-text text-transparent group-hover:drop-shadow-[0_0_20px_rgba(0,229,255,0.5)] transition-all duration-300">
@@ -358,7 +358,7 @@ export default function Hero() {
                 <div className="text-xs text-slate-400 mt-0.5">
                   {stat.sub}
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </motion.div>

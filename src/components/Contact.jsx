@@ -37,7 +37,7 @@ export default function Contact() {
   const [selectedServices, setSelectedServices] = useState([
     "Custom Web Development",
   ]);
-  const [selectedBudget, setSelectedBudget] = useState("$3,000 - $6,000");
+  const [selectedBudget, setSelectedBudget] = useState(BUDGET_OPTIONS[1]);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -128,7 +128,13 @@ export default function Contact() {
         {/* 2-Column Layout */}
         <div className="mt-16 sm:mt-20 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-start">
           {/* LEFT: Contact Coordinates & Guarantees */}
-          <div className="lg:col-span-5 flex flex-col justify-between space-y-8">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            className="lg:col-span-5 flex flex-col justify-between space-y-8"
+          >
             {/* Tagline Card */}
             <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/[0.08] backdrop-blur-xl">
               <div className="flex items-center gap-2 text-xs font-semibold text-[#00E5FF] mb-2">
@@ -226,10 +232,16 @@ export default function Contact() {
                 <span>{dict.contact.ndaNotice}</span>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* RIGHT: Interactive Lead Form */}
-          <div className="lg:col-span-7">
+          <motion.div
+            initial={{ opacity: 0, x: 30, scale: 0.98 }}
+            whileInView={{ opacity: 1, x: 0, scale: 1 }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ duration: 0.65, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+            className="lg:col-span-7"
+          >
             <div className="relative rounded-3xl bg-[#0B0E17]/95 border border-white/[0.12] p-8 sm:p-10 backdrop-blur-2xl shadow-[0_20px_60px_rgba(0,0,0,0.8)]">
               <AnimatePresence mode="wait">
                 {isSubmitted ? (
@@ -417,7 +429,7 @@ export default function Contact() {
                 )}
               </AnimatePresence>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

@@ -15,12 +15,12 @@ import { useLanguage } from "@/context/LanguageContext";
 
 const BASE_TIERS = [
   {
-    nameEn: "Growth Web Platform",
-    nameBn: "গ্রোথ ওয়েব প্ল্যাটফর্ম",
+    nameEn: "Modern Web Platform",
+    nameBn: "মডার্ন ওয়েব প্ল্যাটফর্ম",
     taglineEn:
-      "Ideal for startups & businesses seeking a high-converting modern web presence.",
+      "For companies needing a fast, professional, and SEO-ready web presence.",
     taglineBn:
-      "স্টার্টআপ ও ব্যবসায়ের জন্য নিখুঁত, দ্রুত ও আধুনিক অনলাইন পরিচিতি।",
+      "ব্যবসা ও স্টার্টআপের জন্য দ্রুতগতির, প্রফেশনাল ও আধুনিক ওয়েবসাইট।",
     popular: false,
     projectPrice: "৳11,499",
     retainerPrice: "৳990",
@@ -29,32 +29,32 @@ const BASE_TIERS = [
     retainerPeriodEn: "/ month",
     retainerPeriodBn: "/ প্রতি মাসে",
     featuresEn: [
-      "Custom Next.js 16 + Tailwind CSS architecture",
-      "99+ Google Lighthouse speed & Core Web Vitals",
-      "Headless CMS integration (Sanity / Strapi)",
-      "Technical SEO & OpenGraph optimization",
-      "100% responsive cross-device engineering",
-      "2 weeks post-launch dedicated warranty",
+      "Custom Next.js 16 + Tailwind CSS build",
+      "95+ Google Lighthouse speed & Core Web Vitals",
+      "Headless CMS setup (Sanity / Strapi)",
+      "Technical SEO, sitemaps & OpenGraph metadata",
+      "Mobile-first responsive design",
+      "2 weeks post-launch technical warranty",
     ],
     featuresBn: [
-      "কাস্টম Next.js 16 ও Tailwind CSS আর্কিটেকচার",
-      "৯৯+ গুগল লাইটহাউস স্পিড ও কোর ওয়েব ভাইটালস",
-      "হেডলেস CMS ইন্টিগ্রেশন (Sanity / Strapi)",
-      "টেকনিক্যাল এসইও ও ওপেনগ্রাফ অপ্টিমাইজেশন",
-      "১০০% রেসপন্সিভ ক্রস-ডিভাইস ইঞ্জিনিয়ারিং",
-      "লঞ্চের পর ২ সপ্তাহের ডেডিকেটেড টেকনিক্যাল ওয়ারেন্টি",
+      "কাস্টম Next.js 16 ও Tailwind CSS কোডবেস",
+      "৯৫+ গুগল লাইটহাউস স্পিড ও কোর ওয়েব ভাইটালস",
+      "হেডলেস CMS সেটআপ (Sanity / Strapi)",
+      "টেকনিক্যাল এসইও ও মেটাডাটা অপ্টিমাইজেশন",
+      "মোবাইল-ফার্স্ট রেসপন্সিভ ডিজাইন",
+      "লঞ্চের পর ২ সপ্তাহের ফ্রি টেকনিক্যাল সাপোর্ট",
     ],
-    ctaEn: "Launch Growth Site",
-    ctaBn: "গ্রোথ সাইট শুরু করুন",
+    ctaEn: "Get Started",
+    ctaBn: "শুরু করুন",
     href: "#contact",
   },
   {
-    nameEn: "Scale-Up Full-Stack SaaS",
-    nameBn: "স্কেল-আপ ফুল-স্ট্যাক SaaS",
+    nameEn: "Full-Stack Web App",
+    nameBn: "ফুল-স্ট্যাক ওয়েব অ্যাপ",
     taglineEn:
-      "Engineered for high-growth tech companies and scalable digital products.",
+      "For startups and businesses building custom software, SaaS, or complex workflows.",
     taglineBn:
-      "উচ্চ প্রবৃদ্ধিশীল টেক কোম্পানি ও স্কেলেবল ডিজিটাল প্রোডাক্টের জন্য নির্মিত।",
+      "কাস্টম সফটওয়্যার, SaaS বা জটিল ওয়েব অ্যাপ্লিকেশনের জন্য উপযুক্ত।",
     popular: true,
     projectPrice: "৳21,899",
     retainerPrice: "৳1,999",
@@ -63,34 +63,34 @@ const BASE_TIERS = [
     retainerPeriodEn: "/ month",
     retainerPeriodBn: "/ প্রতি মাসে",
     featuresEn: [
-      "Everything in Growth Web Platform",
-      "Full-stack React/Next.js App Router architecture",
-      "Scalable REST / GraphQL APIs & Database schema",
-      "Secure Auth (OAuth, JWT, RBAC multi-tenant)",
-      "Stripe / Global payment gateway integration",
-      "Automated CI/CD deployment pipelines",
-      "30 days dedicated technical warranty & QA",
+      "Everything in Modern Web Platform",
+      "Full-stack React/Next.js App Router & Server Actions",
+      "REST / GraphQL APIs & PostgreSQL / MongoDB schema",
+      "Secure authentication & role-based access control",
+      "Payment gateway integration (Stripe, SSLCommerz)",
+      "Automated CI/CD deployment pipeline",
+      "30 days dedicated post-launch support & QA",
     ],
     featuresBn: [
-      "গ্রোথ ওয়েব প্ল্যাটফর্মের সকল ফিচার অন্তর্ভুক্ত",
-      "ফুল-স্ট্যাক React/Next.js অ্যাপ রাউটার আর্কিটেকচার",
-      "স্কেলেবল REST / GraphQL APIs ও ডেটাবেস স্কিমা",
-      "নিরাপদ অথেনটিকেশন (OAuth, JWT, RBAC মাল্টি-টেন্যান্ট)",
-      "Stripe ও আন্তর্জাতিক পেমেন্ট গেটওয়ে ইন্টিগ্রেশন",
-      "অটোমেটেড CI/CD ক্লাউড ডিপ্লয়মেন্ট পাইপলাইন",
-      "৩০ দিনের ডেডিকেটেড টেকনিক্যাল ওয়ারেন্টি ও QA",
+      "মডার্ন ওয়েব প্ল্যাটফর্মের সকল ফিচার অন্তর্ভুক্ত",
+      "ফুল-স্ট্যাক Next.js অ্যাপ রাউটার ও সার্ভার অ্যাকশনস",
+      "REST / GraphQL API ও সুবিন্যস্ত ডেটাবেস স্কিমা",
+      "নিরাপদ অথেনটিকেশন ও রোল-ভিত্তিক পারমিশন",
+      "পেমেন্ট গেটওয়ে ইন্টিগ্রেশন (Stripe, লোকাল গেটওয়ে)",
+      "অটোমেটেড CI/CD ক্লাউড ডিপ্লয়মেন্ট",
+      "লঞ্চের পর ৩০ দিনের ডেডিকেটেড সাপোর্ট ও QA",
     ],
-    ctaEn: "Build Scale-Up Product",
-    ctaBn: "স্কেল-আপ প্রোডাক্ট তৈরি করুন",
+    ctaEn: "Build Full-Stack App",
+    ctaBn: "ফুল-স্ট্যাক অ্যাপ তৈরি করুন",
     href: "#contact",
   },
   {
-    nameEn: "Enterprise Dedicated Pod",
-    nameBn: "এন্টারপ্রাইজ ডেডিকেটেড পড",
+    nameEn: "Dedicated Engineering Pod",
+    nameBn: "ডেডিকেটেড ইঞ্জিনিয়ারিং পড",
     taglineEn:
-      "Dedicated senior engineering team tailored to enterprise-grade compliance & scale.",
+      "A dedicated sprint team working as an extension of your in-house product team.",
     taglineBn:
-      "এন্টারপ্রাইজ নিরাপত্তা ও স্কেলের জন্য ডেডিকেটেড সিনিয়র ইঞ্জিনিয়ারদের দল।",
+      "আপনার ইন-হাউস টিমের সাথে সরাসরি যুক্ত হয়ে কাজ করার ডেডিকেটেড ডেভেলপার দল।",
     popular: false,
     projectPrice: "Custom",
     retainerPrice: "Custom",
@@ -99,25 +99,25 @@ const BASE_TIERS = [
     retainerPeriodEn: "flexible retainers",
     retainerPeriodBn: "ফ্লেক্সিবল রিটেইনার",
     featuresEn: [
-      "Dedicated senior engineers & product architects",
-      "Microservices & high-concurrency cloud design",
-      "Bank-grade SOC2 & HIPAA compliance engineering",
-      "99.99% Uptime SLA with 24/7 incident response",
-      "Full IP & source code ownership transfer",
-      "Weekly executive roadmap & sprint reviews",
-      "Unlimited technical consultation & advisory",
+      "Dedicated senior full-stack developers & architects",
+      "Custom microservices & high-concurrency cloud design",
+      "Architecture review & security hardening",
+      "Priority SLA response with direct Slack/Teams sync",
+      "Full git repository and IP ownership transfer",
+      "Weekly sprint demos and roadmap reviews",
+      "Ongoing code refactoring & technical advisory",
     ],
     featuresBn: [
-      "ডেডিকেটেড সিনিয়র সফটওয়্যার ইঞ্জিনিয়ার ও আর্কিটেক্ট",
-      "মাইক্রোসার্ভিসেস ও উচ্চ কনকারেন্সি ক্লাউড ডিজাইন",
-      "ব্যাংক-গ্রেড SOC2 ও HIPAA কমপ্লায়েন্স ইঞ্জিনিয়ারিং",
-      "৯৯.৯৯% আপটাইম SLA সহ ২৪/৭ ইন্সট্যান্ট ইনসিডেন্ট রেসপন্স",
-      "সম্পূর্ণ আইপি ও সোর্স কোডের সরাসরি হস্তান্তর",
-      "সাপ্তাহিক এক্সিকিউটিভ রোডম্যাপ ও স্প্রিন্ট রিভিউ",
-      "সীমাহীন টেকনিক্যাল কনসালটেশন ও অ্যাডভাইজরি সাপোর্ট",
+      "ডেডিকেটেড সিনিয়র ডেভেলপার ও সফটওয়্যার আর্কিটেক্ট",
+      "উচ্চ ট্রাফিকের জন্য ক্লাউড ও মাইক্রোসার্ভিসেস আর্কিটেকচার",
+      "কোডবেস সিকিউরিটি অডিট ও পারফরম্যান্স টিউনিং",
+      "অগ্রাধিকারমূলক SLA রেসপন্স ও সরাসরি স্ল্যাক/টিমস যোগাযোগ",
+      "সম্পূর্ণ গিট রিপোজিটরি ও আইপির পূর্ণ হস্তান্তর",
+      "সাপ্তাহিক স্প্রিন্ট ডেমো ও অগ্রগতি পর্যালোচনা",
+      "ধারাবাহিক রিফ্যাক্টরিং ও টেকনিক্যাল অ্যাডভাইজরি",
     ],
-    ctaEn: "Contact Enterprise Team",
-    ctaBn: "এন্টারপ্রাইজ টিমে যোগাযোগ করুন",
+    ctaEn: "Contact Engineering Team",
+    ctaBn: "ইঞ্জিনিয়ারিং টিমে যোগাযোগ করুন",
     href: "#contact",
   },
 ];
@@ -255,13 +255,18 @@ export default function Pricing() {
             const features = isBn ? tier.featuresBn : tier.featuresEn;
             const cta = isBn ? tier.ctaBn : tier.ctaEn;
 
+            const isCenter = tier.popular;
             return (
               <motion.div
                 key={tier.nameEn}
-                initial={{ opacity: 0, y: 25 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                initial={{ opacity: 0, y: isCenter ? 40 : 30, scale: isCenter ? 0.98 : 1 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{
+                  duration: isCenter ? 0.6 : 0.55,
+                  delay: 0.1 + idx * 0.1,
+                  ease: [0.16, 1, 0.3, 1],
+                }}
                 className={`relative rounded-3xl p-8 sm:p-10 flex flex-col justify-between backdrop-blur-2xl transition-all duration-300 ${
                   tier.popular
                     ? "bg-[#0B0E17]/95 border-2 border-[#00E5FF] shadow-[0_0_40px_rgba(0,229,255,0.25)] lg:-translate-y-2"

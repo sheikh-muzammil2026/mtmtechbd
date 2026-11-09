@@ -15,16 +15,16 @@ import { useLanguage } from "@/context/LanguageContext";
 const BASE_PROJECTS = [
   {
     id: 1,
-    titleEn: "FinVantage AI - Financial Analytics Suite",
-    titleBn: "ফিনভান্টেজ এআই - ফিন্যান্সিয়াল অ্যানালিটিক্স স্যুট",
+    titleEn: "FinVantage - Real-Time Financial Analytics",
+    titleBn: "ফিনভান্টেজ - রিয়েল-টাইম ফিন্যান্সিয়াল অ্যানালিটিক্স",
     categoryEn: "Web Apps & SaaS",
     categoryBn: "ওয়েব অ্যাপস ও SaaS",
     descEn:
-      "Enterprise analytics dashboard with real-time algorithmic market predictions, institutional charting, and automated portfolio rebalancing.",
+      "Cloud analytics dashboard featuring interactive market charts, portfolio tracking, and sub-200ms query responses on high-volume data.",
     descBn:
-      "রিয়েল-টাইম মার্কেট প্রেডিকশন এবং অ্যালগরিদমিক ইনভেস্টমেন্ট চার্ট সহ এন্টারপ্রাইজ গ্রেড SaaS অ্যানালিটিক্স ড্যাশবোর্ড।",
-    metricEn: "+220% User Engagement",
-    metricBn: "+২২০% ইউজার এনগেজমেন্ট",
+      "রিয়েল-টাইম চার্টিং, পোর্টফোলিও ট্র্যাকিং ও দ্রুত কুয়েরি রেসপন্স সমৃদ্ধ ক্লাউড অ্যানালিটিক্স ড্যাশবোর্ড।",
+    metricEn: "+180% User Engagement",
+    metricBn: "+১৮০% ইউজার এনগেজমেন্ট",
     subMetricEn: "<180ms Query Latency",
     subMetricBn: "<১৮০মি.সে. কুয়েরি লেটেন্সি",
     tags: ["Next.js 16", "TypeScript", "Tailwind CSS", "PostgreSQL"],
@@ -32,50 +32,50 @@ const BASE_PROJECTS = [
   },
   {
     id: 2,
-    titleEn: "Aura Luxe - Global Headless Storefront",
-    titleBn: "অরা লাক্স - গ্লোবাল হেডলেস ই-কমার্স",
+    titleEn: "Aura Commerce - Global Headless Storefront",
+    titleBn: "অরা কমার্স - গ্লোবাল হেডলেস স্টোরফ্রন্ট",
     categoryEn: "E-Commerce",
     categoryBn: "ই-কমার্স",
     descEn:
-      "Ultra-modern headless luxury e-commerce experience featuring multi-currency checkout, dynamic product previews, and sub-second page transitions.",
+      "Headless e-commerce storefront built with Next.js and Shopify, supporting multi-currency checkout and sub-second page transitions.",
     descBn:
-      "মাল্টি-কারেন্সি চেকআউট ও সাব-সেকেন্ড পেজ ট্রানজিশন সহ আল্ট্রা-মডার্ন হেডলেস লাক্সারি ই-কমার্স প্ল্যাটফর্ম।",
-    metricEn: "+164% Conversion Rate",
-    metricBn: "+১৬৪% কনভার্সন রেট বৃদ্ধি",
-    subMetricEn: "99.99% Uptime SLA",
-    subMetricBn: "৯৯.৯৯% আপটাইম SLA",
+      "Next.js ও Shopify দিয়ে তৈরি হেডলেস স্টোরফ্রন্ট—মাল্টি-কারেন্সি চেকআউট ও দ্রুত পেজ ট্রানজিশন সুবিধা সহ।",
+    metricEn: "+145% Mobile Checkout Rate",
+    metricBn: "+১৪৫% মোবাইল চেকআউট বৃদ্ধি",
+    subMetricEn: "99.99% Uptime",
+    subMetricBn: "৯৯.৯৯% আপটাইম",
     tags: ["Shopify Plus", "Next.js", "Stripe", "Framer Motion"],
     gradient: "from-[#0066FF]/20 via-[#00E5FF]/20 to-transparent",
   },
   {
     id: 3,
-    titleEn: "Nexus Cloud - Enterprise Portal & Hub",
-    titleBn: "নেক্সাস ক্লাউড - এন্টারপ্রাইজ ক্লাউড হাব",
+    titleEn: "Nexus Portal - Cloud Infrastructure Hub",
+    titleBn: "নেক্সাস পোর্টাল - ক্লাউড ইনফ্রাস্ট্রাকচার হাব",
     categoryEn: "Custom Websites",
     categoryBn: "কাস্টম ওয়েবসাইট",
     descEn:
-      "High-security global corporate infrastructure portal engineered with Jamstack architecture and top-tier accessibility compliance.",
+      "Secure documentation and developer portal engineered with Jamstack architecture, headless CMS, and 100/100 Lighthouse performance.",
     descBn:
-      "জ্যামস্ট্যাক আর্কিটেকচার ও উচ্চ অ্যাক্সেসিবিলিটি সমন্বয়ে তৈরি হাই-সিকিউরিটি গ্লোবাল ক্লাউড ইনফ্রাস্ট্রাকচার পোর্টাল।",
+      "জ্যামস্ট্যাক আর্কিটেকচার, হেডলেস CMS ও ১০০/১০০ লাইটহাউস স্কোর সহ আধুনিক ক্লাউড পোর্টাল।",
     metricEn: "100/100 Lighthouse Score",
     metricBn: "১০০/১০০ লাইটহাউস স্কোর",
-    subMetricEn: "4x Inbound Lead Velocity",
-    subMetricBn: "৪ গুণ বেশি ইনবাউন্ড লিড",
+    subMetricEn: "3x Faster Documentation Search",
+    subMetricBn: "৩ গুণ দ্রুত সার্চ রেসপন্স",
     tags: ["React", "Next.js", "Tailwind CSS", "Sanity CMS"],
     gradient: "from-[#00E5FF]/20 via-[#38bdf8]/20 to-transparent",
   },
   {
     id: 4,
-    titleEn: "PulseFlow - Collaborative Workflow OS",
-    titleBn: "পালসফ্লো - ওয়ার্কফ্লো অপারেটিং সিস্টেম",
+    titleEn: "PulseFlow - Team Workflow & Task Manager",
+    titleBn: "পালসফ্লো - টিম ওয়ার্কফ্লো ও টাস্ক ম্যানেজার",
     categoryEn: "UI/UX Design",
     categoryBn: "ইউআই/ইউএক্স ডিজাইন",
     descEn:
-      "Complete design system and streamlined interaction architecture for a high-velocity B2B project orchestration platform.",
+      "Design system and responsive frontend application for collaborative task planning, sprint tracking, and team milestone management.",
     descBn:
-      "হাই-স্পিড B2B টিম ম্যানেজমেন্টের জন্য আধুনিক ডিজাইন সিস্টেম এবং মসৃণ ইউজার ইন্টারফেস আর্কিটেকচার।",
-    metricEn: "-45% Onboarding Friction",
-    metricBn: "-৪৫% অনবোর্ডিং সময় সাশ্রয়",
+      "টিম টাস্ক প্ল্যানিং ও স্প্রিন্ট ট্র্যাকিংয়ের জন্য তৈরি আধুনিক ডিজাইন সিস্টেম ও রেসপন্সিভ ফ্রন্টএন্ড।",
+    metricEn: "-40% Onboarding Drop-off",
+    metricBn: "-৪০% অনবোর্ডিং ড্রপ-অফ",
     subMetricEn: "4.9/5 User Rating",
     subMetricBn: "৪.৯/৫ ইউজার রেটিং",
     tags: ["Figma", "Design System", "Next.js", "Tailwind CSS"],
@@ -83,35 +83,35 @@ const BASE_PROJECTS = [
   },
   {
     id: 5,
-    titleEn: "MedixCore - Telehealth & EHR Platform",
-    titleBn: "মেডিক্সকোর - টেলিহেলথ ও ইএইচআর পোর্টাল",
+    titleEn: "MedixCore - Telehealth Consultation Portal",
+    titleBn: "মেডিক্সকোর - টেলিহেলথ কনসালটেশন পোর্টাল",
     categoryEn: "Web Apps & SaaS",
     categoryBn: "ওয়েব অ্যাপস ও SaaS",
     descEn:
-      "HIPAA-compliant healthcare portal supporting encrypted video consultations, electronic health records, and automated e-prescriptions.",
+      "Secure healthcare web application featuring encrypted WebRTC video visits, patient records management, and automated appointment reminders.",
     descBn:
-      "এনক্রিপ্টেড ভিডিও কনসালটেশন ও অটোমেটেড প্রেসক্রিপশন সহ ১০০% হিপা-কমপ্লায়েন্ট ডিজিটাল স্বাস্থ্যসেবা পোর্টাল।",
-    metricEn: "100% HIPAA Compliant",
-    metricBn: "১০০% HIPAA কমপ্লায়েন্ট",
-    subMetricEn: "35k+ Tele-visits",
-    subMetricBn: "৩৫,০০০+ রোগী সেবা",
+      "এনক্রিপ্টেড WebRTC ভিডিও কনসালটেশন, পেশেন্ট রেকর্ড ও অটোমেটেড শিডিউলিং সমৃদ্ধ নিরাপদ টেলিহেলথ প্ল্যাটফর্ম।",
+    metricEn: "HIPAA Compliant Architecture",
+    metricBn: "HIPAA কমপ্লায়েন্ট আর্কিটেকচার",
+    subMetricEn: "30k+ Patient Consultations",
+    subMetricBn: "৩০,০০০+ রোগী সেবা",
     tags: ["Next.js", "WebRTC", "Node.js", "AWS Cloud"],
     gradient: "from-[#00E5FF]/20 via-emerald-500/20 to-transparent",
   },
   {
     id: 6,
-    titleEn: "Vertex Real Estate - Modern PropTech",
-    titleBn: "ভার্টেক্স রিয়েল এস্টেট - আধুনিক প্রপটেক",
+    titleEn: "Vertex Properties - Map-Based Real Estate Search",
+    titleBn: "ভার্টেক্স প্রপার্টিজ - ম্যাপ-ভিত্তিক রিয়েল এস্টেট পোর্টাল",
     categoryEn: "Custom Websites",
     categoryBn: "কাস্টম ওয়েবসাইট",
     descEn:
-      "Next-generation property discovery engine featuring interactive map polygon filtering, virtual tours, and real-time agent booking.",
+      "Interactive property listing portal featuring polygon map search, neighborhood filters, and direct inquiry scheduling with agents.",
     descBn:
-      "ম্যাপ ভিত্তিক প্রপার্টি সার্চিং, ভার্চুয়াল ট্যুর ও রিয়েল-টাইম বুকিং সুবিধা সম্বলিত আধুনিক প্রপটেক প্ল্যাটফর্ম।",
-    metricEn: "+190% Organic Traffic",
-    metricBn: "+১৯০% অর্গানিক ট্রাফিক বৃদ্ধি",
-    subMetricEn: "3.2m Avg Session Duration",
-    subMetricBn: "৩.২ মিনিট গড় সেশন সময়",
+      "ইন্টারেক্টিভ ম্যাপ ফিল্টারিং, এলাকাভিত্তিক সার্চ এবং সরাসরি এজেন্ট বুকিং সুবিধা সম্বলিত আধুনিক প্রপার্টি পোর্টাল।",
+    metricEn: "+160% Organic Search Leads",
+    metricBn: "+১৬০% অর্গানিক সার্চ লিড",
+    subMetricEn: "3.5m Avg Session Time",
+    subMetricBn: "৩.৫ মিনিট গড় সেশন সময়",
     tags: ["Next.js", "Mapbox GL", "Tailwind CSS", "Supabase"],
     gradient: "from-[#38bdf8]/20 via-[#0066FF]/20 to-transparent",
   },
@@ -241,10 +241,10 @@ export default function Portfolio() {
                 <motion.div
                   layout
                   key={project.id}
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.95 }}
-                  transition={{ duration: 0.4 }}
+                  initial={{ opacity: 0, y: 16, scale: 0.97 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, y: -10, scale: 0.97 }}
+                  transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
                   className="group relative rounded-2xl bg-white/[0.02] border border-white/[0.08] hover:border-[#00E5FF]/40 backdrop-blur-xl overflow-hidden flex flex-col justify-between transition-all duration-300 hover:shadow-[0_20px_45px_rgba(0,0,0,0.7)] hover:-translate-y-1.5"
                 >
                   {/* Visual Header / Mock Window */}
