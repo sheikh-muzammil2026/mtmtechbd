@@ -3,7 +3,6 @@
 import Link from "next/link";
 import {
   ArrowUp,
-  Sparkles,
   Mail,
   CheckCircle2,
   Send,
@@ -36,10 +35,10 @@ function TwitterXIcon({ className = "w-4 h-4" }) {
 }
 
 const SOCIALS = [
-  { name: "LinkedIn", icon: LinkedinIcon, href: "https://linkedin.com" },
-  { name: "GitHub", icon: GithubIcon, href: "https://github.com" },
+  { name: "LinkedIn", icon: LinkedinIcon, href: "https://www.linkedin.com/in/sheikh-muzammil-dev" },
+  { name: "GitHub", icon: GithubIcon, href: "https://github.com/sheikh-muzammil2026" },
   { name: "Twitter / X", icon: TwitterXIcon, href: "https://x.com" },
-  { name: "Email", icon: Mail, href: "mailto:contact@mtmtechbd.com" },
+  { name: "Email", icon: Mail, href: "mailto:mtmtechbd@gmail.com" },
 ];
 
 export default function Footer() {
@@ -65,57 +64,57 @@ export default function Footer() {
   const servicesLinks =
     language === "bn"
       ? [
-          { name: "কাস্টম ওয়েব ডেভেলপমেন্ট", href: "#services" },
-          { name: "ফুল-স্ট্যাক SaaS অ্যাপ্লিকেশন", href: "#services" },
-          { name: "ইউআই/ইউএক্স ও প্রোডাক্ট ডিজাইন", href: "#services" },
-          { name: "হেডলেস ই-কমার্স", href: "#services" },
-          { name: "ক্লাউড আর্কিটেকচার ও ডেভঅপ্স", href: "#services" },
-          { name: "২৪/৭ আইটি মেইনটেন্যান্স ও সাপোর্ট", href: "#services" },
-        ]
+        { name: "কাস্টম ওয়েব ডেভেলপমেন্ট", href: "#services" },
+        { name: "ফুল-স্ট্যাক SaaS অ্যাপ্লিকেশন", href: "#services" },
+        { name: "ইউআই/ইউএক্স ও প্রোডাক্ট ডিজাইন", href: "#services" },
+        { name: "হেডলেস ই-কমার্স", href: "#services" },
+        { name: "ক্লাউড আর্কিটেকচার ও ডেভঅপ্স", href: "#services" },
+        { name: "২৪/৭ আইটি মেইনটেন্যান্স ও সাপোর্ট", href: "#services" },
+      ]
       : [
-          { name: "Custom Web Development", href: "#services" },
-          { name: "Full-Stack SaaS Applications", href: "#services" },
-          { name: "UI/UX & Product Design", href: "#services" },
-          { name: "Headless E-Commerce", href: "#services" },
-          { name: "Cloud Architecture & DevOps", href: "#services" },
-          { name: "24/7 IT Maintenance & Support", href: "#services" },
-        ];
+        { name: "Custom Web Development", href: "#services" },
+        { name: "Full-Stack SaaS Applications", href: "#services" },
+        { name: "UI/UX & Product Design", href: "#services" },
+        { name: "Headless E-Commerce", href: "#services" },
+        { name: "Cloud Architecture & DevOps", href: "#services" },
+        { name: "24/7 IT Maintenance & Support", href: "#services" },
+      ];
 
   const companyLinks =
     language === "bn"
       ? [
-          { name: "এমটিএম টেক সম্পর্কে", href: "#about" },
-          { name: "গ্লোবাল ডেলিভারি নেটওয়ার্ক", href: "#about" },
-          { name: "বাছাইকৃত পোর্টফোলিও", href: "#portfolio" },
-          { name: "ক্লায়েন্ট রিভিউসমূহ", href: "#testimonials" },
-          { name: "প্রাইসিং ও প্যাকেজসমূহ", href: "#pricing" },
-          { name: "যোগাযোগ ও আলোচনা", href: "#contact" },
-        ]
+        { name: "এমটিএম টেক সম্পর্কে", href: "#about" },
+        { name: "গ্লোবাল ডেলিভারি নেটওয়ার্ক", href: "#about" },
+        { name: "বাছাইকৃত পোর্টফোলিও", href: "#portfolio" },
+        { name: "ক্লায়েন্ট রিভিউসমূহ", href: "#testimonials" },
+        { name: "প্রাইসিং ও প্যাকেজসমূহ", href: "#pricing" },
+        { name: "যোগাযোগ ও আলোচনা", href: "#contact" },
+      ]
       : [
-          { name: "About MTM Tech", href: "#about" },
-          { name: "Global Delivery Network", href: "#about" },
-          { name: "Featured Portfolio", href: "#portfolio" },
-          { name: "Client Testimonials", href: "#testimonials" },
-          { name: "Engagement Models & Pricing", href: "#pricing" },
-          { name: "Contact & Discovery", href: "#contact" },
-        ];
+        { name: "About MTM Tech", href: "#about" },
+        { name: "Global Delivery Network", href: "#about" },
+        { name: "Featured Portfolio", href: "#portfolio" },
+        { name: "Client Testimonials", href: "#testimonials" },
+        { name: "Engagement Models & Pricing", href: "#pricing" },
+        { name: "Contact & Discovery", href: "#contact" },
+      ];
 
   const standardsLinks =
     language === "bn"
       ? [
-          { name: "Next.js আর্কিটেকচার গাইড", href: "#home" },
-          { name: "এন্টারপ্রাইজ SOC2 ও সিকিউরিটি", href: "#about" },
-          { name: "কোর ওয়েব ভাইটালস অডিট", href: "#services" },
-          { name: "কোড মালিকানা ও NDA নীতিমালা", href: "#pricing" },
-          { name: "ক্লায়েন্ট পোর্টাল (লগইন)", href: "#contact" },
-        ]
+        { name: "Next.js আর্কিটেকচার গাইড", href: "#home" },
+        { name: "এন্টারপ্রাইজ SOC2 ও সিকিউরিটি", href: "#about" },
+        { name: "কোর ওয়েব ভাইটালস অডিট", href: "#services" },
+        { name: "কোড মালিকানা ও NDA নীতিমালা", href: "#pricing" },
+        { name: "ক্লায়েন্ট পোর্টাল (লগইন)", href: "#contact" },
+      ]
       : [
-          { name: "Next.js Architecture Guide", href: "#home" },
-          { name: "Enterprise SOC2 & Security", href: "#about" },
-          { name: "Core Web Vitals Audit", href: "#services" },
-          { name: "Code Ownership & NDA Terms", href: "#pricing" },
-          { name: "Client Portal (SSO Login)", href: "#contact" },
-        ];
+        { name: "Next.js Architecture Guide", href: "#home" },
+        { name: "Enterprise SOC2 & Security", href: "#about" },
+        { name: "Core Web Vitals Audit", href: "#services" },
+        { name: "Code Ownership & NDA Terms", href: "#pricing" },
+        { name: "Client Portal (SSO Login)", href: "#contact" },
+      ];
 
   return (
     <footer className="relative bg-[#080B12] border-t border-white/[0.08] text-slate-400 overflow-hidden">
@@ -125,12 +124,12 @@ export default function Footer() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-12">
-        
+
         {/* Top Newsletter & Architecture Subscription Box */}
         <div className="p-8 sm:p-10 rounded-3xl bg-white/[0.02] border border-white/[0.08] backdrop-blur-xl mb-16 flex flex-col lg:flex-row items-center justify-between gap-8">
           <div className="max-w-xl text-center lg:text-left">
             <div className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-[#00E5FF] mb-2">
-              <Sparkles className="w-3.5 h-3.5" />
+
               <span>{dict.footer.newsletterBadge}</span>
             </div>
             <h3 className="text-2xl font-bold text-white">
@@ -177,7 +176,7 @@ export default function Footer() {
 
         {/* 4-Column Main Footer Links */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 pb-16 border-b border-white/[0.08]">
-          
+
           {/* Brand Column (Span 2 on Large) */}
           <div className="lg:col-span-2 flex flex-col justify-between">
             <div>

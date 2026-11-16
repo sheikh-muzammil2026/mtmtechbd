@@ -33,7 +33,7 @@ export default function Services() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
           <motion.div
@@ -43,7 +43,7 @@ export default function Services() {
             transition={{ duration: 0.5 }}
             className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.03] border border-[#00E5FF]/30 backdrop-blur-md mb-4"
           >
-            <Sparkles className="w-3.5 h-3.5 text-[#00E5FF]" />
+
             <span className="text-xs font-semibold tracking-wider uppercase bg-gradient-to-r from-[#00E5FF] to-[#38bdf8] bg-clip-text text-transparent">
               {dict.services.badge}
             </span>

@@ -95,7 +95,7 @@ export default function Contact() {
             transition={{ duration: 0.5 }}
             className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.03] border border-[#00E5FF]/30 backdrop-blur-md mb-4"
           >
-            <Sparkles className="w-3.5 h-3.5 text-[#00E5FF]" />
+
             <span className="text-xs font-semibold tracking-wider uppercase bg-gradient-to-r from-[#00E5FF] to-[#38bdf8] bg-clip-text text-transparent">
               {dict.contact.badge}
             </span>
@@ -138,7 +138,7 @@ export default function Contact() {
             {/* Tagline Card */}
             <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/[0.08] backdrop-blur-xl">
               <div className="flex items-center gap-2 text-xs font-semibold text-[#00E5FF] mb-2">
-                <Sparkles className="w-3.5 h-3.5" />
+
                 <span>{dict.contact.promiseBadge}</span>
               </div>
               <h3 className="text-xl font-bold text-white tracking-tight">
@@ -161,10 +161,10 @@ export default function Contact() {
                       {dict.contact.directInquiries}
                     </div>
                     <a
-                      href="mailto:contact@mtmtechbd.com"
+                      href="mailto:mtmtechbd@gmail.com"
                       className="text-sm font-semibold text-white group-hover:text-[#00E5FF] transition-colors"
                     >
-                      contact@mtmtechbd.com
+                      mtmtechbd@gmail.com
                     </a>
                   </div>
                 </div>
@@ -194,10 +194,10 @@ export default function Contact() {
                       {dict.contact.technicalAdvisory}
                     </div>
                     <a
-                      href="tel:+8801700000000"
+                      href="tel:+8801836376174"
                       className="text-sm font-semibold text-white group-hover:text-[#00E5FF] transition-colors"
                     >
-                      +880 (17) 0000-0000
+                      +880 (18) 3637-6174
                     </a>
                   </div>
                 </div>
@@ -293,11 +293,10 @@ export default function Contact() {
                               key={srv.en}
                               type="button"
                               onClick={() => toggleService(srv.en)}
-                              className={`px-3.5 py-1.5 rounded-full text-xs font-medium transition-all ${
-                                isSelected
-                                  ? "bg-gradient-to-r from-[#00E5FF] to-[#0066FF] text-[#0B0E17] font-semibold shadow-[0_0_12px_rgba(0,229,255,0.4)]"
-                                  : "bg-white/[0.03] text-slate-300 hover:text-white border border-white/[0.08] hover:border-white/[0.2]"
-                              }`}
+                              className={`px-3.5 py-1.5 rounded-full text-xs font-medium transition-all ${isSelected
+                                ? "bg-gradient-to-r from-[#00E5FF] to-[#0066FF] text-[#0B0E17] font-semibold shadow-[0_0_12px_rgba(0,229,255,0.4)]"
+                                : "bg-white/[0.03] text-slate-300 hover:text-white border border-white/[0.08] hover:border-white/[0.2]"
+                                }`}
                             >
                               {label}
                             </button>
@@ -319,11 +318,10 @@ export default function Contact() {
                               key={bgt}
                               type="button"
                               onClick={() => setSelectedBudget(bgt)}
-                              className={`py-2 px-3 rounded-xl text-xs font-semibold text-center transition-all ${
-                                isSelected
-                                  ? "bg-white text-[#0B0E17] shadow-[0_0_15px_rgba(255,255,255,0.3)]"
-                                  : "bg-white/[0.03] text-slate-300 hover:text-white border border-white/[0.08]"
-                              }`}
+                              className={`py-2 px-3 rounded-xl text-xs font-semibold text-center transition-all ${isSelected
+                                ? "bg-white text-[#0B0E17] shadow-[0_0_15px_rgba(255,255,255,0.3)]"
+                                : "bg-white/[0.03] text-slate-300 hover:text-white border border-white/[0.08]"
+                                }`}
                             >
                               {bgt}
                             </button>

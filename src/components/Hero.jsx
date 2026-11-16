@@ -90,7 +90,7 @@ export default function Hero() {
       {/* Dynamic Background Glows and Grid Pattern */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[850px] h-[550px] bg-gradient-to-b from-[#00E5FF]/15 via-[#0066FF]/10 to-transparent blur-[140px] rounded-full" />
-        <div 
+        <div
           className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#00E5FF_1px,transparent_1px)] [background-size:24px_24px]"
           aria-hidden="true"
         />
@@ -100,10 +100,10 @@ export default function Hero() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          
+
           {/* LEFT COLUMN: High-Converting Copy & CTAs */}
           <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left">
-            
+
             {/* Tagline / Announcement Pill */}
             <motion.div
               initial={{ opacity: 0, y: -16, scale: 0.96 }}
@@ -121,7 +121,7 @@ export default function Hero() {
               </span>
               <span className="text-white/20 text-xs">|</span>
               <span className="text-xs text-slate-300 font-medium flex items-center gap-1 group-hover:text-white transition-colors duration-300">
-                {dict.hero.badgeSub} <Sparkles className="w-3 h-3 text-[#00E5FF] group-hover:rotate-12 group-hover:scale-110 transition-transform duration-300" />
+                {dict.hero.badgeSub}
               </span>
             </motion.div>
 
@@ -216,7 +216,7 @@ export default function Hero() {
 
           {/* RIGHT COLUMN: Modern Interactive Visual Element (Tech Architecture & Live Metrics) */}
           <div className="lg:col-span-5 relative flex items-center justify-center">
-            
+
             <div className="absolute inset-0 bg-gradient-to-tr from-[#00E5FF]/20 via-[#0066FF]/20 to-transparent rounded-3xl blur-2xl transform -rotate-3 scale-95 pointer-events-none group-hover:scale-105 transition-transform duration-700" />
 
             {/* Terminal Window */}
@@ -333,35 +333,7 @@ export default function Hero() {
 
         </div>
 
-        {/* BOTTOM STATS COUNTER STRIP */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-20 pt-10 border-t border-white/[0.08]"
-        >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
-            {dict.hero.stats.map((stat, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 22 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.55, delay: 0.45 + idx * 0.09, ease: [0.16, 1, 0.3, 1] }}
-                className="relative flex flex-col p-4 rounded-xl bg-white/[0.02] border border-white/[0.04] hover:border-[#00E5FF]/40 hover:shadow-[0_0_25px_rgba(0,229,255,0.2)] hover:scale-[1.03] backdrop-blur-xl transition-all duration-300 group cursor-default"
-              >
-                <div className="text-3xl sm:text-4xl lg:text-5xl font-extrabold bg-gradient-to-r from-white via-slate-100 to-[#00E5FF] bg-clip-text text-transparent group-hover:drop-shadow-[0_0_20px_rgba(0,229,255,0.5)] transition-all duration-300">
-                  <AnimatedStatValue value={stat.value} />
-                </div>
-                <div className="text-sm font-semibold text-white mt-1">
-                  {stat.label}
-                </div>
-                <div className="text-xs text-slate-400 mt-0.5">
-                  {stat.sub}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+
 
       </div>
     </section>
