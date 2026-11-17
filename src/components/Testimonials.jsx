@@ -10,97 +10,122 @@ import {
   Sparkles,
 } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
+import StarfieldBackground from "@/components/shared/StarfieldBackground";
 
 const BASE_TESTIMONIALS = [
   {
     id: 1,
-    name: "Alexander Wright",
-    roleEn: "Chief Technology Officer",
-    roleBn: "চিফ টেকনোলজি অফিসার (CTO)",
-    company: "FinVantage",
-    locationEn: "New York, USA",
-    locationBn: "নিউ ইয়র্ক, যুক্তরাষ্ট্র",
-    projectEn: "Financial Analytics & Real-Time Charts",
-    projectBn: "অ্যানালিটিক্স ড্যাশবোর্ড ও রিয়েল-টাইম চার্ট",
+    name: "Prof. M. A. Karim",
+    roleEn: "Principal",
+    roleBn: "অধ্যক্ষ",
+    roleAr: "مدير الكلية",
+    company: "Ideal Model College",
+    locationEn: "Dhaka, Bangladesh",
+    locationBn: "ঢাকা, বাংলাদেশ",
+    locationAr: "دكا، بنغلاديش",
+    projectEn: "Campus ERP & Result Automation",
+    projectBn: "ক্যাম্পাস ইআরপি ও রেজাল্ট অটোমেশন",
+    projectAr: "نظام إدارة الكلية وأتمتة النتائج",
     rating: 5,
-    highlightEn: "Saved us months of engineering time.",
-    highlightBn: "আমাদের কয়েক মাসের মূল্যবান সময় সাশ্রয় করেছে।",
+    highlightEn: "Exam result publication is now 100% error-free.",
+    highlightBn: "পরীক্ষার ফলাফল ও মার্কশিট এখন শতভাগ নির্ভুল।",
+    highlightAr: "إعلان نتائج الامتحانات والشهادات أصبح دقيقاً وبلا أخطاء.",
     contentEn:
-      "MTM Tech proved to be a reliable engineering partner. Their understanding of Next.js architecture and database query tuning helped us launch our trading analytics dashboard on schedule. Clean code and responsive communication throughout.",
+      "Before MTM Tech BD's ERP, compiling tabulation sheets and publishable marksheets for over 1,500 students took our teachers weeks of overtime. Now, marks are calculated automatically with GPA rules, and parents can check results online instantly.",
     contentBn:
-      "এমটিএম টেক অত্যন্ত নির্ভরযোগ্য একটি ইঞ্জিনিয়ারিং পার্টনার। Next.js আর্কিটেকচার ও ডাটাবেস টিউনিংয়ে তাদের দক্ষতার কারণে আমরা সময়মতো আমাদের অ্যানালিটিক্স ড্যাশবোর্ড লঞ্চ করতে পেরেছি। শুরু থেকেই যোগাযোগ ছিল অত্যন্ত মসৃণ।",
-    avatarInitial: "AW",
+      "এমটিএম টেকের ইআরপি ব্যবহারের পূর্বে দেড় হাজার শিক্ষার্থীর টেবুলেশন ও মার্কশিট প্রস্তুত করতে শিক্ষকদের কয়েক সপ্তাহ হিমশিম খেতে হতো। এখন স্বয়ংক্রিয় জিপিএ নিয়মে ফলাফল প্রস্তুত হয় এবং অভিভাবকরা তাৎক্ষণিক অনলাইনে রেজাল্ট দেখতে পান।",
+    contentAr:
+      "قبل تطبيق نظام MTM Tech BD، كان تجميع كشوف الدرجات والشهادات لأكثر من 1500 طالب يستغرق أسابيع من الإرهاق للمعلمين. الآن يتم احتساب المعدلات التراكمية تلقائياً ويطّلع أولياء الأمور على النتائج إلكترونياً وفورياً.",
+    avatarInitial: "MK",
     accent: "from-[#00E5FF] to-[#0066FF]",
   },
   {
     id: 2,
-    name: "Elena Rostova",
-    roleEn: "Head of Digital",
-    roleBn: "হেড অফ ডিজিটাল",
-    company: "Aura Luxe",
-    locationEn: "London, UK",
-    locationBn: "লন্ডন, যুক্তরাজ্য",
-    projectEn: "Headless E-Commerce Storefront",
-    projectBn: "হেডলেস ই-কমার্স স্টোরফ্রন্ট",
+    name: "Mawlana Abdur Rahman",
+    roleEn: "Principal / Muhtamim",
+    roleBn: "অধ্যক্ষ ও মুহতামিম",
+    roleAr: "المدير العام والمهتمم",
+    company: "AIM Habiganj & Purbachal",
+    locationEn: "Sylhet & Dhaka",
+    locationBn: "সিলেট ও ঢাকা",
+    locationAr: "سيلهيت ودكا",
+    projectEn: "Complete Institutional ERP & Accounts",
+    projectBn: "সম্পূর্ণ প্রাতিষ্ঠানিক ইআরপি ও হিসাব ব্যবস্থা",
+    projectAr: "نظام المؤسسة الشامل والمحاسبة",
     rating: 5,
-    highlightEn: "Instant page loads and smoother checkout.",
-    highlightBn: "ইন্সট্যান্ট পেজ লোড ও মসৃণ চেকআউট।",
+    highlightEn: "Complete financial clarity with automated monthly vouchers.",
+    highlightBn: "মাসিক ফি ভাউচার ও প্রতিষ্ঠানের হিসাবে সম্পূর্ণ স্বচ্ছতা এসেছে।",
+    highlightAr: "وضوح مالي تام مع فواتير الرسوم الشهرية التلقائية.",
     contentEn:
-      "The team re-built our storefront as a headless Next.js application with instant route transitions. Our mobile checkout drop-off dropped noticeably within the first month. They are fast, thoughtful, and communicative.",
+      "Managing boarding fees, kitchen dining accounts, and teacher payroll across multiple branches used to be overwhelming. The software's double-entry accounting and fee vouchers give our management committee complete peace of mind.",
     contentBn:
-      "আমাদের স্টোরফ্রন্টকে হেডলেস Next.js অ্যাপ্লিকেশনে রূপান্তর করার পর থেকেই পেজ ট্রানজিশন অবিশ্বাস্য দ্রুত হয়েছে এবং মোবাইল চেকআউট ড্রপ-অফ উল্লেখযোগ্যভাবে হ্রাস পেয়েছে। তারা খুবই দক্ষ ও পেশাদার।",
-    avatarInitial: "ER",
+      "একাধিক শাখার বোর্ডিং ফি, মেস হিসাব ও শিক্ষক-স্টাফদের বেতন সামলানো আমাদের জন্য অনেক কঠিন ছিল। সফটওয়্যারটির ডাবল-এন্ট্রি হিসাব ও ভাউচার ব্যবস্থার ফলে আমাদের পরিচালনা কমিটির কাছে প্রতিটি হিসাব অত্যন্ত স্বচ্ছ।",
+    contentAr:
+      "كانت إدارة رسوم الإقامة وسكن الطلاب وحسابات الإطعام ومسيرات رواتب المعلمين عبر فروع متعددة مهمة شاقة. نظام المحاسبة المزدوج وقسائم الرسوم التلقائية وفّرا للجنة الإدارة شفافية تامة وراحة بال.",
+    avatarInitial: "AR",
     accent: "from-[#0066FF] to-[#38bdf8]",
   },
   {
     id: 3,
-    name: "Marcus Chen",
-    roleEn: "Founder & CEO",
-    roleBn: "ফাউন্ডার ও সিইও",
-    company: "Nexus Systems",
-    locationEn: "Singapore",
-    locationBn: "সিঙ্গাপুর",
-    projectEn: "Cloud Operations Hub & Docs",
-    projectBn: "ক্লাউড হাব ও ডেভেলপার পোর্টাল",
+    name: "Engr. Tariqul Islam",
+    roleEn: "Chairman, Governing Body",
+    roleBn: "চেয়ারম্যান, গভর্নিং বডি",
+    roleAr: "رئيس مجلس الإدارة",
+    company: "Al-Hikmah Academy",
+    locationEn: "Chittagong",
+    locationBn: "চট্টগ্রাম",
+    locationAr: "تشيتاغونغ",
+    projectEn: "Online Admission & Multi-Branch Management",
+    projectBn: "অনলাইন ভর্তি ও শাখা ব্যবস্থাপনা",
+    projectAr: "القبول الإلكتروني وإدارة الفروع",
     rating: 5,
-    highlightEn: "Direct communication and zero technical debt.",
-    highlightBn: "সরাসরি যোগাযোগ ও পরিচ্ছন্ন কোডবেস।",
+    highlightEn: "Admissions increased by 40% with the modern online portal.",
+    highlightBn: "অনলাইন পোর্টালের মাধ্যমে আমাদের ভর্তি কার্যক্রম ৪০% বৃদ্ধি পেয়েছে।",
+    highlightAr: "زادت طلبات التسجيل والقبول بنسبة 40% بفضل البوابة الرقمية الحديثة.",
     contentEn:
-      "Working with MTM Tech felt like having senior engineers sitting right next to us. They attend our weekly sprint reviews, suggest practical architecture fixes, and write clean, modular TypeScript code.",
+      "Parents can now submit admission forms, upload student photos, and pay registration fees directly from their mobile phones. The admin panel makes reviewing applications and generating admit cards remarkably straightforward.",
     contentBn:
-      "এমটিএম টেকের সাথে কাজ করা খুবই সহজ। তারা আমাদের সাথে সরাসরি যোগাযোগ রাখে, বাস্তবসম্মত সমাধান দেয় এবং সহজে মেইনটেইন করার মতো মডুলার কোড ডেলিভারি করে।",
-    avatarInitial: "MC",
+      "অভিভাবকরা এখন ঘরে বসেই মোবাইল ফোনের মাধ্যমে ভর্তি ফরম পূরণ, ছবি আপলোড ও ফি পরিশোধ করতে পারেন। অ্যাডমিন প্যানেল থেকে আবেদন যাচাই ও প্রবেশপত্র তৈরি করা অত্যন্ত সহজ হয়ে গেছে।",
+    contentAr:
+      "يستطيع أولياء الأمور الآن تقديم طلبات الالتحاق ورفع المستندات ودفع رسوم التسجيل مباشرة من هواتفهم. كما أصبحت مراجعة الطلبات وإصدار بطاقات الاختبار أمراً في غاية السهولة للموظفين.",
+    avatarInitial: "TI",
     accent: "from-[#00E5FF] to-[#38bdf8]",
   },
   {
     id: 4,
-    name: "Dr. Sarah Jenkins",
-    roleEn: "VP of Engineering",
-    roleBn: "ভিপি অফ ইঞ্জিনিয়ারিং",
-    company: "MedixCore",
-    locationEn: "Toronto, Canada",
-    locationBn: "টরন্টো, কানাডা",
-    projectEn: "Telehealth Web Portal",
-    projectBn: "টেলিহেলথ ওয়েব পোর্টাল",
+    name: "Dr. Farhana Ahmed",
+    roleEn: "Academic Director",
+    roleBn: "একাডেমিক ডিরেক্টর",
+    roleAr: "المدير الأكاديمي",
+    company: "Global Learners Academy",
+    locationEn: "Dhaka",
+    locationBn: "ঢাকা",
+    locationAr: "دكا",
+    projectEn: "Integrated LMS & Guardian Portal",
+    projectBn: "ইন্টিগ্রেটেড এলএমএস ও অভিভাবক পোর্টাল",
+    projectAr: "منصة التعلم المدمجة وبوابة أولياء الأمور",
     rating: 5,
-    highlightEn: "Passed strict penetration audits on the first run.",
-    highlightBn: "প্রথমবারেই সকল সিকিউরিটি অডিটে সফল।",
+    highlightEn: "Guardian engagement and attendance tracking are effortless.",
+    highlightBn: "অভিভাবকদের সাথে সংযোগ ও শিক্ষার্থীদের উপস্থিতি ট্র্যাকিং সহজ হয়েছে।",
+    highlightAr: "تواصل استثنائي مع أولياء الأمور ومتابعة يومية دقيقة لحضور الطلاب.",
     contentEn:
-      "Security and reliable uptime were our primary concerns for telehealth. MTM Tech designed our web portal with end-to-end encryption and clean role-based permissions, clearing our third-party security audit smoothly.",
+      "The automated SMS system alerts parents immediately when their child arrives at campus or is marked absent. Homework updates and exam notices reach guardians in real-time, drastically reducing office inquiry calls.",
     contentBn:
-      "আমাদের স্বাস্থ্যসেবা পোর্টালে নিরাপত্তা ও আপটাইম ছিল সর্বোচ্চ অগ্রাধিকার। এমটিএম টেক শুরু থেকেই সুরক্ষিত আর্কিটেকচার গড়ে তোলে, যা সহজেই আমাদের সিকিউরিটি অডিটে উত্তীর্ণ হয়েছে।",
-    avatarInitial: "SJ",
+      "শিক্ষার্থী প্রতিষ্ঠানে উপস্থিত হলে বা অনুপস্থিত থাকলে অভিভাবকের ফোনে সাথে সাথে স্বয়ংক্রিয় SMS চলে যায়। হোমওয়ার্ক ও পরীক্ষার নোটিশ রিয়েল-টাইমে পৌঁছানোর ফলে অফিসে অভিভাবকদের ফোন কলের চাপ অনেকটাই কমেছে।",
+    contentAr:
+      "يقوم النظام التلقائي بإرسال رسائل SMS فورية لأولياء الأمور بمجرد وصول الطالب أو تسجيل غيابه. كما تصل الواجبات المدرسية ومواعيد الاختبارات في الوقت الفعلي، مما وفر الكثير من الاستفسارات المتكررة.",
+    avatarInitial: "FA",
     accent: "from-[#38bdf8] to-[#0066FF]",
   },
 ];
 
 const TRUST_BRANDS = [
-  "FINVANTAGE",
-  "AURA LUXE",
-  "NEXUS CLOUD",
-  "MEDIXCORE",
-  "PULSEFLOW",
-  "VERTEX PROP",
+  "AIM EDUCATIONAL ERP",
+  "IDEAL MODEL COLLEGE",
+  "AL-HIKMAH ACADEMY",
+  "MEDIQUEUE EDTECH",
+  "GLOBAL LEARNERS",
+  "DARUL ULOOM",
 ];
 
 export default function Testimonials() {
@@ -129,25 +154,46 @@ export default function Testimonials() {
   };
 
   const current = BASE_TESTIMONIALS[currentIndex];
-  const role = language === "bn" ? current.roleBn : current.roleEn;
-  const location = language === "bn" ? current.locationBn : current.locationEn;
-  const project = language === "bn" ? current.projectBn : current.projectEn;
-  const highlight = language === "bn" ? current.highlightBn : current.highlightEn;
-  const content = language === "bn" ? current.contentBn : current.contentEn;
+  const role =
+    language === "ar"
+      ? current.roleAr
+      : language === "bn"
+      ? current.roleBn
+      : current.roleEn;
+  const location =
+    language === "ar"
+      ? current.locationAr
+      : language === "bn"
+      ? current.locationBn
+      : current.locationEn;
+  const project =
+    language === "ar"
+      ? current.projectAr
+      : language === "bn"
+      ? current.projectBn
+      : current.projectEn;
+  const highlight =
+    language === "ar"
+      ? current.highlightAr
+      : language === "bn"
+      ? current.highlightBn
+      : current.highlightEn;
+  const content =
+    language === "ar"
+      ? current.contentAr
+      : language === "bn"
+      ? current.contentBn
+      : current.contentEn;
 
   return (
     <section
       id="testimonials"
-      className="relative py-28 sm:py-32 bg-[#0B0E17] overflow-hidden"
+      className="relative py-28 sm:py-32 bg-gradient-to-b from-[#070B14] via-[#0B162C]/60 to-[#070B14] overflow-hidden"
     >
-      {/* Ambient Lighting */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/3 -left-48 w-96 h-96 bg-[#0066FF]/10 rounded-full blur-[160px]" />
-        <div className="absolute bottom-1/3 -right-48 w-96 h-96 bg-[#00E5FF]/10 rounded-full blur-[160px]" />
-      </div>
+      {/* Background Aurora Glows, Blueprint Grid & Starfield */}
+      <StarfieldBackground glowPosition="left" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
         {/* Section Header */}
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
           <motion.div
@@ -195,14 +241,17 @@ export default function Testimonials() {
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="mt-16 max-w-4xl mx-auto"
         >
-          <div className="relative rounded-3xl bg-white/[0.02] border border-white/[0.08] p-8 sm:p-12 backdrop-blur-2xl shadow-[0_20px_60px_rgba(0,0,0,0.7)] overflow-hidden">
+          <div className="relative rounded-3xl bg-[#111C33]/80 border border-white/[0.08] p-8 sm:p-12 backdrop-blur-md shadow-[0_20px_60px_rgba(0,0,0,0.7)] overflow-hidden">
             <div className="absolute -top-24 -right-24 w-64 h-64 bg-[#00E5FF]/10 rounded-full blur-3xl pointer-events-none" />
 
             {/* Top Row: Stars + Project Tag */}
             <div className="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/[0.06]">
               <div className="flex items-center gap-1.5 text-amber-400">
                 {[...Array(current.rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400" />
+                  <Star
+                    key={i}
+                    className="w-5 h-5 fill-amber-400 text-amber-400"
+                  />
                 ))}
                 <span className="ml-2 text-xs font-bold text-white tracking-wider">
                   {dict.testimonials.verifiedRating}
@@ -251,16 +300,14 @@ export default function Testimonials() {
                     {current.name}
                   </h4>
                   <div className="text-xs text-slate-400">
-                    <span className="text-slate-300 font-medium">
-                      {role}
-                    </span>{" "}
+                    <span className="text-slate-300 font-medium">{role}</span>{" "}
                     • {current.company} ({location})
                   </div>
                 </div>
               </div>
 
               {/* Slider Arrows & Indicators */}
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3" dir="ltr">
                 <div className="flex gap-1.5 mr-2">
                   {BASE_TESTIMONIALS.map((_, idx) => (
                     <button
@@ -297,9 +344,7 @@ export default function Testimonials() {
                   <ChevronRight className="w-5 h-5" />
                 </button>
               </div>
-
             </div>
-
           </div>
         </motion.div>
 
@@ -320,7 +365,6 @@ export default function Testimonials() {
             ))}
           </div>
         </div>
-
       </div>
     </section>
   );

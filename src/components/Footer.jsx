@@ -35,10 +35,18 @@ function TwitterXIcon({ className = "w-4 h-4" }) {
 }
 
 const SOCIALS = [
-  { name: "LinkedIn", icon: LinkedinIcon, href: "https://www.linkedin.com/in/sheikh-muzammil-dev" },
-  { name: "GitHub", icon: GithubIcon, href: "https://github.com/sheikh-muzammil2026" },
+  {
+    name: "LinkedIn",
+    icon: LinkedinIcon,
+    href: "https://www.linkedin.com/in/sheikh-muzammil-dev",
+  },
+  {
+    name: "GitHub",
+    icon: GithubIcon,
+    href: "https://github.com/sheikh-muzammil2026",
+  },
   { name: "Twitter / X", icon: TwitterXIcon, href: "https://x.com" },
-  { name: "Email", icon: Mail, href: "mailto:mtmtechbd@gmail.com" },
+  { name: "Email", icon: Mail, href: "mailto:contact@mtmtechbd.com" },
 ];
 
 export default function Footer() {
@@ -62,74 +70,101 @@ export default function Footer() {
   };
 
   const servicesLinks =
-    language === "bn"
+    language === "ar"
       ? [
-        { name: "কাস্টম ওয়েব ডেভেলপমেন্ট", href: "#services" },
-        { name: "ফুল-স্ট্যাক SaaS অ্যাপ্লিকেশন", href: "#services" },
-        { name: "ইউআই/ইউএক্স ও প্রোডাক্ট ডিজাইন", href: "#services" },
-        { name: "হেডলেস ই-কমার্স", href: "#services" },
-        { name: "ক্লাউড আর্কিটেকচার ও ডেভঅপ্স", href: "#services" },
-        { name: "২৪/৭ আইটি মেইনটেন্যান্স ও সাপোর্ট", href: "#services" },
-      ]
+          { name: "نظام الحرم المدرسي وسجلات الطلاب", href: "#services" },
+          { name: "محاسبة المؤسسة المزدوجة وقسائم الرسوم", href: "#services" },
+          { name: "أتمتة النتائج وجداول الدرجات", href: "#services" },
+          { name: "سجل الحضور ورسائل SMS لأولياء الأمور", href: "#services" },
+          { name: "إدارة السكن الداخلي والإطعام", href: "#services" },
+          { name: "الموقع المؤسسي ومنصة التعلم الرقمي", href: "#services" },
+        ]
+      : language === "bn"
+      ? [
+          { name: "ক্যাম্পাস ইআরপি ও ছাত্র ডাটাবেস", href: "#services" },
+          { name: "ডাবল-এন্ট্রি প্রাতিষ্ঠানিক হিসাব", href: "#services" },
+          { name: "স্বয়ংক্রিয় রেজাল্ট ও মার্কশিট", href: "#services" },
+          { name: "বায়োমেট্রিক হাজিরা ও SMS অ্যালার্ট", href: "#services" },
+          { name: "বোর্ডিং, হোস্টেল ও মেস হিসাব", href: "#services" },
+          { name: "প্রতিষ্ঠানের ওয়েবসাইট ও অনলাইন এলএমএস", href: "#services" },
+        ]
       : [
-        { name: "Custom Web Development", href: "#services" },
-        { name: "Full-Stack SaaS Applications", href: "#services" },
-        { name: "UI/UX & Product Design", href: "#services" },
-        { name: "Headless E-Commerce", href: "#services" },
-        { name: "Cloud Architecture & DevOps", href: "#services" },
-        { name: "24/7 IT Maintenance & Support", href: "#services" },
-      ];
+          { name: "Campus ERP & Student Records", href: "#services" },
+          { name: "Double-Entry Tuition Accounting", href: "#services" },
+          { name: "Automated Result & Marksheets", href: "#services" },
+          { name: "Attendance Sync & Guardian SMS", href: "#services" },
+          { name: "Boarding & Hostel Mess Manager", href: "#services" },
+          { name: "Official Web Portal & LMS", href: "#services" },
+        ];
 
   const companyLinks =
-    language === "bn"
+    language === "ar"
       ? [
-        { name: "এমটিএম টেক সম্পর্কে", href: "#about" },
-        { name: "গ্লোবাল ডেলিভারি নেটওয়ার্ক", href: "#about" },
-        { name: "বাছাইকৃত পোর্টফোলিও", href: "#portfolio" },
-        { name: "ক্লায়েন্ট রিভিউসমূহ", href: "#testimonials" },
-        { name: "প্রাইসিং ও প্যাকেজসমূহ", href: "#pricing" },
-        { name: "যোগাযোগ ও আলোচনা", href: "#contact" },
-      ]
+          { name: "عن MTM Tech BD", href: "#about" },
+          { name: "الفروع والمؤسسات النشطة", href: "#about" },
+          { name: "المشاريع المنفذة والناجحة", href: "#portfolio" },
+          { name: "آراء القيادات التعليمية", href: "#testimonials" },
+          { name: "باقات وأسعار الأنظمة", href: "#pricing" },
+          { name: "طلب عرض توضيحي مباشر", href: "#contact" },
+        ]
+      : language === "bn"
+      ? [
+          { name: "এমটিএম টেক বিডি সম্পর্কে", href: "#about" },
+          { name: "আঞ্চলিক ক্যাম্পাস ডিপ্লয়মেন্ট", href: "#about" },
+          { name: "বাস্তবায়িত সফল প্রজেক্টসমূহ", href: "#portfolio" },
+          { name: "সম্মানিত অধ্যক্ষদের মূল্যায়ন", href: "#testimonials" },
+          { name: "প্যাকেজ ও সাশ্রয়ী মূল্যতালিকা", href: "#pricing" },
+          { name: "সরাসরি ডেমো প্রদর্শনের অনুরোধ", href: "#contact" },
+        ]
       : [
-        { name: "About MTM Tech", href: "#about" },
-        { name: "Global Delivery Network", href: "#about" },
-        { name: "Featured Portfolio", href: "#portfolio" },
-        { name: "Client Testimonials", href: "#testimonials" },
-        { name: "Engagement Models & Pricing", href: "#pricing" },
-        { name: "Contact & Discovery", href: "#contact" },
-      ];
+          { name: "About MTM Tech BD", href: "#about" },
+          { name: "Regional Campus Deployments", href: "#about" },
+          { name: "Featured Production Projects", href: "#portfolio" },
+          { name: "Institutional Reviews", href: "#testimonials" },
+          { name: "Campus ERP Pricing Plans", href: "#pricing" },
+          { name: "Request Live Institution Demo", href: "#contact" },
+        ];
 
   const standardsLinks =
-    language === "bn"
+    language === "ar"
       ? [
-        { name: "Next.js আর্কিটেকচার গাইড", href: "#home" },
-        { name: "এন্টারপ্রাইজ SOC2 ও সিকিউরিটি", href: "#about" },
-        { name: "কোর ওয়েব ভাইটালস অডিট", href: "#services" },
-        { name: "কোড মালিকানা ও NDA নীতিমালা", href: "#pricing" },
-        { name: "ক্লায়েন্ট পোর্টাল (লগইন)", href: "#contact" },
-      ]
+          { name: "بنية Next.js السحابية للمؤسسات", href: "#home" },
+          { name: "حماية البيانات وسرية السجلات", href: "#about" },
+          { name: "النسخ الاحتياطي السحابي اليومي", href: "#services" },
+          { name: "إدارة الفروع والأفواج المتعددة", href: "#pricing" },
+          { name: "بوابة الإدارة ومديري الفروع", href: "#contact" },
+        ]
+      : language === "bn"
+      ? [
+          { name: "Next.js ক্যাম্পাস আর্কিটেকচার", href: "#home" },
+          { name: "তথ্য সুরক্ষা ও প্রাতিষ্ঠানিক চুক্তি", href: "#about" },
+          { name: "দৈনিক ক্লাউড ব্যাকআপ ও রিকভারি", href: "#services" },
+          { name: "মাল্টি-শিফট ও ব্রাঞ্চ ব্যবস্থাপনা", href: "#pricing" },
+          { name: "প্রিন্সিপাল ও অ্যাডমিন ড্যাশবোর্ড", href: "#contact" },
+        ]
       : [
-        { name: "Next.js Architecture Guide", href: "#home" },
-        { name: "Enterprise SOC2 & Security", href: "#about" },
-        { name: "Core Web Vitals Audit", href: "#services" },
-        { name: "Code Ownership & NDA Terms", href: "#pricing" },
-        { name: "Client Portal (SSO Login)", href: "#contact" },
-      ];
+          { name: "Next.js Campus Architecture", href: "#home" },
+          { name: "Data Privacy & Institutional NDA", href: "#about" },
+          { name: "Automated Cloud Backups & Recovery", href: "#services" },
+          { name: "Multi-Shift & Branch Hierarchy", href: "#pricing" },
+          { name: "Principal & Admin Portal", href: "#contact" },
+        ];
 
   return (
-    <footer className="relative bg-[#080B12] border-t border-white/[0.08] text-slate-400 overflow-hidden">
+    <footer className="relative bg-[#060911] border-t border-white/[0.08] text-slate-400 overflow-hidden">
+      {/* Top Ambient Glow Line */}
+      <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-cyan-400/40 to-transparent pointer-events-none" />
+
       {/* Ambient Lighting at Base */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[700px] h-[250px] bg-gradient-to-b from-[#00E5FF]/10 via-[#0066FF]/5 to-transparent blur-[120px] rounded-full" />
+        <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[700px] h-[250px] bg-gradient-to-b from-cyan-500/10 via-indigo-500/5 to-transparent blur-[120px] rounded-full" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-12">
-
         {/* Top Newsletter & Architecture Subscription Box */}
-        <div className="p-8 sm:p-10 rounded-3xl bg-white/[0.02] border border-white/[0.08] backdrop-blur-xl mb-16 flex flex-col lg:flex-row items-center justify-between gap-8">
+        <div className="p-8 sm:p-10 rounded-3xl bg-[#0F1B33]/80 border border-white/[0.08] backdrop-blur-md mb-16 flex flex-col lg:flex-row items-center justify-between gap-8 shadow-[0_15px_40px_rgba(0,0,0,0.4)]">
           <div className="max-w-xl text-center lg:text-left">
-            <div className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-[#00E5FF] mb-2">
-
+            <div className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-cyan-400 mb-2">
               <span>{dict.footer.newsletterBadge}</span>
             </div>
             <h3 className="text-2xl font-bold text-white">
@@ -150,14 +185,15 @@ export default function Footer() {
               value={newsletterEmail}
               onChange={(e) => setNewsletterEmail(e.target.value)}
               placeholder={dict.footer.newsletterPlaceholder}
-              className="w-full sm:w-80 px-4 py-3 rounded-full bg-white/[0.04] border border-white/[0.1] text-white placeholder-slate-500 text-sm focus:outline-none focus:border-[#00E5FF] transition-colors"
+              className="w-full sm:w-80 px-4 py-3 rounded-full bg-[#070D1A] border border-white/10 text-white placeholder-slate-400 text-sm focus:outline-none focus:border-cyan-400 transition-colors"
+              dir="ltr"
             />
             <button
               type="submit"
-              className="w-full sm:w-auto relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-semibold rounded-full group focus:outline-none shrink-0"
+              className="w-full sm:w-auto relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-semibold rounded-full group focus:outline-none shrink-0 cursor-pointer"
             >
-              <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-[#00E5FF] to-[#0066FF] rounded-full filter blur-[4px] opacity-75 group-hover:opacity-100 transition-opacity" />
-              <span className="relative flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-[#00E5FF] to-[#0066FF] text-[#0B0E17] font-bold text-sm tracking-wide transition-all group-hover:brightness-110 active:scale-95 shadow-[0_0_15px_rgba(0,229,255,0.4)]">
+              <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-cyan-400 to-indigo-500 rounded-full filter blur-[4px] opacity-75 group-hover:opacity-100 transition-opacity" />
+              <span className="relative flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-cyan-400 to-indigo-500 text-[#070B14] font-bold text-sm tracking-wide transition-all group-hover:brightness-110 active:scale-95 shadow-[0_0_15px_rgba(6,182,212,0.4)]">
                 {subscribed ? (
                   <>
                     <CheckCircle2 className="w-4 h-4" />
@@ -176,26 +212,25 @@ export default function Footer() {
 
         {/* 4-Column Main Footer Links */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 pb-16 border-b border-white/[0.08]">
-
           {/* Brand Column (Span 2 on Large) */}
           <div className="lg:col-span-2 flex flex-col justify-between">
             <div>
               {/* Brand Logo & Name */}
               <Link href="#home" className="flex items-center gap-3 group">
-                <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-[#00E5FF] to-[#0066FF] p-[1.5px] transition-transform duration-300 group-hover:scale-105">
-                  <div className="w-full h-full bg-[#0B0E17] rounded-[10px] flex items-center justify-center">
-                    <span className="font-extrabold text-base tracking-wider bg-gradient-to-r from-[#00E5FF] to-[#0066FF] bg-clip-text text-transparent">
+                <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-400 to-indigo-500 p-[1.5px] transition-transform duration-300 group-hover:scale-105">
+                  <div className="w-full h-full bg-[#0B162C] rounded-[10px] flex items-center justify-center">
+                    <span className="font-extrabold text-base tracking-wider bg-gradient-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent">
                       M
                     </span>
                   </div>
                 </div>
 
                 <div className="flex flex-col">
-                  <div className="flex items-center gap-1.5">
+                  <div className="flex items-center gap-1.5" dir="ltr">
                     <span className="text-xl font-bold tracking-tight text-white">
                       MTM
                     </span>
-                    <span className="text-xl font-extrabold tracking-tight bg-gradient-to-r from-[#00E5FF] to-[#0066FF] bg-clip-text text-transparent">
+                    <span className="text-xl font-extrabold tracking-tight bg-gradient-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent">
                       TECH
                     </span>
                   </div>
@@ -215,12 +250,14 @@ export default function Footer() {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
                 </span>
-                <span className="font-mono">{dict.footer.operationalStatus}</span>
+                <span className="font-mono">
+                  {dict.footer.operationalStatus}
+                </span>
               </div>
             </div>
 
             {/* Social Channels */}
-            <div className="mt-8 flex items-center gap-3">
+            <div className="mt-8 flex items-center gap-3" dir="ltr">
               {SOCIALS.map((soc) => {
                 const IconComponent = soc.icon;
                 return (
@@ -229,7 +266,7 @@ export default function Footer() {
                     href={soc.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2.5 rounded-xl bg-white/[0.03] hover:bg-white/[0.08] border border-white/[0.08] hover:border-[#00E5FF]/40 text-slate-400 hover:text-[#00E5FF] transition-all"
+                    className="p-2.5 rounded-xl bg-white/[0.03] hover:bg-white/[0.08] border border-white/[0.08] hover:border-cyan-400/40 text-slate-400 hover:text-cyan-400 transition-all"
                     aria-label={soc.name}
                   >
                     <IconComponent className="w-4 h-4" />
@@ -249,7 +286,7 @@ export default function Footer() {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-slate-400 hover:text-[#00E5FF] transition-colors"
+                    className="text-slate-400 hover:text-cyan-400 transition-colors"
                   >
                     {item.name}
                   </Link>
@@ -268,7 +305,7 @@ export default function Footer() {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-slate-400 hover:text-[#00E5FF] transition-colors"
+                    className="text-slate-400 hover:text-cyan-400 transition-colors"
                   >
                     {item.name}
                   </Link>
@@ -287,7 +324,7 @@ export default function Footer() {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-slate-400 hover:text-[#00E5FF] transition-colors"
+                    className="text-slate-400 hover:text-cyan-400 transition-colors"
                   >
                     {item.name}
                   </Link>
@@ -295,7 +332,6 @@ export default function Footer() {
               ))}
             </ul>
           </div>
-
         </div>
 
         {/* Bottom Legal & Copyright Bar */}
@@ -305,23 +341,20 @@ export default function Footer() {
               &copy; {new Date().getFullYear()} {dict.footer.copyright}
             </span>
             <span className="hidden sm:inline text-white/20">•</span>
-            <span className="text-slate-400">
-              {dict.footer.builtWith}
-            </span>
+            <span className="text-slate-400">{dict.footer.builtWith}</span>
           </div>
 
           {/* Back to top button */}
           <button
             type="button"
             onClick={scrollToTop}
-            className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/[0.03] hover:bg-white/[0.08] border border-white/[0.08] hover:border-[#00E5FF]/40 text-slate-400 hover:text-white transition-all cursor-pointer"
+            className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/[0.03] hover:bg-white/[0.08] border border-white/[0.08] hover:border-cyan-400/40 text-slate-400 hover:text-white transition-all cursor-pointer"
             aria-label="Scroll to top"
           >
             <span>{dict.footer.backToTop}</span>
-            <ArrowUp className="w-3.5 h-3.5 text-[#00E5FF]" />
+            <ArrowUp className="w-3.5 h-3.5 text-cyan-400" />
           </button>
         </div>
-
       </div>
     </footer>
   );

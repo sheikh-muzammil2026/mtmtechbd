@@ -12,112 +12,160 @@ import {
   Lock,
 } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
+import StarfieldBackground from "@/components/shared/StarfieldBackground";
 
 const BASE_TIERS = [
   {
-    nameEn: "Modern Web Platform",
-    nameBn: "মডার্ন ওয়েব প্ল্যাটফর্ম",
+    nameEn: "Starter Portal & Results",
+    nameBn: "স্টার্টার পোর্টাল ও রেজাল্ট সিস্টেম",
+    nameAr: "بوابة البداية ونظام النتائج",
     taglineEn:
-      "For companies needing a fast, professional, and SEO-ready web presence.",
+      "Ideal for schools, madrasahs, and coaching centers seeking a fast, professional online presence and digital result publishing.",
     taglineBn:
-      "ব্যবসা ও স্টার্টআপের জন্য দ্রুতগতির, প্রফেশনাল ও আধুনিক ওয়েবসাইট।",
+      "যেসব স্কুল, মাদ্রাসা ও কোচিং সেন্টারের জন্য একটি আধুনিক ওয়েবসাইট ও অনলাইনে রেজাল্ট প্রকাশ প্রয়োজন।",
+    taglineAr:
+      "مثالية للمدارس والمعاهد ومراكز التعليم التي تحتاج موقعاً رسمياً ونظاماً رقمياً لنشر النتائج.",
     popular: false,
     projectPrice: "৳11,499",
     retainerPrice: "৳990",
-    periodEn: "single delivery",
-    periodBn: "এককালীন প্রজেক্ট",
+    periodEn: "single deployment",
+    periodBn: "এককালীন সেটআপ",
+    periodAr: "إعداد لمرة واحدة",
     retainerPeriodEn: "/ month",
     retainerPeriodBn: "/ প্রতি মাসে",
+    retainerPeriodAr: "/ شهرياً",
     featuresEn: [
-      "Custom Next.js 16 + Tailwind CSS build",
-      "95+ Google Lighthouse speed & Core Web Vitals",
-      "Headless CMS setup (Sanity / Strapi)",
-      "Technical SEO, sitemaps & OpenGraph metadata",
-      "Mobile-first responsive design",
-      "2 weeks post-launch technical warranty",
+      "Official institutional website (Bengali & English)",
+      "Online examination marksheet & result publishing",
+      "Notice board, event calendar & academic routines",
+      "Student admission inquiry & printable application form",
+      "Mobile-optimized responsive design & high-speed hosting",
+      "Staff orientation & 30 days technical support",
     ],
     featuresBn: [
-      "কাস্টম Next.js 16 ও Tailwind CSS কোডবেস",
-      "৯৫+ গুগল লাইটহাউস স্পিড ও কোর ওয়েব ভাইটালস",
-      "হেডলেস CMS সেটআপ (Sanity / Strapi)",
-      "টেকনিক্যাল এসইও ও মেটাডাটা অপ্টিমাইজেশন",
-      "মোবাইল-ফার্স্ট রেসপন্সিভ ডিজাইন",
-      "লঞ্চের পর ২ সপ্তাহের ফ্রি টেকনিক্যাল সাপোর্ট",
+      "প্রতিষ্ঠানের অফিসিয়াল দ্বিভাষিক ওয়েবসাইট (বাংলা ও ইংরেজি)",
+      "অনলাইনে পরীক্ষার রেজাল্ট ও মার্কশিট প্রকাশের ব্যবস্থা",
+      "ডিজিটাল নোটিশ বোর্ড, ক্লাস রুটিন ও অ্যাকাডেমিক ক্যালেন্ডার",
+      "ভর্তি তথ্য, অনলাইন আবেদন ও প্রিন্টযোগ্য ফরম",
+      "মোবাইল-বান্ধব রেসপন্সিভ ডিজাইন ও উচ্চগতির ক্লাউড হোস্টিং",
+      "স্টাফ ট্রেনিং ও ৩০ দিনের সম্পূর্ণ কারিগরি সহযোগিতা",
     ],
-    ctaEn: "Get Started",
-    ctaBn: "শুরু করুন",
+    featuresAr: [
+      "موقع رسمي للمؤسسة باللغتين العربية والإنجليزية",
+      "نشر درجات الاختبارات واستخراج النتائج إلكترونياً",
+      "لوحة إعلانات رقمية، جدول الحصص والتقويم الدراسي",
+      "بوابة استفسارات القبول ونماذج التسجيل القابلة للطباعة",
+      "تصميم متجاوب وسريع متوافق مع الهواتف الذكية",
+      "تدريب الموظفين ودعم فني مخصص لمدة 30 يوماً",
+    ],
+    ctaEn: "Get Starter Solution",
+    ctaBn: "স্টার্টার প্যাকেজ নিন",
+    ctaAr: "ابدأ بباقة البداية",
     href: "#contact",
   },
   {
-    nameEn: "Full-Stack Web App",
-    nameBn: "ফুল-স্ট্যাক ওয়েব অ্যাপ",
+    nameEn: "Standard Campus ERP",
+    nameBn: "স্ট্যান্ডার্ড ক্যাম্পাস ইআরপি",
+    nameAr: "نظام إدارة الحرم المدرسي القياسي",
     taglineEn:
-      "For startups and businesses building custom software, SaaS, or complex workflows.",
+      "The complete administrative operating system for residential, non-residential, and multi-shift educational institutions.",
     taglineBn:
-      "কাস্টম সফটওয়্যার, SaaS বা জটিল ওয়েব অ্যাপ্লিকেশনের জন্য উপযুক্ত।",
+      "আবাসিক, অনাবাসিক ও ডে-কেয়ার শিক্ষা প্রতিষ্ঠানের সার্বিক হিসাব, হাজিরা ও পরীক্ষার পূর্ণাঙ্গ ইআরপি।",
+    taglineAr:
+      "النظام الإداري الشامل للمؤسسات التعليمية الداخلية والخارجية بكافة مراحلها.",
     popular: true,
     projectPrice: "৳21,899",
     retainerPrice: "৳1,999",
-    periodEn: "turnkey project",
-    periodBn: "টার্নকি প্রজেক্ট",
+    periodEn: "complete turnkey",
+    periodBn: "টার্নকি সেটআপ",
+    periodAr: "تركيب متكامل",
     retainerPeriodEn: "/ month",
     retainerPeriodBn: "/ প্রতি মাসে",
+    retainerPeriodAr: "/ شهرياً",
     featuresEn: [
-      "Everything in Modern Web Platform",
-      "Full-stack React/Next.js App Router & Server Actions",
-      "REST / GraphQL APIs & PostgreSQL / MongoDB schema",
-      "Secure authentication & role-based access control",
-      "Payment gateway integration (Stripe, SSLCommerz)",
-      "Automated CI/CD deployment pipeline",
-      "30 days dedicated post-launch support & QA",
+      "Everything in Starter Portal & Results",
+      "Double-entry institutional accounts & auto fee vouchers",
+      "Student & staff attendance with daily guardian SMS alerts",
+      "Automated exam tabulation sheets & QR-coded admit cards",
+      "Hostel, boarding & mess management module",
+      "Teacher payroll, allowance & staff advance tracking",
+      "Biometric & geolocation attendance sync support",
+      "Hands-on teacher training & 60 days priority support",
     ],
     featuresBn: [
-      "মডার্ন ওয়েব প্ল্যাটফর্মের সকল ফিচার অন্তর্ভুক্ত",
-      "ফুল-স্ট্যাক Next.js অ্যাপ রাউটার ও সার্ভার অ্যাকশনস",
-      "REST / GraphQL API ও সুবিন্যস্ত ডেটাবেস স্কিমা",
-      "নিরাপদ অথেনটিকেশন ও রোল-ভিত্তিক পারমিশন",
-      "পেমেন্ট গেটওয়ে ইন্টিগ্রেশন (Stripe, লোকাল গেটওয়ে)",
-      "অটোমেটেড CI/CD ক্লাউড ডিপ্লয়মেন্ট",
-      "লঞ্চের পর ৩০ দিনের ডেডিকেটেড সাপোর্ট ও QA",
+      "স্টার্টার প্যাকেজের সকল ফিচার অন্তর্ভুক্ত",
+      "ডাবল-এন্ট্রি প্রাতিষ্ঠানিক হিসাব ও স্বয়ংক্রিয় ফি ভাউচার",
+      "শিক্ষার্থী ও শিক্ষক হাজিরা এবং অভিভাবকদের স্বয়ংক্রিয় SMS",
+      "স্বয়ংক্রিয় পরীক্ষার ফলাফল, টেবুলেশন ও QR প্রবেশপত্র",
+      "বোর্ডিং, হোস্টেল ও ডাইনিং হিসাব ব্যবস্থাপনা",
+      "শিক্ষক-কর্মচারীদের বেতন শিট ও প্রভিডেন্ট ফান্ড ট্র্যাকিং",
+      "বায়োমেট্রিক ও জিও-লোকেশন হাজিরা ডিভাইস ইন্টিগ্রেশন",
+      "শিক্ষক প্রশিক্ষণ ও ৬০ দিনের অগ্রাধিকারমূলক সাপোর্ট",
     ],
-    ctaEn: "Build Full-Stack App",
-    ctaBn: "ফুল-স্ট্যাক অ্যাপ তৈরি করুন",
+    featuresAr: [
+      "يشمل جميع ميزات باقة البداية",
+      "محاسبة مؤسسية مزدوجة وإصدار تلقائي لقسائم الرسوم",
+      "سجل حضور الطلاب والأساتذة مع إشعارات SMS فورية للأهالي",
+      "جداول الدرجات التلقائية وبطاقات دخول الاختبار برموز QR",
+      "إدارة السكن الداخلي ونظام الإطعام والمصروفات",
+      "مسيرات رواتب المعلمين والموظفين والبدلات",
+      "ربط الحضور مع أجهزة البصمة والتتبع الجغرافي",
+      "تدريب مكثف للطاقم ودعم فني متميز لمدة 60 يوماً",
+    ],
+    ctaEn: "Deploy Campus ERP",
+    ctaBn: "ক্যাম্পাস ইআরপি চালু করুন",
+    ctaAr: "تثبيت نظام الحرم المدرسي",
     href: "#contact",
   },
   {
-    nameEn: "Dedicated Engineering Pod",
-    nameBn: "ডেডিকেটেড ইঞ্জিনিয়ারিং পড",
+    nameEn: "Enterprise Multi-Campus & LMS",
+    nameBn: "এন্টারপ্রাইজ মাল্টি-ক্যাম্পাস ও এলএমএস",
+    nameAr: "إدارة الفروع المتعددة ومنصة التعلم (LMS)",
     taglineEn:
-      "A dedicated sprint team working as an extension of your in-house product team.",
+      "Tailored for large madrasah networks, university colleges, and multi-branch educational organizations.",
     taglineBn:
-      "আপনার ইন-হাউস টিমের সাথে সরাসরি যুক্ত হয়ে কাজ করার ডেডিকেটেড ডেভেলপার দল।",
+      "বৃহৎ মাদ্রাসা নেটওয়ার্ক, একাধিক শাখা ও অনলাইন একাডেমি সম্বলিত প্রতিষ্ঠানের জন্য কাস্টম সলিউশন।",
+    taglineAr:
+      "مخصص لشبكات المدارس الكبرى، وفروع المعاهد المتعددة، والأكاديميات التعليمية الرقمية.",
     popular: false,
     projectPrice: "Custom",
     retainerPrice: "Custom",
-    periodEn: "scoped per roadmap",
-    periodBn: "রোডম্যাপ অনুযায়ী নির্ধারিত",
-    retainerPeriodEn: "flexible retainers",
-    retainerPeriodBn: "ফ্লেক্সিবল রিটেইনার",
+    periodEn: "custom scoped",
+    periodBn: "প্রয়োজন অনুযায়ী নির্ধারিত",
+    periodAr: "حسب متطلبات المؤسسة",
+    retainerPeriodEn: "dedicated SLA",
+    retainerPeriodBn: "ডেডিকেটেড SLA",
+    retainerPeriodAr: "اتفاقية مستوى خدمة مخصصة",
     featuresEn: [
-      "Dedicated senior full-stack developers & architects",
-      "Custom microservices & high-concurrency cloud design",
-      "Architecture review & security hardening",
-      "Priority SLA response with direct Slack/Teams sync",
-      "Full git repository and IP ownership transfer",
-      "Weekly sprint demos and roadmap reviews",
-      "Ongoing code refactoring & technical advisory",
+      "Centralized multi-campus dashboard with unified billing",
+      "Integrated Learning Management System (LMS) & video classes",
+      "Custom online payment gateways (bKash, Nagad, Cards, Banks)",
+      "Guardian mobile app with attendance & fee payment notifications",
+      "Multi-curriculum support (General, Hifz, Qawmi, Alia, British)",
+      "Automated daily off-site cloud backups & disaster recovery",
+      "Dedicated account manager & 24/7 emergency phone hotline",
     ],
     featuresBn: [
-      "ডেডিকেটেড সিনিয়র ডেভেলপার ও সফটওয়্যার আর্কিটেক্ট",
-      "উচ্চ ট্রাফিকের জন্য ক্লাউড ও মাইক্রোসার্ভিসেস আর্কিটেকচার",
-      "কোডবেস সিকিউরিটি অডিট ও পারফরম্যান্স টিউনিং",
-      "অগ্রাধিকারমূলক SLA রেসপন্স ও সরাসরি স্ল্যাক/টিমস যোগাযোগ",
-      "সম্পূর্ণ গিট রিপোজিটরি ও আইপির পূর্ণ হস্তান্তর",
-      "সাপ্তাহিক স্প্রিন্ট ডেমো ও অগ্রগতি পর্যালোচনা",
-      "ধারাবাহিক রিফ্যাক্টরিং ও টেকনিক্যাল অ্যাডভাইজরি",
+      "সকল ব্রাঞ্চের জন্য কেন্দ্রীয় ড্যাশবোর্ড ও সমন্বিত আর্থিক হিসাব",
+      "অনলাইন লার্নিং ম্যানেজমেন্ট (LMS), লাইভ ক্লাস ও লেকচার নোটস",
+      "অনলাইন ফি পেমেন্ট গেটওয়ে (বিকাশ, নগদ, কার্ড ও ব্যাংক)",
+      "অভিভাবক মোবাইল অ্যাপ (ফি পেমেন্ট ও রিয়েল-টাইম নোটিফিকেশন)",
+      "বহুমাত্রিক সিলেবাস সমর্থন (জেনারেল, হিফয, কওমি, আলিয়া)",
+      "স্বয়ংক্রিয় দৈনিক অফ-সাইট ক্লাউড ব্যাকআপ ও সর্বোচ্চ নিরাপত্তা",
+      "ডেডিকেটেড একাউন্ট ম্যানেজার ও ২৪/৭ জরুরি ফোন সাপোর্ট",
     ],
-    ctaEn: "Contact Engineering Team",
-    ctaBn: "ইঞ্জিনিয়ারিং টিমে যোগাযোগ করুন",
+    featuresAr: [
+      "لوحة تحكم مركزية لكافة الفروع مع محاسبة موحدة",
+      "منصة تعليمية مدمجة (LMS) للحصص المرئية والمواد الدراسية",
+      "بوابات دفع إلكترونية مدمجة (بطاقات، محافظ إلكترونية، تحويل بنكي)",
+      "تطبيق ذكي لأولياء الأمور لدفع الرسوم ومتابعة الحضور",
+      "دعم المناهج المتعددة (عام، تحفيظ، أكاديمي، معاهد شرعية)",
+      "نسخ احتياطي يومي سحابي وتأمين عالي ضد فقدان البيانات",
+      "مدير حساب مخصص ودعم هاتفي طارئ على مدار الساعة",
+    ],
+    ctaEn: "Consult Enterprise Team",
+    ctaBn: "এন্টারপ্রাইজ টিমে যোগাযোগ করুন",
+    ctaAr: "تواصل مع الفريق المؤسسي",
     href: "#contact",
   },
 ];
@@ -131,13 +179,10 @@ export default function Pricing() {
   return (
     <section
       id="pricing"
-      className="relative py-28 sm:py-32 bg-[#0B0E17] overflow-hidden"
+      className="relative py-28 sm:py-32 bg-gradient-to-b from-[#070B14] via-[#0B162C]/80 to-[#070B14] overflow-hidden"
     >
-      {/* Background Lighting */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/4 -right-48 w-96 h-96 bg-[#00E5FF]/10 rounded-full blur-[150px]" />
-        <div className="absolute bottom-1/4 -left-48 w-96 h-96 bg-[#0066FF]/10 rounded-full blur-[150px]" />
-      </div>
+      {/* Background Aurora Glows, Blueprint Grid & Starfield */}
+      <StarfieldBackground glowPosition="both" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
@@ -233,33 +278,61 @@ export default function Pricing() {
         {/* 3-Tier Pricing Grid */}
         <div className="mt-16 grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
           {BASE_TIERS.map((tier, idx) => {
-            const isBn = language === "bn";
-            const name = isBn ? tier.nameBn : tier.nameEn;
-            const tagline = isBn ? tier.taglineBn : tier.taglineEn;
-            const price =
+            const name =
+              language === "ar"
+                ? tier.nameAr
+                : language === "bn"
+                ? tier.nameBn
+                : tier.nameEn;
+            const tagline =
+              language === "ar"
+                ? tier.taglineAr
+                : language === "bn"
+                ? tier.taglineBn
+                : tier.taglineEn;
+
+            const isCustom = tier.projectPrice === "Custom";
+            const rawPrice =
               billingModel === "project"
-                ? tier.projectPrice === "Custom" && isBn
-                  ? dict.pricing.customPrice
-                  : tier.projectPrice
-                : tier.retainerPrice === "Custom" && isBn
-                  ? dict.pricing.customPrice
-                  : tier.retainerPrice;
+                ? tier.projectPrice
+                : tier.retainerPrice;
+            const price = isCustom ? dict.pricing.customPrice : rawPrice;
+
             const period =
               billingModel === "project"
-                ? isBn
+                ? language === "ar"
+                  ? tier.periodAr
+                  : language === "bn"
                   ? tier.periodBn
                   : tier.periodEn
-                : isBn
-                  ? tier.retainerPeriodBn
-                  : tier.retainerPeriodEn;
-            const features = isBn ? tier.featuresBn : tier.featuresEn;
-            const cta = isBn ? tier.ctaBn : tier.ctaEn;
+                : language === "ar"
+                ? tier.retainerPeriodAr
+                : language === "bn"
+                ? tier.retainerPeriodBn
+                : tier.retainerPeriodEn;
+
+            const features =
+              language === "ar"
+                ? tier.featuresAr
+                : language === "bn"
+                ? tier.featuresBn
+                : tier.featuresEn;
+            const cta =
+              language === "ar"
+                ? tier.ctaAr
+                : language === "bn"
+                ? tier.ctaBn
+                : tier.ctaEn;
 
             const isCenter = tier.popular;
             return (
               <motion.div
                 key={tier.nameEn}
-                initial={{ opacity: 0, y: isCenter ? 40 : 30, scale: isCenter ? 0.98 : 1 }}
+                initial={{
+                  opacity: 0,
+                  y: isCenter ? 40 : 30,
+                  scale: isCenter ? 0.98 : 1,
+                }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true, margin: "-40px" }}
                 transition={{
@@ -267,15 +340,15 @@ export default function Pricing() {
                   delay: 0.1 + idx * 0.1,
                   ease: [0.16, 1, 0.3, 1],
                 }}
-                className={`relative rounded-3xl p-8 sm:p-10 flex flex-col justify-between backdrop-blur-2xl transition-all duration-300 ${
+                className={`relative rounded-3xl p-8 sm:p-10 flex flex-col justify-between backdrop-blur-md transition-all duration-300 ${
                   tier.popular
-                    ? "bg-[#0B0E17]/95 border-2 border-[#00E5FF] shadow-[0_0_40px_rgba(0,229,255,0.25)] lg:-translate-y-2"
-                    : "bg-white/[0.02] border border-white/[0.08] hover:border-white/[0.2] hover:shadow-[0_15px_30px_rgba(0,0,0,0.5)]"
+                    ? "bg-[#132242]/95 border-2 border-cyan-400 shadow-[0_0_40px_rgba(34,211,238,0.25)] lg:-translate-y-2"
+                    : "bg-[#111C33]/70 hover:bg-[#152442]/90 border border-white/[0.08] hover:border-cyan-400/35 hover:shadow-[0_15px_30px_rgba(0,0,0,0.5)]"
                 }`}
               >
                 {/* Popular Ribbon */}
                 {tier.popular && (
-                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-[#00E5FF] to-[#0066FF] text-[#0B0E17] text-xs font-extrabold uppercase tracking-wider shadow-[0_0_20px_rgba(0,229,255,0.5)] flex items-center gap-1.5">
+                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-[#00E5FF] to-[#0066FF] text-[#0B0E17] text-xs font-extrabold uppercase tracking-wider shadow-[0_0_20px_rgba(0,229,255,0.5)] flex items-center gap-1.5 whitespace-nowrap">
                     <Sparkles className="w-3 h-3" />
                     <span>{dict.pricing.mostPopular}</span>
                   </div>
@@ -342,7 +415,7 @@ export default function Pricing() {
             return (
               <div
                 key={idx}
-                className="flex items-start gap-4 p-5 rounded-2xl bg-white/[0.02] border border-white/[0.05]"
+                className="flex items-start gap-4 p-5 rounded-2xl bg-[#111C33]/60 border border-white/[0.06]"
               >
                 <div className="w-10 h-10 rounded-xl bg-[#00E5FF]/10 border border-[#00E5FF]/20 flex items-center justify-center text-[#00E5FF] shrink-0">
                   <IconComp className="w-5 h-5" />

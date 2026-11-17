@@ -13,8 +13,10 @@ export function LanguageProvider({ children }) {
     const frame = requestAnimationFrame(() => {
       try {
         const savedLang = localStorage.getItem("mtm_lang");
-        if (savedLang === "en" || savedLang === "bn") {
+        if (savedLang === "en" || savedLang === "bn" || savedLang === "ar") {
           setLanguageState(savedLang);
+          document.documentElement.dir = savedLang === "ar" ? "rtl" : "ltr";
+          document.documentElement.lang = savedLang;
         }
       } catch {
         // Ignore if localStorage unavailable (e.g., SSR or private window)
@@ -24,10 +26,12 @@ export function LanguageProvider({ children }) {
   }, []);
 
   const setLanguage = (lang) => {
-    if (lang === "en" || lang === "bn") {
+    if (lang === "en" || lang === "bn" || lang === "ar") {
       setLanguageState(lang);
       try {
         localStorage.setItem("mtm_lang", lang);
+        document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+        document.documentElement.lang = lang;
       } catch {
         // Ignore
       }
@@ -35,7 +39,9 @@ export function LanguageProvider({ children }) {
   };
 
   const toggleLanguage = () => {
-    setLanguage(language === "en" ? "bn" : "en");
+    if (language === "en") setLanguage("bn");
+    else if (language === "bn") setLanguage("ar");
+    else setLanguage("en");
   };
 
   // Helper function to resolve dot-notation path like t("hero.headline")
@@ -54,6 +60,8 @@ export function LanguageProvider({ children }) {
 
   // Current active dictionary object for easy direct access
   const dict = translations[language] || translations.en;
+  const isRTL = language === "ar";
+  const dir = isRTL ? "rtl" : "ltr";
 
   return (
     <LanguageContext.Provider
@@ -63,6 +71,8 @@ export function LanguageProvider({ children }) {
         toggleLanguage,
         t,
         dict,
+        isRTL,
+        dir,
       }}
     >
       {children}

@@ -15,6 +15,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
+import StarfieldBackground from "@/components/shared/StarfieldBackground";
 
 const SERVICE_ICONS = [Code2, Cpu, Palette, ShoppingCart, Cloud, Headphones];
 
@@ -24,13 +25,10 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="relative py-28 sm:py-32 bg-[#0B0E17] overflow-hidden"
+      className="relative py-28 sm:py-32 bg-gradient-to-b from-[#070B14] via-[#0B162C]/80 to-[#070B14] overflow-hidden"
     >
-      {/* Background Lighting */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/4 -right-48 w-96 h-96 bg-[#00E5FF]/10 rounded-full blur-[150px]" />
-        <div className="absolute bottom-1/4 -left-48 w-96 h-96 bg-[#0066FF]/10 rounded-full blur-[150px]" />
-      </div>
+      {/* Background Aurora Glows, Blueprint Grid & Starfield */}
+      <StarfieldBackground glowPosition="left" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -84,7 +82,7 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true, margin: "-40px" }}
                 transition={{ duration: 0.5, delay: idx * 0.08, ease: [0.21, 0.47, 0.32, 0.98] }}
-                className="group relative rounded-2xl bg-white/[0.02] border border-white/[0.08] hover:border-[#00E5FF]/40 p-8 backdrop-blur-xl transition-all duration-300 flex flex-col justify-between hover:shadow-[0_15px_40px_rgba(0,0,0,0.6)] hover:-translate-y-1 overflow-hidden"
+                className="group relative rounded-2xl bg-[#111C33]/70 hover:bg-[#152442]/90 border border-white/[0.08] hover:border-cyan-400/35 p-8 backdrop-blur-md transition-all duration-300 flex flex-col justify-between hover:shadow-[0_15px_40px_rgba(0,0,0,0.6)] hover:-translate-y-1 overflow-hidden"
               >
                 {/* Ambient Card Hover Glow */}
                 <div className="absolute -top-24 -right-24 w-48 h-48 bg-gradient-to-br from-[#00E5FF]/15 to-[#0066FF]/10 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
@@ -150,7 +148,7 @@ export default function Services() {
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-16 rounded-2xl bg-gradient-to-r from-white/[0.03] via-[#00E5FF]/[0.05] to-[#0066FF]/[0.05] border border-white/[0.1] p-8 sm:p-10 backdrop-blur-xl relative overflow-hidden"
+          className="mt-16 rounded-2xl bg-gradient-to-r from-[#111C33]/90 via-[#0E172B]/90 to-[#111C33]/90 border border-cyan-400/30 p-8 sm:p-10 backdrop-blur-md relative overflow-hidden"
         >
           <div className="absolute -top-12 -right-12 w-48 h-48 bg-[#00E5FF]/20 rounded-full blur-3xl pointer-events-none" />
 

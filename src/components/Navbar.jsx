@@ -43,7 +43,7 @@ export default function Navbar() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${
           isScrolled
-            ? "bg-[#0B0E17]/85 backdrop-blur-xl border-b border-white/[0.08] shadow-[0_8px_32px_rgba(0,0,0,0.5)] shadow-cyan-950/20 py-3.5"
+            ? "bg-[#0B162C]/80 backdrop-blur-md border-b border-white/[0.08] shadow-[0_8px_32px_rgba(0,0,0,0.5)] py-3.5"
             : "bg-transparent border-b border-transparent py-5 sm:py-6"
         }`}
       >
@@ -57,7 +57,7 @@ export default function Navbar() {
               onClick={() => setActiveLink("#home")}
             >
               <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-[#00E5FF] to-[#0066FF] p-[1.5px] transition-all duration-300 group-hover:scale-105 group-hover:shadow-[0_0_20px_rgba(0,229,255,0.6)]">
-                <div className="w-full h-full bg-[#0B0E17] rounded-[10px] flex items-center justify-center relative overflow-hidden">
+                <div className="w-full h-full bg-[#0B162C] rounded-[10px] flex items-center justify-center relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-tr from-[#00E5FF]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <span className="font-extrabold text-base tracking-wider bg-gradient-to-r from-[#00E5FF] to-[#0066FF] bg-clip-text text-transparent">
                     M
@@ -111,7 +111,7 @@ export default function Navbar() {
             {/* Right Group: Language Switcher + Desktop CTA */}
             <div className="hidden md:flex items-center gap-3 lg:gap-4">
               
-              {/* Segmented Language Switcher [ EN | বাংলা ] */}
+              {/* Segmented Language Switcher [ EN | বাংলা | عربي ] */}
               <div className="inline-flex items-center p-1 rounded-full bg-white/[0.04] border border-white/[0.1] backdrop-blur-md">
                 <Globe className="w-3.5 h-3.5 text-[#00E5FF] ml-2 mr-1" />
                 
@@ -154,6 +154,26 @@ export default function Navbar() {
                   )}
                   <span className="relative z-10">বাংলা</span>
                 </button>
+
+                <button
+                  type="button"
+                  onClick={() => setLanguage("ar")}
+                  className={`relative px-2.5 py-1 text-xs font-bold rounded-full transition-all duration-200 hover:scale-105 active:scale-95 ${
+                    language === "ar"
+                      ? "text-[#0B0E17]"
+                      : "text-slate-400 hover:text-white"
+                  }`}
+                  aria-label="Switch to Arabic"
+                >
+                  {language === "ar" && (
+                    <motion.div
+                      layoutId="lang-pill-desktop"
+                      className="absolute inset-0 rounded-full bg-gradient-to-r from-[#00E5FF] to-[#38bdf8] shadow-[0_0_10px_rgba(0,229,255,0.5)]"
+                      transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                    />
+                  )}
+                  <span className="relative z-10">عربي</span>
+                </button>
               </div>
 
               {/* Desktop CTA Button */}
@@ -174,12 +194,16 @@ export default function Navbar() {
               {/* Quick Mobile Language Toggle Button */}
               <button
                 type="button"
-                onClick={() => setLanguage(language === "en" ? "bn" : "en")}
+                onClick={() => {
+                  if (language === "en") setLanguage("bn");
+                  else if (language === "bn") setLanguage("ar");
+                  else setLanguage("en");
+                }}
                 className="px-2.5 py-1.5 rounded-lg bg-white/[0.05] border border-white/[0.1] text-xs font-bold text-[#00E5FF] flex items-center gap-1.5 hover:scale-105 active:scale-95 transition-all duration-200"
                 aria-label="Toggle language"
               >
                 <Globe className="w-3.5 h-3.5" />
-                <span>{language === "en" ? "বাংলা" : "EN"}</span>
+                <span>{language === "en" ? "বাংলা" : language === "bn" ? "عربي" : "EN"}</span>
               </button>
 
               {/* Hamburger Button */}
@@ -222,7 +246,7 @@ export default function Navbar() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -20, scale: 0.98 }}
               transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
-              className="fixed top-20 left-4 right-4 z-50 md:hidden bg-[#0B0E17]/95 backdrop-blur-2xl border border-white/[0.12] rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.8)] shadow-cyan-950/20 p-6 overflow-hidden"
+              className="fixed top-20 left-4 right-4 z-50 md:hidden bg-[#0F1D3A]/95 backdrop-blur-2xl border border-white/[0.12] rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.8)] shadow-cyan-950/20 p-6 overflow-hidden"
             >
               {/* Subtle Ambient Glow */}
               <div className="absolute -top-12 -right-12 w-32 h-32 bg-[#00E5FF]/20 rounded-full blur-3xl pointer-events-none" />

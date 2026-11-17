@@ -41,6 +41,52 @@ function useCounter(end, duration = 2000) {
 
 const BENGALI_DIGITS = ["০", "১", "২", "৩", "৪", "৫", "৬", "৭", "৮", "৯"];
 
+// Deterministic 42-star constellation avoiding Math.random() for 100% hydration safety
+const HERO_STARS = [
+  { top: "6%", left: "12%", size: 3, color: "#FFFFFF", glow: "0 0 6px rgba(255,255,255,0.85)", duration: "3.2s", delay: "0.2s" },
+  { top: "9%", left: "34%", size: 2, color: "#22D3EE", glow: "0 0 8px rgba(34,211,238,0.8)", duration: "2.5s", delay: "1.1s" },
+  { top: "14%", left: "68%", size: 3, color: "#FBBF24", glow: "0 0 8px rgba(251,191,36,0.8)", duration: "4.1s", delay: "0.5s" },
+  { top: "8%", left: "88%", size: 4, color: "#34D399", glow: "0 0 9px rgba(52,211,153,0.85)", duration: "3.7s", delay: "1.8s" },
+  { top: "18%", left: "22%", size: 2, color: "#FFFFFF", glow: "0 0 6px rgba(255,255,255,0.85)", duration: "3.4s", delay: "0.9s" },
+  { top: "22%", left: "48%", size: 3, color: "#22D3EE", glow: "0 0 8px rgba(34,211,238,0.8)", duration: "2.8s", delay: "2.1s" },
+  { top: "16%", left: "80%", size: 2, color: "#FBBF24", glow: "0 0 8px rgba(251,191,36,0.8)", duration: "3.9s", delay: "1.4s" },
+  { top: "26%", left: "9%", size: 3, color: "#34D399", glow: "0 0 8px rgba(52,211,153,0.8)", duration: "3.0s", delay: "0.3s" },
+  { top: "28%", left: "62%", size: 2, color: "#FFFFFF", glow: "0 0 6px rgba(255,255,255,0.85)", duration: "4.3s", delay: "2.4s" },
+  { top: "33%", left: "28%", size: 4, color: "#22D3EE", glow: "0 0 9px rgba(34,211,238,0.85)", duration: "2.4s", delay: "0.7s" },
+  { top: "31%", left: "92%", size: 3, color: "#FBBF24", glow: "0 0 8px rgba(251,191,36,0.8)", duration: "3.6s", delay: "1.9s" },
+  { top: "38%", left: "4%", size: 2, color: "#FFFFFF", glow: "0 0 6px rgba(255,255,255,0.85)", duration: "3.1s", delay: "1.3s" },
+  { top: "42%", left: "44%", size: 3, color: "#34D399", glow: "0 0 8px rgba(52,211,153,0.8)", duration: "4.0s", delay: "0.8s" },
+  { top: "40%", left: "74%", size: 2, color: "#22D3EE", glow: "0 0 8px rgba(34,211,238,0.8)", duration: "2.9s", delay: "2.6s" },
+  { top: "46%", left: "18%", size: 3, color: "#FBBF24", glow: "0 0 8px rgba(251,191,36,0.8)", duration: "3.5s", delay: "0.4s" },
+  { top: "49%", left: "85%", size: 4, color: "#FFFFFF", glow: "0 0 9px rgba(255,255,255,0.9)", duration: "4.4s", delay: "1.6s" },
+  { top: "53%", left: "32%", size: 2, color: "#34D399", glow: "0 0 8px rgba(52,211,153,0.8)", duration: "2.7s", delay: "2.2s" },
+  { top: "56%", left: "58%", size: 3, color: "#22D3EE", glow: "0 0 8px rgba(34,211,238,0.8)", duration: "3.8s", delay: "0.1s" },
+  { top: "52%", left: "96%", size: 2, color: "#FBBF24", glow: "0 0 8px rgba(251,191,36,0.8)", duration: "3.3s", delay: "2.8s" },
+  { top: "61%", left: "14%", size: 3, color: "#FFFFFF", glow: "0 0 6px rgba(255,255,255,0.85)", duration: "4.2s", delay: "1.0s" },
+  { top: "64%", left: "41%", size: 2, color: "#22D3EE", glow: "0 0 8px rgba(34,211,238,0.8)", duration: "2.6s", delay: "1.7s" },
+  { top: "59%", left: "78%", size: 4, color: "#34D399", glow: "0 0 9px rgba(52,211,153,0.85)", duration: "3.6s", delay: "0.6s" },
+  { top: "68%", left: "24%", size: 3, color: "#FBBF24", glow: "0 0 8px rgba(251,191,36,0.8)", duration: "4.5s", delay: "2.0s" },
+  { top: "66%", left: "89%", size: 2, color: "#FFFFFF", glow: "0 0 6px rgba(255,255,255,0.85)", duration: "3.0s", delay: "0.8s" },
+  { top: "72%", left: "6%", size: 3, color: "#22D3EE", glow: "0 0 8px rgba(34,211,238,0.8)", duration: "3.7s", delay: "1.5s" },
+  { top: "74%", left: "52%", size: 2, color: "#FFFFFF", glow: "0 0 6px rgba(255,255,255,0.85)", duration: "2.8s", delay: "2.7s" },
+  { top: "71%", left: "69%", size: 3, color: "#34D399", glow: "0 0 8px rgba(52,211,153,0.8)", duration: "4.1s", delay: "0.3s" },
+  { top: "78%", left: "36%", size: 4, color: "#FBBF24", glow: "0 0 9px rgba(251,191,36,0.85)", duration: "3.3s", delay: "1.2s" },
+  { top: "82%", left: "82%", size: 2, color: "#22D3EE", glow: "0 0 8px rgba(34,211,238,0.8)", duration: "2.9s", delay: "2.3s" },
+  { top: "79%", left: "16%", size: 3, color: "#FFFFFF", glow: "0 0 6px rgba(255,255,255,0.85)", duration: "4.6s", delay: "0.5s" },
+  { top: "85%", left: "64%", size: 2, color: "#34D399", glow: "0 0 8px rgba(52,211,153,0.8)", duration: "3.4s", delay: "1.8s" },
+  { top: "88%", left: "27%", size: 3, color: "#FBBF24", glow: "0 0 8px rgba(251,191,36,0.8)", duration: "2.5s", delay: "0.9s" },
+  { top: "86%", left: "94%", size: 3, color: "#FFFFFF", glow: "0 0 6px rgba(255,255,255,0.85)", duration: "4.0s", delay: "2.5s" },
+  { top: "91%", left: "10%", size: 2, color: "#22D3EE", glow: "0 0 8px rgba(34,211,238,0.8)", duration: "3.2s", delay: "1.4s" },
+  { top: "93%", left: "47%", size: 3, color: "#FFFFFF", glow: "0 0 6px rgba(255,255,255,0.85)", duration: "3.8s", delay: "0.4s" },
+  { top: "89%", left: "76%", size: 4, color: "#34D399", glow: "0 0 9px rgba(52,211,153,0.85)", duration: "4.3s", delay: "2.1s" },
+  { top: "95%", left: "84%", size: 2, color: "#FBBF24", glow: "0 0 8px rgba(251,191,36,0.8)", duration: "2.7s", delay: "1.0s" },
+  { top: "11%", left: "54%", size: 2, color: "#FFFFFF", glow: "0 0 6px rgba(255,255,255,0.85)", duration: "3.5s", delay: "1.6s" },
+  { top: "24%", left: "72%", size: 3, color: "#22D3EE", glow: "0 0 8px rgba(34,211,238,0.8)", duration: "4.2s", delay: "0.7s" },
+  { top: "36%", left: "15%", size: 2, color: "#34D399", glow: "0 0 8px rgba(52,211,153,0.8)", duration: "3.1s", delay: "2.9s" },
+  { top: "63%", left: "95%", size: 3, color: "#FBBF24", glow: "0 0 8px rgba(251,191,36,0.8)", duration: "3.6s", delay: "0.2s" },
+  { top: "45%", left: "37%", size: 2, color: "#FFFFFF", glow: "0 0 6px rgba(255,255,255,0.85)", duration: "2.9s", delay: "1.9s" },
+];
+
 function toBengaliDigits(numStr) {
   return String(numStr).replace(/[0-9]/g, (digit) => BENGALI_DIGITS[+digit]);
 }
@@ -85,17 +131,49 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex flex-col justify-center pt-32 pb-20 overflow-hidden"
+      className="relative min-h-screen flex flex-col justify-center pt-32 pb-20 overflow-hidden bg-gradient-to-b from-[#0B162C] via-[#0A1326] to-[#070B14]"
     >
-      {/* Dynamic Background Glows and Grid Pattern */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[850px] h-[550px] bg-gradient-to-b from-[#00E5FF]/15 via-[#0066FF]/10 to-transparent blur-[140px] rounded-full" />
+      {/* Background Layers: Aurora Glows, Blueprint Grid & Starfield */}
+      <div
+        className="absolute inset-0 pointer-events-none select-none overflow-hidden"
+        aria-hidden="true"
+      >
+        {/* Layer 1: Ambient Radial Aurora Glows */}
+        <div className="absolute top-1/4 -right-28 w-[420px] h-[420px] bg-[#0D9488]/15 rounded-full blur-[120px]" />
+        <div className="absolute top-1/4 -left-28 w-[440px] h-[440px] bg-[#1E3A8A]/20 rounded-full blur-[130px]" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[650px] h-[380px] bg-gradient-to-b from-[#00E5FF]/10 to-transparent blur-[140px] rounded-full" />
+
+        {/* Layer 2: Subtle Architectural Blueprint Grid with Smooth Bottom Fade */}
         <div
-          className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#00E5FF_1px,transparent_1px)] [background-size:24px_24px]"
-          aria-hidden="true"
+          className="absolute inset-0 opacity-100"
+          style={{
+            backgroundImage:
+              "linear-gradient(to right, rgba(255, 255, 255, 0.045) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.045) 1px, transparent 1px)",
+            backgroundSize: "48px 48px",
+            maskImage:
+              "radial-gradient(ellipse 85% 70% at 50% 25%, black 40%, transparent 100%)",
+            WebkitMaskImage:
+              "radial-gradient(ellipse 85% 70% at 50% 25%, black 40%, transparent 100%)",
+          }}
         />
-        <div className="absolute top-1/4 -left-36 w-80 h-80 bg-[#0066FF]/15 rounded-full blur-[120px]" />
-        <div className="absolute top-1/3 -right-36 w-80 h-80 bg-[#00E5FF]/15 rounded-full blur-[120px]" />
+
+        {/* Layer 3: Continuously Twinkling Multi-Color Starfield Dots */}
+        {HERO_STARS.map((star, idx) => (
+          <span
+            key={idx}
+            className="absolute rounded-full animate-hero-star"
+            style={{
+              top: star.top,
+              left: star.left,
+              width: `${star.size}px`,
+              height: `${star.size}px`,
+              backgroundColor: star.color,
+              boxShadow: star.glow,
+              "--twinkle-duration": star.duration,
+              "--twinkle-delay": star.delay,
+            }}
+          />
+        ))}
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -224,7 +302,7 @@ export default function Hero() {
               initial={{ opacity: 0, scale: 0.94, x: 30 }}
               animate={{ opacity: 1, scale: 1, x: 0 }}
               transition={{ duration: 0.75, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
-              className="relative w-full max-w-lg bg-[#0B0E17]/90 border border-white/[0.12] rounded-2xl p-5 sm:p-6 backdrop-blur-2xl shadow-[0_20px_60px_rgba(0,0,0,0.7)] hover:border-[#00E5FF]/40 hover:shadow-[0_20px_60px_rgba(0,229,255,0.18)] transition-all duration-500 group"
+              className="relative w-full max-w-lg bg-[#111C33]/85 border border-white/[0.1] rounded-2xl p-5 sm:p-6 backdrop-blur-md shadow-[0_20px_60px_rgba(0,0,0,0.7)] hover:border-cyan-400/35 hover:bg-[#152442]/90 transition-all duration-500 group"
             >
               {/* Window Header */}
               <div className="flex items-center justify-between pb-4 border-b border-white/[0.08]">
@@ -244,28 +322,28 @@ export default function Hero() {
               </div>
 
               {/* Code Snippet */}
-              <div className="mt-4 font-mono text-xs sm:text-sm leading-relaxed text-slate-300 overflow-x-auto">
+              <div className="mt-4 font-mono text-xs sm:text-sm leading-relaxed text-slate-300 overflow-x-auto" dir="ltr">
                 <p className="text-slate-500">{dict.hero.terminalComment}</p>
                 <p>
                   <span className="text-[#00E5FF]">export default</span>{" "}
-                  <span className="text-amber-300">defineConfig</span>({"{"}
+                  <span className="text-amber-300">defineCampusERP</span>({"{"}
                 </p>
                 <div className="pl-4 space-y-1">
                   <p>
-                    <span className="text-slate-400">framework:</span>{" "}
-                    <span className="text-emerald-400">&apos;Next.js 16 (Turbopack)&apos;</span>,
+                    <span className="text-slate-400">institution:</span>{" "}
+                    <span className="text-emerald-400">&apos;School • College • Madrasah&apos;</span>,
                   </p>
                   <p>
-                    <span className="text-slate-400">rendering:</span>{" "}
-                    <span className="text-emerald-400">&apos;Server Components &amp; Edge SSR&apos;</span>,
+                    <span className="text-slate-400">modules:</span>{" "}
+                    <span className="text-emerald-400">&apos;Admissions, Accounts, Results, SMS&apos;</span>,
                   </p>
                   <p>
-                    <span className="text-slate-400">lighthouse:</span>{" "}
-                    <span className="text-[#00E5FF]">99</span>,
+                    <span className="text-slate-400">uptime_sla:</span>{" "}
+                    <span className="text-[#00E5FF]">99.9%</span>,
                   </p>
                   <p>
-                    <span className="text-slate-400">ci_cd:</span>{" "}
-                    <span className="text-emerald-400">&apos;Automated Zero-Downtime&apos;</span>,
+                    <span className="text-slate-400">data_privacy:</span>{" "}
+                    <span className="text-emerald-400">&apos;Encrypted &amp; Audit-Ready&apos;</span>,
                   </p>
                 </div>
                 <p>{"});"}</p>
@@ -278,16 +356,21 @@ export default function Hero() {
 
               {/* Tech Badges Row */}
               <div className="mt-5 pt-4 border-t border-white/[0.08] flex flex-wrap gap-2">
-                {["Next.js 16", "React 19", "TypeScript", "Tailwind CSS", "Node.js", "Docker"].map(
-                  (tech) => (
-                    <span
-                      key={tech}
-                      className="px-2.5 py-1 rounded-lg bg-white/[0.03] border border-white/[0.08] text-[11px] font-medium text-slate-300 hover:border-[#00E5FF]/50 hover:bg-white/[0.06] hover:scale-105 hover:text-white transition-all duration-300 cursor-default"
-                    >
-                      {tech}
-                    </span>
-                  )
-                )}
+                {[
+                  "Student ERP",
+                  "Online Admission",
+                  "Tuition Billing",
+                  "QR Admit Cards",
+                  "Guardian SMS",
+                  "Live Academy",
+                ].map((mod) => (
+                  <span
+                    key={mod}
+                    className="px-2.5 py-1 rounded-lg bg-white/[0.03] border border-white/[0.08] text-[11px] font-medium text-slate-300 hover:border-[#00E5FF]/50 hover:bg-white/[0.06] hover:scale-105 hover:text-white transition-all duration-300 cursor-default"
+                  >
+                    {mod}
+                  </span>
+                ))}
               </div>
             </motion.div>
 
@@ -296,7 +379,7 @@ export default function Hero() {
               animate={{ y: [0, -8, 0] }}
               transition={{ repeat: Infinity, duration: 4.2, ease: "easeInOut" }}
               whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
-              className="absolute -top-6 -right-2 sm:-right-6 bg-[#0B0E17]/95 border border-[#00E5FF]/40 hover:border-[#00E5FF]/70 rounded-xl p-3 sm:p-4 backdrop-blur-xl shadow-[0_10px_30px_rgba(0,229,255,0.25)] hover:shadow-[0_15px_35px_rgba(0,229,255,0.4)] flex items-center gap-3 z-20 transition-all duration-300 cursor-default"
+              className="absolute -top-6 -right-2 sm:-right-6 bg-[#111C33]/90 border border-cyan-400/40 hover:border-cyan-400/70 rounded-xl p-3 sm:p-4 backdrop-blur-md shadow-[0_10px_30px_rgba(34,211,238,0.25)] hover:shadow-[0_15px_35px_rgba(34,211,238,0.4)] flex items-center gap-3 z-20 transition-all duration-300 cursor-default"
             >
               <div className="w-10 h-10 rounded-lg bg-[#00E5FF]/10 border border-[#00E5FF]/30 flex items-center justify-center text-[#00E5FF]">
                 <Zap className="w-5 h-5" />
@@ -304,8 +387,8 @@ export default function Hero() {
               <div>
                 <div className="text-xs text-slate-400 font-medium">{dict.hero.metricSpeed}</div>
                 <div className="text-base font-bold text-white flex items-center gap-1">
-                  <span>99/100</span>
-                  <span className="text-[10px] text-emerald-400 font-normal">Score</span>
+                  <span>99.9%</span>
+                  <span className="text-[10px] text-emerald-400 font-normal">SLA</span>
                 </div>
               </div>
             </motion.div>
@@ -315,7 +398,7 @@ export default function Hero() {
               animate={{ y: [0, 8, 0] }}
               transition={{ repeat: Infinity, duration: 4.8, ease: "easeInOut", delay: 0.6 }}
               whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
-              className="absolute -bottom-6 -left-2 sm:-left-6 bg-[#0B0E17]/95 border border-white/[0.12] hover:border-emerald-500/50 rounded-xl p-3 sm:p-4 backdrop-blur-xl shadow-[0_15px_35px_rgba(0,0,0,0.6)] hover:shadow-[0_15px_35px_rgba(16,185,129,0.3)] flex items-center gap-3 z-20 transition-all duration-300 cursor-default"
+              className="absolute -bottom-6 -left-2 sm:-left-6 bg-[#111C33]/90 border border-white/[0.12] hover:border-emerald-500/50 rounded-xl p-3 sm:p-4 backdrop-blur-md shadow-[0_15px_35px_rgba(0,0,0,0.6)] hover:shadow-[0_15px_35px_rgba(16,185,129,0.3)] flex items-center gap-3 z-20 transition-all duration-300 cursor-default"
             >
               <div className="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
                 <TrendingUp className="w-5 h-5" />
@@ -323,7 +406,7 @@ export default function Hero() {
               <div>
                 <div className="text-xs text-slate-400 font-medium">{dict.hero.metricConversion}</div>
                 <div className="text-base font-bold text-white flex items-center gap-1.5">
-                  <span className="text-[#00E5FF]">Optimal</span>
+                  <span className="text-[#00E5FF]">+80%</span>
                   <span className="text-[10px] text-slate-400 font-normal">{dict.hero.conversionSub}</span>
                 </div>
               </div>
@@ -333,7 +416,37 @@ export default function Hero() {
 
         </div>
 
-
+        {/* BOTTOM STATS STRIP */}
+        {dict.hero.stats && (
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+            className="mt-20 pt-10 border-t border-white/[0.08]"
+          >
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
+              {dict.hero.stats.map((stat, idx) => (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, y: 22 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.55, delay: 0.45 + idx * 0.09, ease: [0.16, 1, 0.3, 1] }}
+                  className="relative flex flex-col p-4 rounded-xl bg-[#111C33]/65 border border-white/[0.08] hover:border-cyan-400/35 hover:bg-[#152442]/90 hover:shadow-[0_0_25px_rgba(34,211,238,0.2)] hover:scale-[1.03] backdrop-blur-md transition-all duration-300 group cursor-default"
+                >
+                  <div className="text-3xl sm:text-4xl lg:text-5xl font-extrabold bg-gradient-to-r from-white via-slate-100 to-[#00E5FF] bg-clip-text text-transparent group-hover:drop-shadow-[0_0_20px_rgba(0,229,255,0.5)] transition-all duration-300">
+                    <AnimatedStatValue value={stat.value} />
+                  </div>
+                  <div className="text-sm font-semibold text-white mt-1">
+                    {stat.label}
+                  </div>
+                  <div className="text-xs text-slate-400 mt-0.5">
+                    {stat.sub}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        )}
 
       </div>
     </section>

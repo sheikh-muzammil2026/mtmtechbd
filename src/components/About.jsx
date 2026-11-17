@@ -11,6 +11,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
+import StarfieldBackground from "@/components/shared/StarfieldBackground";
 
 const PILLAR_ICONS = [Award, Zap, ShieldCheck, Users];
 
@@ -20,13 +21,10 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative py-28 sm:py-32 bg-[#0B0E17] overflow-hidden"
+      className="relative py-28 sm:py-32 bg-gradient-to-b from-[#070B14] via-[#0B162C]/60 to-[#070B14] overflow-hidden"
     >
-      {/* Ambient Glows */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/3 -left-48 w-96 h-96 bg-[#00E5FF]/10 rounded-full blur-[160px]" />
-        <div className="absolute bottom-1/3 -right-48 w-96 h-96 bg-[#0066FF]/10 rounded-full blur-[160px]" />
-      </div>
+      {/* Background Aurora Glows, Blueprint Grid & Starfield */}
+      <StarfieldBackground glowPosition="right" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -83,7 +81,7 @@ export default function About() {
                   whileInView={{ opacity: 1, y: 0, scale: 1 }}
                   viewport={{ once: true, margin: "-40px" }}
                   transition={{ duration: 0.5, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                  className="p-6 rounded-2xl bg-white/[0.02] border border-white/[0.08] hover:border-[#00E5FF]/40 transition-all duration-300 backdrop-blur-xl group hover:-translate-y-1 hover:shadow-[0_15px_30px_rgba(0,0,0,0.5)] flex flex-col justify-between"
+                  className="p-6 rounded-2xl bg-[#111C33]/70 hover:bg-[#152442]/90 border border-white/[0.08] hover:border-cyan-400/35 transition-all duration-300 backdrop-blur-md group hover:-translate-y-1 hover:shadow-[0_15px_30px_rgba(0,0,0,0.5)] flex flex-col justify-between"
                 >
                   <div>
                     <div className="flex items-center justify-between mb-4">
@@ -119,7 +117,7 @@ export default function About() {
               whileInView={{ opacity: 1, x: 0, scale: 1 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-              className="relative p-6 sm:p-8 rounded-2xl bg-[#0B0E17]/95 border border-white/[0.12] backdrop-blur-2xl shadow-[0_20px_50px_rgba(0,0,0,0.8)] overflow-hidden"
+              className="relative p-6 sm:p-8 rounded-2xl bg-[#111C33]/85 border border-white/[0.1] backdrop-blur-md shadow-[0_20px_50px_rgba(0,0,0,0.8)] overflow-hidden"
             >
               <div className="absolute top-0 right-0 w-64 h-64 bg-[#00E5FF]/10 rounded-full blur-3xl pointer-events-none" />
 

@@ -9,33 +9,57 @@ import {
   Clock,
   Send,
   CheckCircle2,
-  Sparkles,
   ShieldCheck,
   Copy,
   Check,
 } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
+import StarfieldBackground from "@/components/shared/StarfieldBackground";
 
 const SERVICES_OPTIONS = [
-  { en: "Custom Web Development", bn: "কাস্টম ওয়েব ডেভেলপমেন্ট" },
-  { en: "Full-Stack SaaS Application", bn: "ফুল-স্ট্যাক SaaS অ্যাপ্লিকেশন" },
-  { en: "UI/UX & Product Design", bn: "ইউআই/ইউএক্স ও প্রোডাক্ট ডিজাইন" },
-  { en: "Headless E-Commerce", bn: "হেডলেস ই-কমার্স" },
-  { en: "Cloud Architecture & DevOps", bn: "ক্লাউড আর্কিটেকচার ও ডেভঅপ্স" },
-  { en: "Dedicated IT Maintenance", bn: "ডেডিকেটেড আইটি মেইনটেন্যান্স" },
+  {
+    en: "Campus ERP & Student Records",
+    bn: "ক্যাম্পাস ইআরপি ও ছাত্র তথ্য",
+    ar: "إدارة الحرم المدرسي وسجلات الطلاب",
+  },
+  {
+    en: "Double-Entry Tuition Accounting",
+    bn: "দ্বি-প্রবেশ হিসাব ও ফি ভাউচার",
+    ar: "محاسبة الرسوم المزدوجة والفواتير",
+  },
+  {
+    en: "Exam Results & QR Admit Cards",
+    bn: "পরীক্ষার ফলাফল ও QR প্রবেশপত্র",
+    ar: "نتائج الاختبارات وبطاقات الدخول QR",
+  },
+  {
+    en: "Attendance Sync & Daily Guardian SMS",
+    bn: "হাজিরা ট্র্যাকিং ও অভিভাবক SMS",
+    ar: "سجل الحضور ورسائل SMS للأهالي",
+  },
+  {
+    en: "Hostel, Boarding & Mess Accounts",
+    bn: "বোর্ডিং, হোস্টেল ও মেস হিসাব",
+    ar: "إدارة السكن الداخلي والإطعام",
+  },
+  {
+    en: "Official Institutional Website & LMS",
+    bn: "প্রতিষ্ঠানের ওয়েবসাইট ও অনলাইন একাডেমি",
+    ar: "الموقع المؤسسي ومنصة التعلم الرقمي",
+  },
 ];
 
 const BUDGET_OPTIONS = [
-  "< ৳3,000",
-  "৳3,000 - ৳6,000",
-  "৳6,000 - ৳12,000",
-  "৳12,000+",
+  "< ৳15,000",
+  "৳15,000 - ৳30,000",
+  "৳30,000 - ৳60,000",
+  "৳60,000+",
 ];
 
 export default function Contact() {
   const { language, dict } = useLanguage();
   const [selectedServices, setSelectedServices] = useState([
-    "Custom Web Development",
+    "Campus ERP & Student Records",
   ]);
   const [selectedBudget, setSelectedBudget] = useState(BUDGET_OPTIONS[1]);
   const [formData, setFormData] = useState({
@@ -77,13 +101,10 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative py-28 sm:py-32 bg-[#0B0E17] overflow-hidden"
+      className="relative py-28 sm:py-32 bg-gradient-to-b from-[#070B14] via-[#0B162C]/60 to-[#070B14] overflow-hidden"
     >
-      {/* Background Lighting */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/3 -right-48 w-96 h-96 bg-[#00E5FF]/10 rounded-full blur-[160px]" />
-        <div className="absolute bottom-1/3 -left-48 w-96 h-96 bg-[#0066FF]/10 rounded-full blur-[160px]" />
-      </div>
+      {/* Hero-grade Blueprint Grid, Ambient Aurora Glow & Twinkling Starfield */}
+      <StarfieldBackground glowPosition="right" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
@@ -93,10 +114,9 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.03] border border-[#00E5FF]/30 backdrop-blur-md mb-4"
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-white/10 backdrop-blur-md mb-4 shadow-[0_0_20px_rgba(6,182,212,0.15)]"
           >
-
-            <span className="text-xs font-semibold tracking-wider uppercase bg-gradient-to-r from-[#00E5FF] to-[#38bdf8] bg-clip-text text-transparent">
+            <span className="text-xs font-semibold tracking-wider uppercase bg-gradient-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent">
               {dict.contact.badge}
             </span>
           </motion.div>
@@ -109,7 +129,7 @@ export default function Contact() {
             className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight"
           >
             {dict.contact.titlePrefix}{" "}
-            <span className="bg-gradient-to-r from-[#00E5FF] via-[#38bdf8] to-[#0066FF] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-cyan-400 via-sky-300 to-indigo-400 bg-clip-text text-transparent">
               {dict.contact.titleHighlight}
             </span>
           </motion.h2>
@@ -136,9 +156,8 @@ export default function Contact() {
             className="lg:col-span-5 flex flex-col justify-between space-y-8"
           >
             {/* Tagline Card */}
-            <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/[0.08] backdrop-blur-xl">
-              <div className="flex items-center gap-2 text-xs font-semibold text-[#00E5FF] mb-2">
-
+            <div className="p-6 rounded-2xl bg-[#111C33]/70 border border-white/[0.08] hover:border-cyan-400/35 hover:bg-[#152442]/90 backdrop-blur-md transition-all duration-300">
+              <div className="flex items-center gap-2 text-xs font-semibold text-cyan-400 mb-2">
                 <span>{dict.contact.promiseBadge}</span>
               </div>
               <h3 className="text-xl font-bold text-white tracking-tight">
@@ -151,9 +170,9 @@ export default function Contact() {
 
             {/* Direct Contact Channels */}
             <div className="space-y-4">
-              <div className="p-4 rounded-xl bg-white/[0.02] border border-white/[0.06] hover:border-[#00E5FF]/40 transition-colors flex items-center justify-between group">
+              <div className="p-4 rounded-xl bg-[#111C33]/70 border border-white/[0.08] hover:border-cyan-400/35 hover:bg-[#152442]/90 transition-all duration-300 flex items-center justify-between group backdrop-blur-md">
                 <div className="flex items-center gap-3.5">
-                  <div className="w-10 h-10 rounded-lg bg-[#00E5FF]/10 border border-[#00E5FF]/20 flex items-center justify-center text-[#00E5FF]">
+                  <div className="w-10 h-10 rounded-lg bg-cyan-400/10 border border-cyan-400/20 flex items-center justify-center text-cyan-400">
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
@@ -161,10 +180,11 @@ export default function Contact() {
                       {dict.contact.directInquiries}
                     </div>
                     <a
-                      href="mailto:mtmtechbd@gmail.com"
-                      className="text-sm font-semibold text-white group-hover:text-[#00E5FF] transition-colors"
+                      href="mailto:contact@mtmtechbd.com"
+                      className="text-sm font-semibold text-white group-hover:text-cyan-400 transition-colors"
+                      dir="ltr"
                     >
-                      mtmtechbd@gmail.com
+                      contact@mtmtechbd.com
                     </a>
                   </div>
                 </div>
@@ -172,7 +192,7 @@ export default function Contact() {
                 <button
                   type="button"
                   onClick={handleCopyEmail}
-                  className="p-2 rounded-lg bg-white/[0.04] hover:bg-white/[0.1] text-slate-400 hover:text-white transition-colors"
+                  className="p-2 rounded-lg bg-white/[0.04] hover:bg-white/[0.1] text-slate-400 hover:text-white transition-colors cursor-pointer"
                   aria-label="Copy email address"
                   title="Copy email"
                 >
@@ -184,9 +204,9 @@ export default function Contact() {
                 </button>
               </div>
 
-              <div className="p-4 rounded-xl bg-white/[0.02] border border-white/[0.06] hover:border-[#00E5FF]/40 transition-colors flex items-center justify-between group">
+              <div className="p-4 rounded-xl bg-[#111C33]/70 border border-white/[0.08] hover:border-cyan-400/35 hover:bg-[#152442]/90 transition-all duration-300 flex items-center justify-between group backdrop-blur-md">
                 <div className="flex items-center gap-3.5">
-                  <div className="w-10 h-10 rounded-lg bg-[#0066FF]/10 border border-[#0066FF]/20 flex items-center justify-center text-[#38bdf8]">
+                  <div className="w-10 h-10 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400">
                     <Phone className="w-5 h-5" />
                   </div>
                   <div>
@@ -195,7 +215,8 @@ export default function Contact() {
                     </div>
                     <a
                       href="tel:+8801836376174"
-                      className="text-sm font-semibold text-white group-hover:text-[#00E5FF] transition-colors"
+                      className="text-sm font-semibold text-white group-hover:text-cyan-400 transition-colors"
+                      dir="ltr"
                     >
                       +880 (18) 3637-6174
                     </a>
@@ -206,9 +227,9 @@ export default function Contact() {
                 </span>
               </div>
 
-              <div className="p-4 rounded-xl bg-white/[0.02] border border-white/[0.06] flex items-center gap-3.5">
+              <div className="p-4 rounded-xl bg-[#111C33]/70 border border-white/[0.08] hover:border-cyan-400/35 hover:bg-[#152442]/90 transition-all duration-300 flex items-center gap-3.5 backdrop-blur-md">
                 <div className="w-10 h-10 rounded-lg bg-white/[0.04] border border-white/[0.08] flex items-center justify-center text-slate-300">
-                  <MapPin className="w-5 h-5 text-[#00E5FF]" />
+                  <MapPin className="w-5 h-5 text-cyan-400" />
                 </div>
                 <div>
                   <div className="text-[11px] font-mono text-slate-400">
@@ -222,13 +243,13 @@ export default function Contact() {
             </div>
 
             {/* SLA & NDA Badges */}
-            <div className="p-5 rounded-2xl bg-gradient-to-br from-[#00E5FF]/5 to-transparent border border-[#00E5FF]/20 space-y-3">
+            <div className="p-5 rounded-2xl bg-[#111C33]/70 border border-white/[0.08] backdrop-blur-md space-y-3">
               <div className="flex items-center gap-2.5 text-xs text-slate-300">
-                <Clock className="w-4 h-4 text-[#00E5FF] shrink-0" />
+                <Clock className="w-4 h-4 text-cyan-400 shrink-0" />
                 <span>{dict.contact.slaNotice}</span>
               </div>
               <div className="flex items-center gap-2.5 text-xs text-slate-300">
-                <ShieldCheck className="w-4 h-4 text-[#00E5FF] shrink-0" />
+                <ShieldCheck className="w-4 h-4 text-cyan-400 shrink-0" />
                 <span>{dict.contact.ndaNotice}</span>
               </div>
             </div>
@@ -239,10 +260,14 @@ export default function Contact() {
             initial={{ opacity: 0, x: 30, scale: 0.98 }}
             whileInView={{ opacity: 1, x: 0, scale: 1 }}
             viewport={{ once: true, margin: "-40px" }}
-            transition={{ duration: 0.65, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+            transition={{
+              duration: 0.65,
+              delay: 0.1,
+              ease: [0.16, 1, 0.3, 1],
+            }}
             className="lg:col-span-7"
           >
-            <div className="relative rounded-3xl bg-[#0B0E17]/95 border border-white/[0.12] p-8 sm:p-10 backdrop-blur-2xl shadow-[0_20px_60px_rgba(0,0,0,0.8)]">
+            <div className="relative rounded-3xl bg-[#111C33]/90 border border-white/[0.1] p-8 sm:p-10 backdrop-blur-md shadow-[0_20px_60px_rgba(0,0,0,0.8)]">
               <AnimatePresence mode="wait">
                 {isSubmitted ? (
                   <motion.div
@@ -272,7 +297,7 @@ export default function Contact() {
                           message: "",
                         });
                       }}
-                      className="mt-8 px-6 py-2.5 rounded-full bg-white/[0.05] hover:bg-white/[0.1] border border-white/[0.1] text-xs font-semibold text-white transition-colors"
+                      className="mt-8 px-6 py-2.5 rounded-full bg-white/[0.05] hover:bg-white/[0.1] border border-white/[0.1] text-xs font-semibold text-white transition-colors cursor-pointer"
                     >
                       {dict.contact.sendAnother}
                     </button>
@@ -287,16 +312,22 @@ export default function Contact() {
                       <div className="flex flex-wrap gap-2">
                         {SERVICES_OPTIONS.map((srv) => {
                           const isSelected = selectedServices.includes(srv.en);
-                          const label = language === "bn" ? srv.bn : srv.en;
+                          const label =
+                            language === "ar"
+                                ? srv.ar
+                                : language === "bn"
+                                ? srv.bn
+                                : srv.en;
                           return (
                             <button
                               key={srv.en}
                               type="button"
                               onClick={() => toggleService(srv.en)}
-                              className={`px-3.5 py-1.5 rounded-full text-xs font-medium transition-all ${isSelected
-                                ? "bg-gradient-to-r from-[#00E5FF] to-[#0066FF] text-[#0B0E17] font-semibold shadow-[0_0_12px_rgba(0,229,255,0.4)]"
-                                : "bg-white/[0.03] text-slate-300 hover:text-white border border-white/[0.08] hover:border-white/[0.2]"
-                                }`}
+                              className={`px-3.5 py-1.5 rounded-full text-xs font-medium transition-all cursor-pointer ${
+                                isSelected
+                                  ? "bg-gradient-to-r from-cyan-400 to-indigo-500 text-[#070B14] font-semibold shadow-[0_0_15px_rgba(6,182,212,0.4)]"
+                                  : "bg-white/[0.04] text-slate-300 hover:text-white border border-white/[0.08] hover:border-white/20"
+                              }`}
                             >
                               {label}
                             </button>
@@ -310,7 +341,7 @@ export default function Contact() {
                       <label className="block text-xs font-mono uppercase text-slate-400 tracking-wider mb-2.5">
                         {dict.contact.budgetLabel}
                       </label>
-                      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2" dir="ltr">
                         {BUDGET_OPTIONS.map((bgt) => {
                           const isSelected = selectedBudget === bgt;
                           return (
@@ -318,10 +349,11 @@ export default function Contact() {
                               key={bgt}
                               type="button"
                               onClick={() => setSelectedBudget(bgt)}
-                              className={`py-2 px-3 rounded-xl text-xs font-semibold text-center transition-all ${isSelected
-                                ? "bg-white text-[#0B0E17] shadow-[0_0_15px_rgba(255,255,255,0.3)]"
-                                : "bg-white/[0.03] text-slate-300 hover:text-white border border-white/[0.08]"
-                                }`}
+                              className={`py-2 px-3 rounded-xl text-xs font-semibold text-center transition-all cursor-pointer ${
+                                isSelected
+                                  ? "bg-cyan-400 text-[#070B14] shadow-[0_0_15px_rgba(6,182,212,0.35)]"
+                                  : "bg-[#0A1224]/80 text-slate-300 hover:text-white border border-white/[0.08] hover:border-white/20"
+                              }`}
                             >
                               {bgt}
                             </button>
@@ -344,7 +376,7 @@ export default function Contact() {
                             setFormData({ ...formData, name: e.target.value })
                           }
                           placeholder={dict.contact.namePlaceholder}
-                          className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.1] text-white placeholder-slate-500 text-sm focus:outline-none focus:border-[#00E5FF] focus:ring-1 focus:ring-[#00E5FF] transition-all"
+                          className="w-full px-4 py-3 rounded-xl bg-[#0A1224] border border-white/10 text-white placeholder-slate-400 text-sm focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-colors"
                         />
                       </div>
 
@@ -360,12 +392,13 @@ export default function Contact() {
                             setFormData({ ...formData, email: e.target.value })
                           }
                           placeholder={dict.contact.emailPlaceholder}
-                          className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.1] text-white placeholder-slate-500 text-sm focus:outline-none focus:border-[#00E5FF] focus:ring-1 focus:ring-[#00E5FF] transition-all"
+                          className="w-full px-4 py-3 rounded-xl bg-[#0A1224] border border-white/10 text-white placeholder-slate-400 text-sm focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-colors"
+                          dir="ltr"
                         />
                       </div>
                     </div>
 
-                    {/* Company / Website */}
+                    {/* Institution Name / Website */}
                     <div>
                       <label className="block text-xs font-mono uppercase text-slate-400 mb-1.5">
                         {dict.contact.companyLabel}
@@ -377,11 +410,11 @@ export default function Contact() {
                           setFormData({ ...formData, company: e.target.value })
                         }
                         placeholder={dict.contact.companyPlaceholder}
-                        className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.1] text-white placeholder-slate-500 text-sm focus:outline-none focus:border-[#00E5FF] focus:ring-1 focus:ring-[#00E5FF] transition-all"
+                        className="w-full px-4 py-3 rounded-xl bg-[#0A1224] border border-white/10 text-white placeholder-slate-400 text-sm focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-colors"
                       />
                     </div>
 
-                    {/* Project Requirements Message */}
+                    {/* Requirements Message */}
                     <div>
                       <label className="block text-xs font-mono uppercase text-slate-400 mb-1.5">
                         {dict.contact.messageLabel}
@@ -394,7 +427,7 @@ export default function Contact() {
                           setFormData({ ...formData, message: e.target.value })
                         }
                         placeholder={dict.contact.messagePlaceholder}
-                        className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.1] text-white placeholder-slate-500 text-sm focus:outline-none focus:border-[#00E5FF] focus:ring-1 focus:ring-[#00E5FF] transition-all resize-none"
+                        className="w-full px-4 py-3 rounded-xl bg-[#0A1224] border border-white/10 text-white placeholder-slate-400 text-sm focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-colors resize-none"
                       />
                     </div>
 
@@ -403,10 +436,10 @@ export default function Contact() {
                       <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="relative w-full inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-semibold rounded-full group focus:outline-none disabled:opacity-50"
+                        className="relative w-full inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-semibold rounded-full group focus:outline-none disabled:opacity-50 cursor-pointer"
                       >
-                        <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-[#00E5FF] to-[#0066FF] rounded-full filter blur-[8px] opacity-75 group-hover:opacity-100 group-hover:blur-[12px] transition-all duration-300" />
-                        <span className="relative w-full flex items-center justify-center gap-2 py-4 px-6 rounded-full bg-gradient-to-r from-[#00E5FF] to-[#0066FF] text-[#0B0E17] font-bold text-sm tracking-wide transition-all duration-300 group-hover:brightness-110 active:scale-98 shadow-[0_0_25px_rgba(0,229,255,0.4)]">
+                        <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-cyan-400 to-indigo-500 rounded-full filter blur-[8px] opacity-75 group-hover:opacity-100 group-hover:blur-[12px] transition-all duration-300" />
+                        <span className="relative w-full flex items-center justify-center gap-2 py-4 px-6 rounded-full bg-gradient-to-r from-cyan-400 to-indigo-500 text-[#070B14] font-bold text-sm tracking-wide transition-all duration-300 group-hover:brightness-110 active:scale-98 shadow-[0_0_25px_rgba(6,182,212,0.4)]">
                           {isSubmitting ? (
                             <span>{dict.contact.submittingBtn}</span>
                           ) : (
