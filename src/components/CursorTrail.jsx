@@ -13,7 +13,7 @@ export default function CursorTrail() {
 
         let animationFrameId;
         const particles = [];
-        const colors = ['#ffffff', '#38bdf8', '#22d3ee', '#f86ff1ff', '#f386bcff'];
+        const colors = ['#0284c7', '#4f46e5', '#059669', '#38bdf8', '#6366f1'];
 
         const resizeCanvas = () => {
             canvas.width = window.innerWidth;

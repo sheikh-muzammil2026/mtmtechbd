@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import {
   ExternalLink,
-  Sparkles,
   ArrowUpRight,
   TrendingUp,
   ArrowRight,
@@ -44,7 +43,7 @@ const BASE_PROJECTS = [
     subMetricBn: "৫,০০০+ শিক্ষার্থী ও স্টাফ",
     subMetricAr: "5,000+ طالب وكادر تعليمي",
     tags: ["Next.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
-    gradient: "from-[#00E5FF]/20 via-[#0066FF]/20 to-transparent",
+    gradient: "from-sky-500/10 via-blue-500/10 to-transparent",
     liveUrl: "https://aimpurbachal.vercel.app",
     repoUrl: null,
   },
@@ -70,7 +69,7 @@ const BASE_PROJECTS = [
     subMetricBn: "রিয়েল-টাইম স্লট ইঞ্জিন",
     subMetricAr: "محرك حجز فوري للمواعيد",
     tags: ["React", "Node.js", "MongoDB", "Express", "Tailwind CSS"],
-    gradient: "from-emerald-500/20 via-[#00E5FF]/20 to-transparent",
+    gradient: "from-emerald-500/10 via-teal-500/10 to-transparent",
     liveUrl: "https://mediqueue-client-ochre.vercel.app",
     repoUrl: "https://github.com/sheikh-muzammil2026/mediqueue-client",
     serverRepoUrl: "https://github.com/sheikh-muzammil2026/mediqueue-server",
@@ -97,7 +96,7 @@ const BASE_PROJECTS = [
     subMetricBn: "দ্রুত পেজ ট্রানজিশন",
     subMetricAr: "تنقل فوري وسلس",
     tags: ["React", "Vite", "Tailwind CSS", "Context API", "Vercel"],
-    gradient: "from-[#0066FF]/20 via-[#00E5FF]/20 to-transparent",
+    gradient: "from-blue-500/10 via-indigo-500/10 to-transparent",
     liveUrl: "https://b13-a8-suncart.vercel.app",
     repoUrl: "https://github.com/sheikh-muzammil2026/B13-A8-suncart",
   },
@@ -123,7 +122,7 @@ const BASE_PROJECTS = [
     subMetricBn: "স্বয়ংক্রিয় ক্যালেন্ডার সিঙ্ক",
     subMetricAr: "مزامنة التقويم الفورية",
     tags: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "Prisma"],
-    gradient: "from-amber-500/20 via-[#0066FF]/20 to-transparent",
+    gradient: "from-amber-500/10 via-orange-500/10 to-transparent",
     liveUrl: null,
     repoUrl: null,
   },
@@ -149,7 +148,7 @@ const BASE_PROJECTS = [
     subMetricBn: "জিরো বাফারিং প্লেব্যাক",
     subMetricAr: "تشغيل سلس دون تقطيع",
     tags: ["Next.js", "HLS.js", "Tailwind CSS", "Cloudflare Stream", "Node.js"],
-    gradient: "from-purple-600/20 via-[#00E5FF]/20 to-transparent",
+    gradient: "from-purple-500/10 via-pink-500/10 to-transparent",
     liveUrl: null,
     repoUrl: null,
   },
@@ -174,14 +173,11 @@ export default function Portfolio() {
         });
 
   return (
-    <section
-      id="portfolio"
-      className="relative py-28 sm:py-32 bg-gradient-to-b from-[#070B14] via-[#0B162C]/80 to-[#070B14] overflow-hidden"
-    >
+    <section id="portfolio" className="site-section relative overflow-hidden">
       {/* Background Aurora Glows, Blueprint Grid & Starfield */}
       <StarfieldBackground glowPosition="both" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 site-container">
         {/* Section Header */}
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
           <motion.div
@@ -189,12 +185,10 @@ export default function Portfolio() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.03] border border-[#00E5FF]/30 backdrop-blur-md mb-4"
+            className="site-badge"
           >
-            <Sparkles className="w-3.5 h-3.5 text-[#00E5FF]" />
-            <span className="text-xs font-semibold tracking-wider uppercase bg-gradient-to-r from-[#00E5FF] to-[#38bdf8] bg-clip-text text-transparent">
-              {dict.portfolio.badge}
-            </span>
+            <span className="w-2 h-2 rounded-full bg-sky-600 animate-pulse" />
+            <span>{dict.portfolio.badge}</span>
           </motion.div>
 
           <motion.h2
@@ -202,10 +196,10 @@ export default function Portfolio() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight"
+            className="site-heading"
           >
             {dict.portfolio.titlePrefix}{" "}
-            <span className="bg-gradient-to-r from-[#00E5FF] via-[#38bdf8] to-[#0066FF] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-sky-600 via-blue-600 to-indigo-600 bg-clip-text text-transparent">
               {dict.portfolio.titleHighlight}
             </span>
           </motion.h2>
@@ -215,7 +209,7 @@ export default function Portfolio() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mt-4 text-base sm:text-lg text-slate-400 leading-relaxed"
+            className="site-subheading"
           >
             {dict.portfolio.description}
           </motion.p>
@@ -227,7 +221,7 @@ export default function Portfolio() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.25 }}
-          className="mt-12 flex flex-wrap items-center justify-center gap-2 sm:gap-3"
+          className="mt-10 sm:mt-12 flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 p-1.5 rounded-full bg-slate-100 border border-slate-200/90 max-w-fit mx-auto"
         >
           {categories.map((cat, idx) => {
             const isActive = selectedCatIndex === idx;
@@ -236,16 +230,16 @@ export default function Portfolio() {
                 key={cat}
                 type="button"
                 onClick={() => setSelectedCatIndex(idx)}
-                className={`relative px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 focus:outline-none ${
+                className={`relative px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 focus:outline-none cursor-pointer ${
                   isActive
-                    ? "text-[#0B0E17]"
-                    : "text-slate-300 hover:text-white bg-white/[0.03] border border-white/[0.08] hover:border-white/[0.15]"
+                    ? "text-sky-800"
+                    : "text-slate-600 hover:text-slate-900"
                 }`}
               >
                 {isActive && (
                   <motion.div
                     layoutId="active-portfolio-pill"
-                    className="absolute inset-0 rounded-full bg-gradient-to-r from-[#00E5FF] to-[#0066FF] shadow-[0_0_20px_rgba(0,229,255,0.4)]"
+                    className="absolute inset-0 rounded-full bg-white shadow-xs border border-slate-200/90"
                     transition={{ type: "spring", stiffness: 380, damping: 30 }}
                   />
                 )}
@@ -258,7 +252,7 @@ export default function Portfolio() {
         {/* Projects Grid */}
         <motion.div
           layout
-          className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
+          className="mt-12 sm:mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
         >
           <AnimatePresence>
             {filteredProjects.map((project) => {
@@ -301,45 +295,45 @@ export default function Portfolio() {
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: -10, scale: 0.97 }}
                   transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-                  className="group relative rounded-2xl bg-[#111C33]/70 hover:bg-[#152442]/90 border border-white/[0.08] hover:border-cyan-400/35 backdrop-blur-md overflow-hidden flex flex-col justify-between transition-all duration-300 hover:shadow-[0_20px_45px_rgba(0,0,0,0.7)] hover:-translate-y-1.5"
+                  className="theme-card overflow-hidden flex flex-col justify-between group relative"
                 >
                   {/* Visual Header / Mock Window */}
-                  <div className="relative h-48 bg-gradient-to-br from-[#0B162C] to-[#070B14] border-b border-white/[0.08] p-4 flex flex-col justify-between overflow-hidden">
+                  <div className="relative h-48 bg-gradient-to-br from-slate-100 via-slate-50 to-white border-b border-slate-200 p-4 flex flex-col justify-between overflow-hidden">
                     <div
-                      className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-50 group-hover:opacity-100 transition-opacity duration-500`}
+                      className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-60 group-hover:opacity-100 transition-opacity duration-500`}
                     />
 
                     {/* Browser Bar */}
                     <div className="relative z-10 flex items-center justify-between" dir="ltr">
                       <div className="flex items-center gap-1.5">
-                        <div className="w-2.5 h-2.5 rounded-full bg-rose-500/80" />
-                        <div className="w-2.5 h-2.5 rounded-full bg-amber-500/80" />
-                        <div className="w-2.5 h-2.5 rounded-full bg-emerald-500/80" />
+                        <div className="w-2.5 h-2.5 rounded-full bg-rose-400" />
+                        <div className="w-2.5 h-2.5 rounded-full bg-amber-400" />
+                        <div className="w-2.5 h-2.5 rounded-full bg-emerald-400" />
                       </div>
-                      <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-black/40 text-slate-300 border border-white/[0.06]">
+                      <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-white text-slate-700 border border-slate-200 shadow-xs font-semibold">
                         {category}
                       </span>
                     </div>
 
                     {/* Metric Accent */}
                     <div className="relative z-10 my-auto text-center">
-                      <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-black/40 border border-white/10 backdrop-blur-md group-hover:border-[#00E5FF]/40 transition-colors">
-                        <TrendingUp className="w-4 h-4 text-[#00E5FF]" />
-                        <span className="text-xs font-bold text-white tracking-wide">
+                      <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/95 border border-slate-200 shadow-xs backdrop-blur-md group-hover:border-sky-300 transition-colors">
+                        <TrendingUp className="w-4 h-4 text-sky-600" />
+                        <span className="text-xs font-bold text-slate-900 tracking-wide">
                           {metric}
                         </span>
                       </div>
-                      <div className="text-[11px] text-slate-400 mt-1 font-mono">
+                      <div className="text-[11px] text-slate-500 mt-1 font-mono font-medium">
                         {subMetric}
                       </div>
                     </div>
 
                     {/* Bottom Status */}
-                    <div className="relative z-10 flex justify-between items-center text-[10px] text-slate-400 font-mono">
+                    <div className="relative z-10 flex justify-between items-center text-[10px] text-slate-500 font-mono">
                       <span>{dict.portfolio.statusLive}</span>
-                      <span className="text-[#00E5FF] flex items-center gap-1">
+                      <span className="text-sky-700 font-semibold flex items-center gap-1">
                         {dict.portfolio.verifiedBadge}{" "}
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
                       </span>
                     </div>
                   </div>
@@ -347,10 +341,10 @@ export default function Portfolio() {
                   {/* Card Content Body */}
                   <div className="p-6 flex-1 flex flex-col justify-between">
                     <div>
-                      <h3 className="text-lg font-bold text-white group-hover:text-[#00E5FF] transition-colors leading-snug">
+                      <h3 className="text-lg font-bold text-slate-900 group-hover:text-sky-700 transition-colors leading-snug">
                         {title}
                       </h3>
-                      <p className="mt-2.5 text-xs sm:text-sm text-slate-400 leading-relaxed">
+                      <p className="mt-2.5 text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
                         {desc}
                       </p>
                     </div>
@@ -360,7 +354,7 @@ export default function Portfolio() {
                         {project.tags.map((tag) => (
                           <span
                             key={tag}
-                            className="px-2 py-0.5 rounded-md bg-white/[0.05] border border-white/10 text-[10px] font-medium text-slate-300"
+                            className="px-2 py-0.5 rounded-md bg-slate-100 border border-slate-200 text-[10px] font-medium text-slate-700"
                           >
                             {tag}
                           </span>
@@ -368,13 +362,13 @@ export default function Portfolio() {
                       </div>
 
                       {/* Action Links */}
-                      <div className="pt-4 border-t border-white/[0.06] flex items-center justify-between gap-2">
+                      <div className="pt-4 border-t border-slate-100 flex items-center justify-between gap-2">
                         {project.liveUrl ? (
                           <a
                             href={project.liveUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#00E5FF] hover:text-[#38bdf8] transition-colors"
+                            className="inline-flex items-center gap-1.5 text-xs font-semibold text-sky-700 hover:text-sky-800 transition-colors"
                           >
                             <span>{dict.portfolio.liveDemoBtn}</span>
                             <ArrowUpRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -382,7 +376,7 @@ export default function Portfolio() {
                         ) : (
                           <Link
                             href="#contact"
-                            className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-400 hover:text-[#00E5FF] transition-colors"
+                            className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-500 hover:text-sky-700 transition-colors"
                           >
                             <span>{dict.portfolio.demoOnRequest}</span>
                             <ArrowUpRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -395,7 +389,7 @@ export default function Portfolio() {
                               href={project.repoUrl}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="p-2 rounded-lg bg-white/[0.03] hover:bg-[#00E5FF]/20 border border-white/[0.06] hover:border-[#00E5FF]/40 text-slate-400 hover:text-[#00E5FF] transition-all"
+                              className="p-2 rounded-lg bg-slate-50 hover:bg-sky-50 border border-slate-200 hover:border-sky-300 text-slate-600 hover:text-sky-700 transition-all shadow-xs"
                               title={dict.portfolio.viewRepoBtn}
                               aria-label="View Source Code"
                             >
@@ -408,7 +402,7 @@ export default function Portfolio() {
                               href={project.liveUrl}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="p-2 rounded-lg bg-white/[0.03] hover:bg-[#00E5FF]/20 border border-white/[0.06] hover:border-[#00E5FF]/40 text-slate-400 hover:text-[#00E5FF] transition-all"
+                              className="p-2 rounded-lg bg-slate-50 hover:bg-sky-50 border border-slate-200 hover:border-sky-300 text-slate-600 hover:text-sky-700 transition-all shadow-xs"
                               aria-label="View Project"
                             >
                               <ExternalLink className="w-3.5 h-3.5" />
@@ -430,17 +424,17 @@ export default function Portfolio() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mt-16 text-center"
+          className="mt-14 sm:mt-16 text-center"
         >
-          <p className="text-sm text-slate-400 mb-4">
+          <p className="text-sm text-slate-600 mb-4 font-normal">
             {dict.portfolio.bottomPrompt}
           </p>
           <Link
             href="#contact"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/[0.03] hover:bg-white/[0.07] border border-white/[0.12] hover:border-[#00E5FF]/40 text-white font-semibold text-sm transition-all duration-300 group hover:shadow-[0_0_20px_rgba(0,229,255,0.2)]"
+            className="theme-btn-secondary px-6 py-3 font-semibold text-sm"
           >
             <span>{dict.portfolio.bottomCta}</span>
-            <ArrowRight className="w-4 h-4 text-[#00E5FF] transition-transform duration-300 group-hover:translate-x-1" />
+            <ArrowRight className="w-4 h-4 text-sky-600 transition-transform duration-300 group-hover:translate-x-1" />
           </Link>
         </motion.div>
       </div>

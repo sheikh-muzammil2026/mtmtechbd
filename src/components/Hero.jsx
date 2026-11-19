@@ -10,7 +10,6 @@ import {
   ArrowRight,
   ChevronLeft,
   ChevronRight,
-  Play,
   CheckCircle2,
   X,
   Send,
@@ -19,14 +18,9 @@ import {
   TrendingUp,
   Zap,
   Sliders,
-  FileText,
-  RotateCcw,
   Receipt,
   Wallet,
-  Users,
   BarChart3,
-  Target,
-  Shield,
   Rocket,
   CircleDollarSign,
   Calculator,
@@ -52,10 +46,10 @@ const HERO_DATA = {
         description:
           "শিক্ষাপ্রতিষ্ঠান, মাদরাসা ও কর্পোরেট প্রতিষ্ঠানের জন্য MTM TECH BD তৈরি করছে আধুনিক ওয়েব ও মোবাইল অ্যাপ। এক প্ল্যাটফর্মেই পান সর্বোচ্চ গতি, নির্ভুল অটোমেশন ও বহুগুণ মুনাফা।",
         pills: [
-          { icon: Clock, label: "সময় সাশ্রয়", color: "text-sky-400", bg: "bg-sky-500/10 border-sky-400/25" },
-          { icon: Brain, label: "মেধার বিকাশ", color: "text-emerald-400", bg: "bg-emerald-500/10 border-emerald-400/25" },
-          { icon: Settings, label: "শ্রম লাঘব", color: "text-indigo-400", bg: "bg-indigo-500/10 border-indigo-400/25" },
-          { icon: Coins, label: "অর্থনৈতিক লাভ", color: "text-amber-400", bg: "bg-amber-500/10 border-amber-400/25" },
+          { icon: Clock, label: "সময় সাশ্রয়", color: "text-sky-700", bg: "bg-sky-50 border-sky-200" },
+          { icon: Brain, label: "মেধার বিকাশ", color: "text-emerald-700", bg: "bg-emerald-50 border-emerald-200" },
+          { icon: Settings, label: "শ্রম লাঘব", color: "text-indigo-700", bg: "bg-indigo-50 border-indigo-200" },
+          { icon: Coins, label: "অর্থনৈতিক লাভ", color: "text-amber-700", bg: "bg-amber-50 border-amber-200" },
         ],
         ctaPrimary: "আপনার অ্যাপ অর্ডার করুন",
         ctaSecondary: "কীভাবে লাভবান হবেন?",
@@ -72,13 +66,13 @@ const HERO_DATA = {
             title: "১-ক্লিক অ্যাডমিট ও রেজাল্ট",
             desc: "হাজারো শিক্ষার্থীর মার্কশিট তৈরি মাত্র ৫ সেকেন্ডে।",
             icon: Zap,
-            color: "text-cyan-400 border-cyan-500/25",
+            color: "text-sky-700 border-sky-200 bg-sky-50/60",
           },
           {
             title: "GPS ও ডিজিটাল হাজিরা",
             desc: "তাৎক্ষণিক SMS নোটিফিকেশন ও অটো রিপোর্ট।",
             icon: Smartphone,
-            color: "text-blue-400 border-blue-500/25",
+            color: "text-indigo-700 border-indigo-200 bg-indigo-50/60",
           },
         ],
         ctaPrimary: "অটোমেশন লাইভ ডেমো দেখুন",
@@ -96,208 +90,208 @@ const HERO_DATA = {
             title: "স্মার্ট অ্যানালিটিক্স রিপোর্ট",
             desc: "সঠিক ডাটা দেখে দ্রুত ও নির্ভুল সিদ্ধান্ত নেওয়ার সুবিধা।",
             icon: BarChart3,
-            color: "text-emerald-400 border-emerald-500/25",
+            color: "text-emerald-700 border-emerald-200 bg-emerald-50/60",
           },
           {
-            title: "ডেডিকেটেড টেক টিম",
-            desc: "আলাদা আইটি এক্সপার্ট নিয়োগের ঝামেলা ছাড়াই পূর্ণ সাপোর্ট।",
+            title: "প্রফেশনাল টেক সাপোর্ট",
+            desc: "কোনো টেকনিক্যাল জ্ঞান ছাড়াই সিস্টেম পরিচালনা ও নিয়মিত ব্যাকআপ।",
             icon: ShieldCheck,
-            color: "text-sky-400 border-sky-500/25",
+            color: "text-sky-700 border-sky-200 bg-sky-50/60",
           },
         ],
-        ctaPrimary: "এক্সপার্ট পরামর্শ নিন",
-        ctaSecondary: "পরামর্শ টিম দেখুন",
+        ctaPrimary: "কনসালটেশন বুক করুন",
+        ctaSecondary: "আমাদের টিম",
       },
       {
-        badge: "সর্বোচ্চ ROI ও স্বচ্ছ আর্থিক ব্যবস্থাপনা",
-        title1: "কম খরচে এন্টারপ্রাইজ সলিউশন: নিশ্চিত করুন",
-        titleHighlight: "অর্থনৈতিক লাভ ও সর্বোচ্চ ROI",
+        badge: "সর্বোচ্চ ROI ও অর্থ সাশ্রয়",
+        title1: "কম খরচে বিশ্বমানের সফটওয়্যার সমাধান: পান",
+        titleHighlight: "সর্বোচ্চ অর্থনৈতিক রিটার্ন (ROI)",
         title2: "",
         description:
-          "অতিরিক্ত জনবল, কাগজ-কলম ও ব্যবস্থাপনা অপচয় কমিয়ে সাশ্রয় করুন ৬০% পর্যন্ত অপারেশনাল খরচ। ডিজিটাল ফি কালেকশন ও স্বচ্ছ ভাউচার সিস্টেমে প্রতিষ্ঠানের আয় বাড়ান বহুগুণ।",
+          "কাগজপত্র ও অতিরিক্ত স্টাফিং খরচ কমিয়ে আনুন ৬০% পর্যন্ত। সাশ্রয়ী প্যাকেজ ও ডিজিটাল ফি কালেকশনের মাধ্যমে প্রতিষ্ঠানের আয় বৃদ্ধি করুন দ্রুত।",
         features: [
           {
-            title: "৬০% অপারেশনাল খরচ সাশ্রয়",
-            desc: "সাশ্রয়ী সাবস্ক্রিপশন ও জিরো হিডেন চার্জ গ্যারান্টি।",
+            title: "অপারেশনাল খরচ ৬০% সাশ্রয়",
+            desc: "বাজেট-বান্ধব এককালীন বা মাসিক সাবস্ক্রিপশন সুবিধা।",
             icon: CircleDollarSign,
-            color: "text-amber-400 border-amber-500/25",
+            color: "text-amber-700 border-amber-200 bg-amber-50/60",
           },
           {
-            title: "ডিজিটাল পেমেন্ট ও ভাউচার",
-            desc: "বিকাশ, নগদ ও ব্যাংকিং ইন্টিগ্রেশনে ১০০% স্বচ্ছ হিসাব।",
+            title: "ডিজিটাল পেমেন্ট ও অটো ভাউচার",
+            desc: "বিকাশ, নগদ ও ব্যাংকের মাধ্যমে ফি কালেকশন ও হিসাব।",
             icon: Wallet,
-            color: "text-emerald-400 border-emerald-500/25",
+            color: "text-emerald-700 border-emerald-200 bg-emerald-50/60",
           },
         ],
-        ctaPrimary: "সাশ্রয়ী প্যাকেজ জানুন",
-        ctaSecondary: "ROI হিসাব দেখুন",
+        ctaPrimary: "প্রাইসিং প্যাকেজ দেখুন",
+        ctaSecondary: "ROI ক্যালকুলেটর",
       },
     ],
     drawer: {
       tag: "MTM TECH BD",
-      title: "আপনার অ্যাপ বা সফটওয়্যার অর্ডার করুন",
-      subtitle: "প্রতিষ্ঠানের তথ্য দিন, আমাদের টিম দ্রুত লাইভ ডেমো ও প্রপোজাল নিয়ে যোগাযোগ করবে।",
+      title: "আপনার প্রতিষ্ঠান বা প্রজেক্টের জন্য অ্যাপ অর্ডার করুন",
+      subtitle: "নিচের তথ্যগুলো দিন, আমাদের টিম অতি দ্রুত আপনার সাথে যোগাযোগ করে লাইভ ডেমো প্রদর্শন করবে।",
       nameLabel: "আপনার নাম / প্রতিষ্ঠানের নাম",
-      namePlaceholder: "যেমন: দারুল উলুম একাডেমি / মাহফুজুর রহমান",
-      phoneLabel: "মোবাইল নম্বর",
-      phonePlaceholder: "০১XXXXXXXXX",
-      typeLabel: "সফটওয়্যারের ধরন",
+      namePlaceholder: "উদাঃ দারুল উলূম মাদরাসা / মো. আব্দুল্লাহ",
+      phoneLabel: "মোবাইল / হোয়াটসঅ্যাপ নম্বর",
+      phonePlaceholder: "০১৭XXXXXXXX",
+      typeLabel: "সফটওয়্যার বা অ্যাপের ধরন",
       typeOptions: [
-        "স্কুল / মাদরাসা ম্যানেজমেন্ট সিস্টেম (MMIS ERP)",
-        "কাস্টম মোবাইল অ্যাপ (Android ও iOS)",
-        "অ্যাকাউন্টিং ও ডাবল-এন্ট্রি ফি সিস্টেম",
-        "কাস্টম এডুকেশন ওয়েবসাইট ও পোর্টাল",
+        "স্মার্ট মাদরাসা ম্যানেজমেন্ট সিস্টেম (MMIS)",
+        "স্কুল / কলেজ ইআরপি সল্যুশন",
+        "কাস্টম মোবাইল অ্যাপ (Android / iOS)",
+        "ইনস্টিটিউশনাল ওয়েবসাইট ও পোর্টাল",
       ],
-      studentsLabel: "আনুমানিক ছাত্রছাত্রী বা ব্যবহারকারী সংখ্যা",
-      studentsOptions: ["২০০-এর নিচে", "২০০ - ৫০০ জন", "৫০০ - ১,৫০০ জন", "১,৫০০+ জন"],
-      submitBtn: "ডেমো ও অর্ডার কনফার্ম করুন",
-      submitting: "পাঠানো হচ্ছে...",
-      successTitle: "ধন্যবাদ! আপনার অনুরোধ সফলভাবে গৃহীত হয়েছে",
-      successDesc: "MTM TECH BD-এর একজন প্রতিনিধি খুব শীঘ্রই আপনার সাথে যোগাযোগ করে সম্পূর্ণ লাইভ ডেমো উপস্থাপন করবেন।",
+      studentsLabel: "শিক্ষার্থী / ব্যবহারকারীর সংখ্যা (আনুমানিক)",
+      studentsOptions: ["২০০ জনের নিচে", "২০০ - ৫০০ জন", "৫০০ - ১,৫০০ জন", "১,৫০০+ জন"],
+      submitBtn: "অর্ডার নিশ্চিত করুন ও ফ্রি ডেমো নিন",
+      submitting: "প্রসেসিং হচ্ছে...",
+      successTitle: "আপনার অর্ডার সফলভাবে গ্রহণ করা হয়েছে!",
+      successDesc: "আমাদের টিম খুব শীঘ্রই আপনার দেওয়া নম্বরে যোগাযোগ করে লাইভ ডেমো দেখাবে।",
       closeBtn: "বন্ধ করুন",
     },
   },
   en: {
     tabs: [
-      { id: 0, label: "01. Overall Gain", short: "Overall" },
-      { id: 1, label: "02. Time & Labor", short: "Time-Labor" },
-      { id: 2, label: "03. Intellect Boost", short: "Intellect" },
-      { id: 3, label: "04. Economic ROI", short: "ROI" },
+      { id: 0, label: "01. Total Impact", short: "Impact" },
+      { id: 1, label: "02. Time & Labor", short: "Efficiency" },
+      { id: 2, label: "03. Talent & Intel", short: "Talent" },
+      { id: 3, label: "04. Financial ROI", short: "ROI" },
     ],
     slides: [
       {
         badge: "MTM TECH BD • 360° DIGITAL TRANSFORMATION",
-        title1: "Save",
-        titleHighlight: "Time, Intellect, Labor & Money",
-        title2: "— Guaranteed Growth in Every Aspect!",
+        title1: "Save Time, Elevate Talent, Slash Labor &",
+        titleHighlight: "Maximize Institutional ROI",
+        title2: "with Custom SaaS Solutions.",
         description:
-          "MTM TECH BD engineers next-gen web & mobile apps for schools, madrasahs, and enterprises. Unlock lightning speed, zero-error automation, and maximum ROI in one suite.",
+          "We build bespoke institutional ERPs, high-converting portals, and mobile apps for academies, enterprises, and madrasahs—driving operational efficiency and measurable revenue growth.",
         pills: [
-          { icon: Clock, label: "Save Time", color: "text-sky-400", bg: "bg-sky-500/10 border-sky-400/25" },
-          { icon: Brain, label: "Boost Intellect", color: "text-emerald-400", bg: "bg-emerald-500/10 border-emerald-400/25" },
-          { icon: Settings, label: "Cut Labor", color: "text-indigo-400", bg: "bg-indigo-500/10 border-indigo-400/25" },
-          { icon: Coins, label: "Maximize ROI", color: "text-amber-400", bg: "bg-amber-500/10 border-amber-400/25" },
+          { icon: Clock, label: "Time Saved", color: "text-sky-700", bg: "bg-sky-50 border-sky-200" },
+          { icon: Brain, label: "Talent Elevated", color: "text-emerald-700", bg: "bg-emerald-50 border-emerald-200" },
+          { icon: Settings, label: "Labor Cut", color: "text-indigo-700", bg: "bg-indigo-50 border-indigo-200" },
+          { icon: Coins, label: "Financial ROI", color: "text-amber-700", bg: "bg-amber-50 border-amber-200" },
         ],
-        ctaPrimary: "Build Your App Now",
+        ctaPrimary: "Order Your Custom App",
         ctaSecondary: "Explore 4 Pillars",
       },
       {
         badge: "SMART AUTOMATION & ZERO PAPERWORK",
-        title1: "90% Manual Tasks Automated: Save",
-        titleHighlight: "Precious Time & Labor",
+        title1: "Automate 90% of Routine Administrative Tasks:",
+        titleHighlight: "Save Countless Work Hours",
         title2: "",
         description:
-          "Say goodbye to hours of manual attendance, admit cards, and result sheets. Execute complex administrative workflows in a single click.",
+          "Eliminate manual paper logs, messy voucher registers, and manual report card generation. Run your entire institution seamlessly from a single unified cloud suite.",
         features: [
           {
-            title: "1-Click Admit & Results",
-            desc: "Generate thousands of error-free marksheets in 5 seconds.",
+            title: "1-Click Marks & Results",
+            desc: "Generate thousands of student transcripts in 5 seconds.",
             icon: Zap,
-            color: "text-cyan-400 border-cyan-500/25",
+            color: "text-sky-700 border-sky-200 bg-sky-50/60",
           },
           {
-            title: "GPS & Smart Attendance",
-            desc: "Instant parent SMS alerts & automated daily reports.",
+            title: "GPS & Digital Attendance",
+            desc: "Instant SMS notifications and audit-ready attendance trails.",
             icon: Smartphone,
-            color: "text-blue-400 border-blue-500/25",
+            color: "text-indigo-700 border-indigo-200 bg-indigo-50/60",
           },
         ],
-        ctaPrimary: "Watch Automation Demo",
-        ctaSecondary: "View All Features",
+        ctaPrimary: "Experience Live Automation",
+        ctaSecondary: "View Tech Specs",
       },
       {
-        badge: "SMART ADMINISTRATIVE INTELLIGENCE",
-        title1: "Focus on Innovation, Not Routine: Unlock",
-        titleHighlight: "True Intellectual Potential",
+        badge: "ADMINISTRATIVE INTELLIGENCE",
+        title1: "Shift Focus from Repetitive Chores to Innovation:",
+        titleHighlight: "Empower Your Core Talent",
         title2: "",
         description:
-          "Free your teachers and staff from repetitive paperwork so their intellect drives academic excellence and expansion—while our engineers handle the tech.",
+          "Free educators and managers from tedious bookkeeping so they can focus on teaching excellence and strategic growth. Our tech team manages server reliability 24/7.",
         features: [
           {
-            title: "Smart Analytics Reports",
-            desc: "Data-driven insights for faster, sharper decisions.",
+            title: "Actionable Insights",
+            desc: "Make confident data-driven decisions with live dashboards.",
             icon: BarChart3,
-            color: "text-emerald-400 border-emerald-500/25",
+            color: "text-emerald-700 border-emerald-200 bg-emerald-50/60",
           },
           {
-            title: "Dedicated Tech Team",
-            desc: "Enterprise IT support without hiring overhead.",
+            title: "Zero In-House Tech Overhead",
+            desc: "No dedicated DevOps hires required. Fully managed by MTM.",
             icon: ShieldCheck,
-            color: "text-sky-400 border-sky-500/25",
+            color: "text-sky-700 border-sky-200 bg-sky-50/60",
           },
         ],
-        ctaPrimary: "Consult Our Experts",
-        ctaSecondary: "Meet Tech Architects",
+        ctaPrimary: "Schedule Strategy Call",
+        ctaSecondary: "Meet Our Engineers",
       },
       {
-        badge: "MAXIMUM ROI & FINANCIAL TRANSPARENCY",
-        title1: "Enterprise Power at Smart Cost: Achieve",
-        titleHighlight: "Financial Gain & Peak ROI",
+        badge: "MAXIMUM ROI & COST SAVINGS",
+        title1: "Enterprise Quality at Sustainable Pricing:",
+        titleHighlight: "Unlock Measurable Net Savings",
         title2: "",
         description:
-          "Cut operational waste by up to 60%. Streamline digital fee collection and split-voucher accounting to multiply your institution's net profitability.",
+          "Cut recurring operational overhead by up to 60%. Accelerate tuition and fee collections with integrated payment gateways and automatic double-entry ledger audits.",
         features: [
           {
-            title: "60% Operational Cost Saved",
-            desc: "Transparent pricing with zero hidden charges.",
+            title: "60% Overhead Reduction",
+            desc: "Transparent monthly or one-off pricing with zero hidden fees.",
             icon: CircleDollarSign,
-            color: "text-amber-400 border-amber-500/25",
+            color: "text-amber-700 border-amber-200 bg-amber-50/60",
           },
           {
-            title: "Digital Fees & Vouchers",
-            desc: "Seamless bKash, Nagad & bank integration.",
+            title: "Digital Payment Integrations",
+            desc: "bKash, Nagad, Visa, and direct bank reconciliation.",
             icon: Wallet,
-            color: "text-emerald-400 border-emerald-500/25",
+            color: "text-emerald-700 border-emerald-200 bg-emerald-50/60",
           },
         ],
-        ctaPrimary: "View Cost-Saving Plans",
-        ctaSecondary: "Calculate Your ROI",
+        ctaPrimary: "Explore Transparent Pricing",
+        ctaSecondary: "ROI Calculator",
       },
     ],
     drawer: {
       tag: "MTM TECH BD",
-      title: "Order Your Custom App or Software",
-      subtitle: "Share your details and our solutions architect will reach out with a live demo.",
+      title: "Request Your Institutional Solution or Custom App",
+      subtitle: "Share your institution's details and our team will prepare a customized live demo.",
       nameLabel: "Your Name / Institution Name",
-      namePlaceholder: "e.g. Al-Hera International Academy",
-      phoneLabel: "Phone Number / WhatsApp",
+      namePlaceholder: "e.g., Apex Academy / John Doe",
+      phoneLabel: "Phone / WhatsApp Number",
       phonePlaceholder: "+880 1XXXXXXXXX",
-      typeLabel: "Software Type",
+      typeLabel: "Software / Solution Type",
       typeOptions: [
-        "School / Madrasah ERP (MMIS)",
-        "Custom Mobile App (Android & iOS)",
-        "Accounting & Split Fee Ledger",
-        "Institutional Website & LMS",
+        "Smart Madrasah Management System (MMIS)",
+        "School / College ERP Solution",
+        "Custom Mobile App (Android / iOS)",
+        "Institutional Website & Web Portal",
       ],
-      studentsLabel: "Estimated Students / Users",
+      studentsLabel: "Estimated Students / Active Users",
       studentsOptions: ["Under 200", "200 - 500", "500 - 1,500", "1,500+"],
-      submitBtn: "Confirm Demo & Order",
+      submitBtn: "Confirm Order & Request Demo",
       submitting: "Submitting...",
-      successTitle: "Request Received Successfully!",
-      successDesc: "An MTM Tech BD architect will contact you shortly to schedule your live walkthrough.",
+      successTitle: "Order Request Received!",
+      successDesc: "An MTM Tech BD specialist will contact you shortly to schedule your demo.",
       closeBtn: "Close",
     },
   },
   ar: {
     tabs: [
-      { id: 0, label: "٠١. النجاح الشامل", short: "شامل" },
-      { id: 1, label: "٠٢. الوقت والجهد", short: "الوقت-الجهد" },
+      { id: 0, label: "٠١. الأثر الشامل", short: "الشامل" },
+      { id: 1, label: "٠٢. الوقت والجهد", short: "الوقت" },
       { id: 2, label: "٠٣. استثمار العقول", short: "العقول" },
       { id: 3, label: "٠٤. العائد المالي", short: "العائد" },
     ],
     slides: [
       {
-        badge: "MTM TECH BD • تحول رقمي متكامل ٣٦٠°",
-        title1: "تطبيقاتنا تضمن توفير",
-        titleHighlight: "الوقت، والعقل، والجهد، والمال",
-        title2: "— أرباح ونمو مضمون من كل جانب!",
+        badge: "MTM TECH BD • تحول رقمي شامل ٣٦٠°",
+        title1: "تطبيقاتنا المتطورة توفر",
+        titleHighlight: "الوقت، العقول، الجهد، والمال",
+        title2: "— عائد استثماري مؤكد لمؤسستك!",
         description:
-          "نبني تطبيقات سحابية وهواتف ذكية متطورة للمدارس والمعاهد والمؤسسات. احصل على أعلى سرعة، وأتمتة خالية من الأخطاء، وعائد مالي مضاعف.",
+          "نبني أنظمة سحابية وتطبيقات جوال متقدمة للمدارس والمعاهد والشركات. منصة واحدة تضمن سرعة فائقة، أتمتة دقيقة، ونتائج استثمارية مضاعفة.",
         pills: [
-          { icon: Clock, label: "توفير الوقت", color: "text-sky-400", bg: "bg-sky-500/10 border-sky-400/25" },
-          { icon: Brain, label: "تنمية العقول", color: "text-emerald-400", bg: "bg-emerald-500/10 border-emerald-400/25" },
-          { icon: Settings, label: "تخفيف الجهد", color: "text-indigo-400", bg: "bg-indigo-500/10 border-indigo-400/25" },
-          { icon: Coins, label: "عائد مالي مضاعف", color: "text-amber-400", bg: "bg-amber-500/10 border-amber-400/25" },
+          { icon: Clock, label: "توفير الوقت", color: "text-sky-700", bg: "bg-sky-50 border-sky-200" },
+          { icon: Brain, label: "استثمار العقول", color: "text-emerald-700", bg: "bg-emerald-50 border-emerald-200" },
+          { icon: Settings, label: "تخفيف الجهد", color: "text-indigo-700", bg: "bg-indigo-50 border-indigo-200" },
+          { icon: Coins, label: "عائد مالي مضاعف", color: "text-amber-700", bg: "bg-amber-50 border-amber-200" },
         ],
         ctaPrimary: "اطلب تطبيقك الآن",
         ctaSecondary: "استكشف الأركان الـ ٤",
@@ -314,13 +308,13 @@ const HERO_DATA = {
             title: "إصدار النتائج والبطاقات بنقرة واحدة",
             desc: "آلاف الشهادات خلال ٥ ثوانٍ فقط.",
             icon: Zap,
-            color: "text-cyan-400 border-cyan-500/25",
+            color: "text-sky-700 border-sky-200 bg-sky-50/60",
           },
           {
             title: "حضور رقمي وتتبع GPS",
             desc: "إشعارات SMS فورية لأولياء الأمور وتقارير آلية.",
             icon: Smartphone,
-            color: "text-blue-400 border-blue-500/25",
+            color: "text-indigo-700 border-indigo-200 bg-indigo-50/60",
           },
         ],
         ctaPrimary: "شاهد العرض المباشر للأتمتة",
@@ -338,13 +332,13 @@ const HERO_DATA = {
             title: "تقارير تحليلية ذكية",
             desc: "رؤى بيانية لاتخاذ قرارات أسرع وأدق.",
             icon: BarChart3,
-            color: "text-emerald-400 border-emerald-500/25",
+            color: "text-emerald-700 border-emerald-200 bg-emerald-50/60",
           },
           {
             title: "فريق تقني مخصص",
             desc: "دعم فني كامل بدون تكاليف توظيف إضافية.",
             icon: ShieldCheck,
-            color: "text-sky-400 border-sky-500/25",
+            color: "text-sky-700 border-sky-200 bg-sky-50/60",
           },
         ],
         ctaPrimary: "استشر خبراءنا مجاناً",
@@ -362,13 +356,13 @@ const HERO_DATA = {
             title: "توفير ٦٠٪ من المصاريف التشغيلية",
             desc: "باقات اقتصادية بدون أي رسوم خفية.",
             icon: CircleDollarSign,
-            color: "text-amber-400 border-amber-500/25",
+            color: "text-amber-700 border-amber-200 bg-amber-50/60",
           },
           {
             title: "دفع وفواتير رقمية مؤتمتة",
             desc: "ربط سلس مع بوابات الدفع والبنوك.",
             icon: Wallet,
-            color: "text-emerald-400 border-emerald-500/25",
+            color: "text-emerald-700 border-emerald-200 bg-emerald-50/60",
           },
         ],
         ctaPrimary: "اطلع على الباقات الاقتصادية",
@@ -420,53 +414,53 @@ function AutoSyncRunner({ language }) {
   };
 
   return (
-    <div className="relative w-full max-w-[510px] p-4 sm:p-6 rounded-3xl bg-gradient-to-b from-[#0F1B35]/90 via-[#0C152B]/90 to-[#070D1E]/95 border border-cyan-400/25 shadow-[0_20px_50px_rgba(0,0,0,0.7)] backdrop-blur-xl">
-      {/* Levitating Floating Badge 1 (Top Left) */}
-      <div className="absolute -top-3.5 -left-2 sm:-left-4 z-20 px-3.5 py-1.5 rounded-2xl bg-[#0F1D3A]/90 border border-cyan-400/40 shadow-lg backdrop-blur-md flex items-center gap-2">
-        <div className="w-6 h-6 rounded-lg bg-cyan-400/20 text-cyan-400 flex items-center justify-center text-xs">
+    <div className="relative w-full max-w-[510px] p-4 sm:p-6 rounded-3xl bg-white/95 border border-slate-200/90 shadow-[0_20px_50px_rgba(15,23,42,0.08)] backdrop-blur-xl">
+      {/* Floating Badge 1 (Top Left) */}
+      <div className="absolute -top-3.5 -left-2 sm:-left-4 z-20 px-3.5 py-1.5 rounded-2xl bg-white border border-sky-300 shadow-md flex items-center gap-2">
+        <div className="w-6 h-6 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center text-xs">
           <Zap className="w-3.5 h-3.5" />
         </div>
         <div>
-          <div className="text-[10px] text-slate-400 font-mono">
+          <div className="text-[10px] text-slate-500 font-mono">
             {language === "bn" ? "কাজের গতি" : language === "ar" ? "سرعة الإنجاز" : "Speed"}
           </div>
-          <div className="text-xs font-bold text-white">
+          <div className="text-xs font-bold text-slate-900">
             {language === "bn" ? "১০ গুণ দ্রুত" : language === "ar" ? "١٠ أضعاف" : "10x Faster"}
           </div>
         </div>
       </div>
 
-      {/* Levitating Floating Badge 2 (Bottom Right) */}
-      <div className="absolute -bottom-3.5 -right-2 sm:-right-4 z-20 px-3.5 py-1.5 rounded-2xl bg-[#0F1D3A]/90 border border-amber-400/40 shadow-lg backdrop-blur-md flex items-center gap-2">
-        <div className="w-6 h-6 rounded-lg bg-amber-400/20 text-amber-400 flex items-center justify-center text-xs">
+      {/* Floating Badge 2 (Bottom Right) */}
+      <div className="absolute -bottom-3.5 -right-2 sm:-right-4 z-20 px-3.5 py-1.5 rounded-2xl bg-white border border-amber-300 shadow-md flex items-center gap-2">
+        <div className="w-6 h-6 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center text-xs">
           <Coins className="w-3.5 h-3.5" />
         </div>
         <div>
-          <div className="text-[10px] text-slate-400 font-mono">
+          <div className="text-[10px] text-slate-500 font-mono">
             {language === "bn" ? "নিট সাশ্রয়" : language === "ar" ? "التوفير" : "Savings"}
           </div>
-          <div className="text-xs font-bold text-amber-300">
+          <div className="text-xs font-bold text-amber-700">
             {language === "bn" ? "৬০%+ খরচ কম" : language === "ar" ? "+٦٠٪ تكلفة أقل" : "60%+ Saved"}
           </div>
         </div>
       </div>
 
       {/* Window Title Bar */}
-      <div className="flex items-center justify-between pb-3 mb-4 border-b border-white/[0.08]">
+      <div className="flex items-center justify-between pb-3 mb-4 border-b border-slate-200">
         <div className="flex items-center gap-2">
           <span className="w-2.5 h-2.5 rounded-full bg-rose-500" />
           <span className="w-2.5 h-2.5 rounded-full bg-amber-400" />
-          <span className="w-2.5 h-2.5 rounded-full bg-emerald-400" />
-          <span className="text-[11px] font-mono text-slate-400 ml-1.5">
+          <span className="w-2.5 h-2.5 rounded-full bg-emerald-500" />
+          <span className="text-[11px] font-mono text-slate-500 ml-1.5">
             MTM Smart Cloud Suite v4.2
           </span>
         </div>
         <button
           onClick={triggerManualSync}
           title="Click to trigger cloud sync"
-          className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 text-[10px] font-mono font-semibold hover:bg-emerald-500/25 transition-all cursor-pointer"
+          className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-50 border border-emerald-300 text-emerald-700 text-[10px] font-mono font-semibold hover:bg-emerald-100 transition-all cursor-pointer shadow-xs"
         >
-          <span className={`w-2 h-2 rounded-full bg-emerald-400 ${isSyncing ? "animate-spin" : "animate-ping"}`} />
+          <span className={`w-2 h-2 rounded-full bg-emerald-500 ${isSyncing ? "animate-spin" : "animate-ping"}`} />
           <span>{isSyncing ? "SYNCING..." : "LIVE SYNC"}</span>
         </button>
       </div>
@@ -474,81 +468,81 @@ function AutoSyncRunner({ language }) {
       {/* 4 Core Pillars Metric Grid */}
       <div className="grid grid-cols-2 gap-3 mb-3.5">
         {/* Metric 1: Time */}
-        <div className="p-3 rounded-2xl bg-[#091224]/80 border border-cyan-500/20 hover:border-cyan-400/40 transition-colors">
+        <div className="p-3 rounded-2xl bg-slate-50 border border-slate-200/90 hover:border-sky-300 transition-colors">
           <div className="flex items-center justify-between mb-1">
-            <span className="text-[11px] text-slate-400">
+            <span className="text-[11px] text-slate-600 font-medium">
               {language === "bn" ? "সময় সাশ্রয়" : language === "ar" ? "توفير الوقت" : "Time Saved"}
             </span>
-            <Clock className="w-3.5 h-3.5 text-cyan-400" />
+            <Clock className="w-3.5 h-3.5 text-sky-600" />
           </div>
-          <div className="text-xl font-extrabold text-cyan-400">৮৫%</div>
-          <div className="w-full h-1.5 bg-slate-800 rounded-full mt-2 overflow-hidden">
-            <div className="h-full bg-cyan-400 w-[85%] rounded-full shadow-[0_0_8px_rgba(6,182,212,0.8)]" />
+          <div className="text-xl font-extrabold text-sky-700">৮৫%</div>
+          <div className="w-full h-1.5 bg-slate-200 rounded-full mt-2 overflow-hidden">
+            <div className="h-full bg-sky-600 w-[85%] rounded-full shadow-xs" />
           </div>
         </div>
 
         {/* Metric 2: Talent */}
-        <div className="p-3 rounded-2xl bg-[#091224]/80 border border-emerald-500/20 hover:border-emerald-400/40 transition-colors">
+        <div className="p-3 rounded-2xl bg-slate-50 border border-slate-200/90 hover:border-emerald-300 transition-colors">
           <div className="flex items-center justify-between mb-1">
-            <span className="text-[11px] text-slate-400">
+            <span className="text-[11px] text-slate-600 font-medium">
               {language === "bn" ? "মেধার সঠিক প্রয়োগ" : language === "ar" ? "استثمار العقول" : "Talent Focus"}
             </span>
-            <Brain className="w-3.5 h-3.5 text-emerald-400" />
+            <Brain className="w-3.5 h-3.5 text-emerald-600" />
           </div>
-          <div className="text-xl font-extrabold text-emerald-400">১০০%</div>
-          <div className="w-full h-1.5 bg-slate-800 rounded-full mt-2 overflow-hidden">
-            <div className="h-full bg-emerald-400 w-full rounded-full shadow-[0_0_8px_rgba(16,185,129,0.8)]" />
+          <div className="text-xl font-extrabold text-emerald-700">১০০%</div>
+          <div className="w-full h-1.5 bg-slate-200 rounded-full mt-2 overflow-hidden">
+            <div className="h-full bg-emerald-600 w-full rounded-full shadow-xs" />
           </div>
         </div>
 
         {/* Metric 3: Labor */}
-        <div className="p-3 rounded-2xl bg-[#091224]/80 border border-indigo-500/20 hover:border-indigo-400/40 transition-colors">
+        <div className="p-3 rounded-2xl bg-slate-50 border border-slate-200/90 hover:border-indigo-300 transition-colors">
           <div className="flex items-center justify-between mb-1">
-            <span className="text-[11px] text-slate-400">
+            <span className="text-[11px] text-slate-600 font-medium">
               {language === "bn" ? "শ্রম লাঘব" : language === "ar" ? "تخفيف الجهد" : "Labor Cut"}
             </span>
-            <Settings className="w-3.5 h-3.5 text-indigo-400" />
+            <Settings className="w-3.5 h-3.5 text-indigo-600" />
           </div>
-          <div className="text-xl font-extrabold text-indigo-400">৯০%</div>
-          <div className="w-full h-1.5 bg-slate-800 rounded-full mt-2 overflow-hidden">
-            <div className="h-full bg-indigo-400 w-[90%] rounded-full shadow-[0_0_8px_rgba(99,102,241,0.8)]" />
+          <div className="text-xl font-extrabold text-indigo-700">৯০%</div>
+          <div className="w-full h-1.5 bg-slate-200 rounded-full mt-2 overflow-hidden">
+            <div className="h-full bg-indigo-600 w-[90%] rounded-full shadow-xs" />
           </div>
         </div>
 
         {/* Metric 4: Revenue / Money */}
-        <div className="p-3 rounded-2xl bg-[#091224]/80 border border-amber-500/20 hover:border-amber-400/40 transition-colors">
+        <div className="p-3 rounded-2xl bg-slate-50 border border-slate-200/90 hover:border-amber-300 transition-colors">
           <div className="flex items-center justify-between mb-1">
-            <span className="text-[11px] text-slate-400">
+            <span className="text-[11px] text-slate-600 font-medium">
               {language === "bn" ? "আর্থিক প্রবৃদ্ধি" : language === "ar" ? "النمو المالي" : "Growth"}
             </span>
-            <TrendingUp className="w-3.5 h-3.5 text-amber-400" />
+            <TrendingUp className="w-3.5 h-3.5 text-amber-600" />
           </div>
-          <div className="text-xl font-extrabold text-amber-400">৩.৫ গুণ</div>
-          <div className="w-full h-1.5 bg-slate-800 rounded-full mt-2 overflow-hidden">
-            <div className="h-full bg-amber-400 w-[88%] rounded-full shadow-[0_0_8px_rgba(251,191,36,0.8)]" />
+          <div className="text-xl font-extrabold text-amber-700">৩.৫ গুণ</div>
+          <div className="w-full h-1.5 bg-slate-200 rounded-full mt-2 overflow-hidden">
+            <div className="h-full bg-amber-500 w-[88%] rounded-full shadow-xs" />
           </div>
         </div>
       </div>
 
       {/* Real-time Sync Status Strip */}
-      <div className="p-3 rounded-2xl bg-gradient-to-r from-cyan-500/10 via-indigo-500/10 to-emerald-500/10 border border-cyan-400/25 flex items-center justify-between">
+      <div className="p-3 rounded-2xl bg-gradient-to-r from-sky-50 via-indigo-50 to-emerald-50 border border-sky-200 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-xl bg-cyan-400/15 text-cyan-300 flex items-center justify-center">
+          <div className="w-8 h-8 rounded-xl bg-white border border-sky-200 text-sky-700 flex items-center justify-center shadow-xs">
             <Smartphone className="w-4 h-4" />
           </div>
           <div>
-            <div className="text-xs font-bold text-white flex items-center gap-2">
+            <div className="text-xs font-bold text-slate-900 flex items-center gap-2">
               <span>Android + iOS + Web</span>
-              <span className="text-[10px] font-mono text-cyan-300 px-1.5 py-0.2 rounded bg-cyan-500/20">
+              <span className="text-[10px] font-mono text-sky-700 px-1.5 py-0.2 rounded bg-sky-100 border border-sky-200">
                 {syncCount.toLocaleString()} {language === "bn" ? "রেকর্ড" : "records"}
               </span>
             </div>
-            <div className="text-[10px] text-slate-400 font-mono">
+            <div className="text-[10px] text-slate-500 font-mono">
               {language === "bn" ? `ক্লাউড সিঙ্ক • ${lastSynced}` : `Cloud Sync • ${lastSynced}`}
             </div>
           </div>
         </div>
-        <span className="text-[10px] font-mono font-bold text-emerald-400 px-2 py-0.5 rounded bg-emerald-500/15 border border-emerald-500/30">
+        <span className="text-[10px] font-mono font-bold text-emerald-700 px-2 py-0.5 rounded bg-emerald-100 border border-emerald-300">
           99.9% Uptime
         </span>
       </div>
@@ -574,10 +568,6 @@ function BeforeAfterComparisonSlider({ language }) {
     updateSlider(e);
   };
 
-  const handlePointerUp = () => {
-    isDragging.current = false;
-  };
-
   const updateSlider = (e) => {
     if (!containerRef.current) return;
     const rect = containerRef.current.getBoundingClientRect();
@@ -596,19 +586,19 @@ function BeforeAfterComparisonSlider({ language }) {
   }, []);
 
   return (
-    <div className="relative w-full max-w-[510px] p-4 sm:p-5 rounded-3xl bg-gradient-to-b from-[#0C1D36]/90 via-[#081329]/90 to-[#060D1E]/95 border border-cyan-400/30 shadow-[0_20px_50px_rgba(0,0,0,0.7)] backdrop-blur-xl select-none">
+    <div className="relative w-full max-w-[510px] p-4 sm:p-5 rounded-3xl bg-white/95 border border-slate-200/90 shadow-[0_20px_50px_rgba(15,23,42,0.08)] backdrop-blur-xl select-none">
       {/* Top Floating Badge */}
-      <div className="absolute -top-3.5 right-4 z-20 px-3.5 py-1 rounded-full bg-[#0F1D3A]/90 border border-cyan-400/40 text-xs font-bold text-cyan-300 shadow-md">
+      <div className="absolute -top-3.5 right-4 z-20 px-3.5 py-1 rounded-full bg-white border border-sky-300 text-xs font-bold text-sky-800 shadow-md">
         ⏱️ {language === "bn" ? "৮০% সময় সাশ্রয়" : language === "ar" ? "توفير ٨٠٪ من الوقت" : "80% Time Saved"}
       </div>
 
       <div className="flex items-center justify-between mb-3 text-xs">
-        <span className="font-semibold text-rose-400/90 flex items-center gap-1.5">
+        <span className="font-semibold text-rose-600 flex items-center gap-1.5">
           <span className="w-2 h-2 rounded-full bg-rose-500" />
           {language === "bn" ? "পূর্বে: ম্যানুয়াল প্রক্রিয়া" : language === "ar" ? "سابقاً: المعاملات الورقية" : "BEFORE: Manual Workflow"}
         </span>
-        <span className="font-semibold text-emerald-400 flex items-center gap-1.5">
-          <span className="w-2 h-2 rounded-full bg-emerald-400" />
+        <span className="font-semibold text-emerald-700 flex items-center gap-1.5">
+          <span className="w-2 h-2 rounded-full bg-emerald-500" />
           {language === "bn" ? "বর্তমানে: MTM অটোমেশন" : language === "ar" ? "حالياً: أتمتة MTM الذكية" : "AFTER: MTM Automation"}
         </span>
       </div>
@@ -618,34 +608,34 @@ function BeforeAfterComparisonSlider({ language }) {
         ref={containerRef}
         onPointerDown={handlePointerDown}
         onPointerMove={handlePointerMove}
-        className="relative h-64 rounded-2xl overflow-hidden border border-white/10 cursor-ew-resize bg-[#070B14]"
+        className="relative h-64 rounded-2xl overflow-hidden border border-slate-200 cursor-ew-resize bg-slate-50"
       >
         {/* RIGHT LAYER (AFTER: MTM Automation) */}
-        <div className="absolute inset-0 p-4 bg-gradient-to-br from-emerald-950/40 via-[#071E22]/60 to-[#070E20] flex flex-col justify-between">
+        <div className="absolute inset-0 p-4 bg-gradient-to-br from-emerald-50/90 via-teal-50/80 to-white flex flex-col justify-between">
           <div className="space-y-2.5">
-            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 text-[10px] font-mono font-bold">
+            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-mono font-bold border border-emerald-200">
               ⚡ {language === "bn" ? "১-ক্লিক অটোমেশন" : "1-Click Cloud Automation"}
             </div>
-            <ul className="space-y-2 text-xs text-emerald-200/90">
+            <ul className="space-y-2 text-xs text-slate-700 font-medium">
               <li className="flex items-center gap-2">
-                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
                 <span>{language === "bn" ? "৫ সেকেন্ডে সকল শিক্ষার্থীর মার্কশিট" : "5-Second Marksheets & Results"}</span>
               </li>
               <li className="flex items-center gap-2">
-                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
                 <span>{language === "bn" ? "GPS হাজিরা ও তাৎক্ষণিক SMS নোটিশ" : "GPS Attendance & Parent Alerts"}</span>
               </li>
               <li className="flex items-center gap-2">
-                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
                 <span>{language === "bn" ? "১০০% নির্ভুল ডিজিটাল অ্যাকাউন্টস" : "100% Audit-Ready Double-Entry"}</span>
               </li>
               <li className="flex items-center gap-2">
-                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
                 <span>{language === "bn" ? "জিরো পেপারওয়ার্ক ও পূর্ণ ক্লাউড ব্যাকআপ" : "Zero Paperwork & Automated Backup"}</span>
               </li>
             </ul>
           </div>
-          <div className="flex items-center justify-between text-[11px] font-mono text-emerald-400 pt-2 border-t border-emerald-500/20">
+          <div className="flex items-center justify-between text-[11px] font-mono text-emerald-700 font-bold pt-2 border-t border-emerald-200">
             <span>99.9% Automated</span>
             <span>0 Errors</span>
           </div>
@@ -653,33 +643,33 @@ function BeforeAfterComparisonSlider({ language }) {
 
         {/* LEFT LAYER (BEFORE: Chaotic Manual), clipped by sliderPos */}
         <div
-          className="absolute inset-y-0 left-0 p-4 bg-gradient-to-br from-rose-950/70 via-[#1C0E16]/80 to-[#0E060C] flex flex-col justify-between border-r border-cyan-400 overflow-hidden"
+          className="absolute inset-y-0 left-0 p-4 bg-gradient-to-br from-rose-50/95 via-amber-50/90 to-white flex flex-col justify-between border-r-2 border-sky-600 overflow-hidden"
           style={{ width: `${sliderPos}%` }}
         >
           <div className="min-w-[280px] space-y-2.5">
-            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-rose-500/20 text-rose-300 text-[10px] font-mono font-bold">
+            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-rose-100 text-rose-800 text-[10px] font-mono font-bold border border-rose-200">
               ⚠️ {language === "bn" ? "খাতা-কলমে দীর্ঘসূত্রিতা" : "Manual & Tedious"}
             </div>
-            <ul className="space-y-2 text-xs text-rose-200/80">
+            <ul className="space-y-2 text-xs text-slate-700 font-medium">
               <li className="flex items-center gap-2">
-                <X className="w-3.5 h-3.5 text-rose-400 shrink-0" />
+                <X className="w-3.5 h-3.5 text-rose-600 shrink-0" />
                 <span>{language === "bn" ? "হাজিরা ও রেজাল্টে দিনব্যাপী পরিশ্রম" : "Days spent calculating marks"}</span>
               </li>
               <li className="flex items-center gap-2">
-                <X className="w-3.5 h-3.5 text-rose-400 shrink-0" />
+                <X className="w-3.5 h-3.5 text-rose-600 shrink-0" />
                 <span>{language === "bn" ? "কাগজপত্রের স্তূপ ও হিসাবের অমিল" : "Piles of ledgers & lost vouchers"}</span>
               </li>
               <li className="flex items-center gap-2">
-                <X className="w-3.5 h-3.5 text-rose-400 shrink-0" />
+                <X className="w-3.5 h-3.5 text-rose-600 shrink-0" />
                 <span>{language === "bn" ? "ম্যানুয়াল এন্ট্রিতে বারবার ভুল" : "Frequent manual arithmetic errors"}</span>
               </li>
               <li className="flex items-center gap-2">
-                <X className="w-3.5 h-3.5 text-rose-400 shrink-0" />
+                <X className="w-3.5 h-3.5 text-rose-600 shrink-0" />
                 <span>{language === "bn" ? "প্রতি ছাত্রে ৪০ মিনিট অপচয়" : "Wasted 40 mins per student"}</span>
               </li>
             </ul>
           </div>
-          <div className="min-w-[280px] flex items-center justify-between text-[11px] font-mono text-rose-400 pt-2 border-t border-rose-500/20">
+          <div className="min-w-[280px] flex items-center justify-between text-[11px] font-mono text-rose-700 font-bold pt-2 border-t border-rose-200">
             <span>High Waste</span>
             <span>Manual Stress</span>
           </div>
@@ -690,16 +680,16 @@ function BeforeAfterComparisonSlider({ language }) {
           className="absolute inset-y-0 -ml-3.5 w-7 flex items-center justify-center cursor-ew-resize z-30"
           style={{ left: `${sliderPos}%` }}
         >
-          <div className="w-7 h-7 rounded-full bg-cyan-400 text-[#070B14] flex items-center justify-center shadow-[0_0_15px_rgba(6,182,212,0.9)] hover:scale-110 active:scale-95 transition-transform">
+          <div className="w-7 h-7 rounded-full bg-sky-600 text-white flex items-center justify-center shadow-lg hover:scale-110 active:scale-95 transition-transform">
             <Sliders className="w-3.5 h-3.5" />
           </div>
         </div>
       </div>
 
       {/* Helper instruction */}
-      <div className="mt-3 flex items-center justify-between text-[11px] text-slate-400 font-mono">
+      <div className="mt-3 flex items-center justify-between text-[11px] text-slate-500 font-mono">
         <span>⟵ {language === "bn" ? "স্লাইডার ড্র্যাগ করুন" : "Drag slider left/right"} ⟶</span>
-        <span className="text-cyan-400 font-bold">{Math.round(sliderPos)}% Split</span>
+        <span className="text-sky-700 font-bold">{Math.round(sliderPos)}% Split</span>
       </div>
     </div>
   );
@@ -712,30 +702,30 @@ function LiveAnalyticsTabs({ language }) {
   const [activeTab, setActiveTab] = useState("efficiency"); // efficiency | staff | ai
 
   return (
-    <div className="relative w-full max-w-[510px] p-4 sm:p-5 rounded-3xl bg-gradient-to-b from-[#0B2328]/90 via-[#081820]/90 to-[#060E1E]/95 border border-emerald-400/30 shadow-[0_20px_50px_rgba(0,0,0,0.7)] backdrop-blur-xl">
+    <div className="relative w-full max-w-[510px] p-4 sm:p-5 rounded-3xl bg-white/95 border border-slate-200/90 shadow-[0_20px_50px_rgba(15,23,42,0.08)] backdrop-blur-xl">
       {/* Header & Metric Score */}
       <div className="flex items-center justify-between mb-4">
         <div>
-          <div className="text-[11px] text-emerald-400 font-mono uppercase tracking-wider">
+          <div className="text-[11px] text-emerald-700 font-mono uppercase tracking-wider font-semibold">
             {language === "bn" ? "অ্যাডমিনিস্ট্রেটিভ ইন্টেলিজেন্স" : "Administrative Intelligence"}
           </div>
-          <div className="text-base font-bold text-white">
+          <div className="text-base font-bold text-slate-900">
             {language === "bn" ? "প্রতিষ্ঠানের মেধা ও দক্ষতা সূচক" : "Talent & Efficiency Index"}
           </div>
         </div>
-        <span className="px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-400/30 text-emerald-300 text-xs font-bold font-mono">
+        <span className="px-3 py-1 rounded-full bg-emerald-50 border border-emerald-300 text-emerald-800 text-xs font-bold font-mono">
           +৯৪% Efficiency
         </span>
       </div>
 
       {/* Interactive Tab Controls */}
-      <div className="flex items-center gap-1.5 p-1 rounded-xl bg-slate-950/80 border border-white/10 mb-4">
+      <div className="flex items-center gap-1.5 p-1 rounded-xl bg-slate-100 border border-slate-200 mb-4">
         <button
           onClick={() => setActiveTab("efficiency")}
           className={`flex-1 py-1.5 px-2 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
             activeTab === "efficiency"
-              ? "bg-emerald-500/20 text-emerald-300 border border-emerald-400/40 shadow-sm"
-              : "text-slate-400 hover:text-white"
+              ? "bg-white text-emerald-800 border border-emerald-300 shadow-xs"
+              : "text-slate-600 hover:text-slate-900"
           }`}
         >
           {language === "bn" ? "দক্ষতা সূচক" : "Efficiency"}
@@ -744,8 +734,8 @@ function LiveAnalyticsTabs({ language }) {
           onClick={() => setActiveTab("staff")}
           className={`flex-1 py-1.5 px-2 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
             activeTab === "staff"
-              ? "bg-cyan-500/20 text-cyan-300 border border-cyan-400/40 shadow-sm"
-              : "text-slate-400 hover:text-white"
+              ? "bg-white text-sky-800 border border-sky-300 shadow-xs"
+              : "text-slate-600 hover:text-slate-900"
           }`}
         >
           {language === "bn" ? "মেধা বণ্টন" : "Staff Focus"}
@@ -754,8 +744,8 @@ function LiveAnalyticsTabs({ language }) {
           onClick={() => setActiveTab("ai")}
           className={`flex-1 py-1.5 px-2 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
             activeTab === "ai"
-              ? "bg-indigo-500/20 text-indigo-300 border border-indigo-400/40 shadow-sm"
-              : "text-slate-400 hover:text-white"
+              ? "bg-white text-indigo-800 border border-indigo-300 shadow-xs"
+              : "text-slate-600 hover:text-slate-900"
           }`}
         >
           {language === "bn" ? "AI Insights" : "AI Insights"}
@@ -763,30 +753,30 @@ function LiveAnalyticsTabs({ language }) {
       </div>
 
       {/* Dynamic Content Based on Tab */}
-      <div className="p-3.5 rounded-2xl bg-slate-950/70 border border-slate-800 space-y-3.5 mb-3.5 min-h-[140px] flex flex-col justify-center">
+      <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200 space-y-3.5 mb-3.5 min-h-[140px] flex flex-col justify-center">
         {activeTab === "efficiency" && (
           <motion.div initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} className="space-y-3">
             <div>
-              <div className="flex justify-between text-xs mb-1.5">
-                <span className="text-slate-300">
+              <div className="flex justify-between text-xs mb-1.5 font-medium">
+                <span className="text-slate-700">
                   {language === "bn" ? "সৃজনশীল ও উন্নয়নমূলক কাজে ফোকাস" : "Creative & Strategic Growth"}
                 </span>
-                <span className="text-emerald-400 font-bold font-mono">৯২%</span>
+                <span className="text-emerald-700 font-bold font-mono">৯২%</span>
               </div>
-              <div className="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
-                <div className="h-full bg-gradient-to-r from-emerald-400 to-cyan-400 w-[92%] rounded-full shadow-[0_0_8px_rgba(16,185,129,0.7)]" />
+              <div className="w-full h-2 bg-slate-200 rounded-full overflow-hidden">
+                <div className="h-full bg-gradient-to-r from-emerald-500 to-sky-500 w-[92%] rounded-full shadow-xs" />
               </div>
             </div>
 
             <div>
-              <div className="flex justify-between text-xs mb-1.5">
-                <span className="text-slate-300">
+              <div className="flex justify-between text-xs mb-1.5 font-medium">
+                <span className="text-slate-700">
                   {language === "bn" ? "সিদ্ধান্ত গ্রহণের নির্ভুলতা (AI Insights)" : "Decision Accuracy"}
                 </span>
-                <span className="text-cyan-400 font-bold font-mono">৯৮%</span>
+                <span className="text-sky-700 font-bold font-mono">৯৮%</span>
               </div>
-              <div className="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
-                <div className="h-full bg-gradient-to-r from-cyan-400 to-indigo-400 w-[98%] rounded-full shadow-[0_0_8px_rgba(6,182,212,0.7)]" />
+              <div className="w-full h-2 bg-slate-200 rounded-full overflow-hidden">
+                <div className="h-full bg-gradient-to-r from-sky-500 to-indigo-500 w-[98%] rounded-full shadow-xs" />
               </div>
             </div>
           </motion.div>
@@ -794,33 +784,33 @@ function LiveAnalyticsTabs({ language }) {
 
         {activeTab === "staff" && (
           <motion.div initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} className="space-y-2.5">
-            <div className="flex items-center justify-between text-xs">
-              <span className="text-slate-300">{language === "bn" ? "পাঠদান ও শিক্ষা উন্নয়ন" : "Teaching & Mentorship"}</span>
-              <span className="text-cyan-300 font-bold font-mono">৮৫% সময় ব্যয়</span>
+            <div className="flex items-center justify-between text-xs font-medium">
+              <span className="text-slate-700">{language === "bn" ? "পাঠদান ও শিক্ষা উন্নয়ন" : "Teaching & Mentorship"}</span>
+              <span className="text-sky-800 font-bold font-mono">৮৫% সময় ব্যয়</span>
             </div>
-            <div className="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
-              <div className="h-full bg-cyan-400 w-[85%] rounded-full" />
+            <div className="w-full h-2 bg-slate-200 rounded-full overflow-hidden">
+              <div className="h-full bg-sky-600 w-[85%] rounded-full" />
             </div>
-            <div className="flex items-center justify-between text-xs pt-1 text-slate-400">
+            <div className="flex items-center justify-between text-xs pt-1 text-slate-500 font-medium">
               <span>{language === "bn" ? "রুটিন পেপারওয়ার্কে অপচয়" : "Routine Paperwork"}</span>
-              <span className="text-emerald-400 font-bold font-mono">মাত্র ১৫% (পূর্বে ৭০%)</span>
+              <span className="text-emerald-700 font-bold font-mono">মাত্র ১৫% (পূর্বে ৭০%)</span>
             </div>
           </motion.div>
         )}
 
         {activeTab === "ai" && (
           <motion.div initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} className="space-y-2">
-            <div className="p-2 rounded-xl bg-indigo-500/10 border border-indigo-400/25 flex items-center justify-between text-xs">
-              <span className="text-indigo-200">
+            <div className="p-2.5 rounded-xl bg-indigo-50 border border-indigo-200 flex items-center justify-between text-xs">
+              <span className="text-indigo-900 font-medium">
                 {language === "bn" ? "ভর্তি ও ফি আদায় প্রেডিকশন" : "Fee Collection Forecast"}
               </span>
-              <span className="font-mono text-indigo-400 font-bold">৯৯.২% নির্ভুল</span>
+              <span className="font-mono text-indigo-700 font-bold">৯৯.২% নির্ভুল</span>
             </div>
-            <div className="p-2 rounded-xl bg-emerald-500/10 border border-emerald-400/25 flex items-center justify-between text-xs">
-              <span className="text-emerald-200">
+            <div className="p-2.5 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-between text-xs">
+              <span className="text-emerald-900 font-medium">
                 {language === "bn" ? "ঝরে পড়ার আগাম সংকেত" : "Student Dropout Early Warning"}
               </span>
-              <span className="font-mono text-emerald-400 font-bold">সক্রিয়</span>
+              <span className="font-mono text-emerald-700 font-bold">সক্রিয়</span>
             </div>
           </motion.div>
         )}
@@ -828,17 +818,17 @@ function LiveAnalyticsTabs({ language }) {
 
       {/* 3 Smart Feature Pills */}
       <div className="grid grid-cols-3 gap-2 text-center text-xs">
-        <div className="p-2.5 rounded-xl bg-emerald-500/10 border border-emerald-400/20">
+        <div className="p-2.5 rounded-xl bg-emerald-50 border border-emerald-200">
           <div className="text-base mb-0.5">🎯</div>
-          <div className="font-bold text-white">{language === "bn" ? "সঠিক পরিকল্পনা" : "Planning"}</div>
+          <div className="font-bold text-slate-900">{language === "bn" ? "সঠিক পরিকল্পনা" : "Planning"}</div>
         </div>
-        <div className="p-2.5 rounded-xl bg-sky-500/10 border border-sky-400/20">
+        <div className="p-2.5 rounded-xl bg-sky-50 border border-sky-200">
           <div className="text-base mb-0.5">🛡️</div>
-          <div className="font-bold text-white">{language === "bn" ? "ডাটা সুরক্ষা" : "Security"}</div>
+          <div className="font-bold text-slate-900">{language === "bn" ? "ডাটা সুরক্ষা" : "Security"}</div>
         </div>
-        <div className="p-2.5 rounded-xl bg-amber-500/10 border border-amber-400/20">
+        <div className="p-2.5 rounded-xl bg-amber-50 border border-amber-200">
           <div className="text-base mb-0.5">🚀</div>
-          <div className="font-bold text-white">{language === "bn" ? "দ্রুত প্রবৃদ্ধি" : "Scale"}</div>
+          <div className="font-bold text-slate-900">{language === "bn" ? "দ্রুত প্রবৃদ্ধি" : "Scale"}</div>
         </div>
       </div>
     </div>
@@ -857,35 +847,35 @@ function InteractiveRoiCalculator({ language }) {
   const annualNetRoi = Math.round(students * 480);
 
   return (
-    <div className="relative w-full max-w-[510px] p-4 sm:p-5 rounded-3xl bg-gradient-to-b from-[#231A0B]/90 via-[#181307]/90 to-[#070E1E]/95 border border-amber-400/35 shadow-[0_20px_50px_rgba(0,0,0,0.7)] backdrop-blur-xl">
+    <div className="relative w-full max-w-[510px] p-4 sm:p-5 rounded-3xl bg-white/95 border border-slate-200/90 shadow-[0_20px_50px_rgba(15,23,42,0.08)] backdrop-blur-xl">
       {/* Floating Gold Badge */}
-      <div className="absolute -top-3.5 right-4 z-20 px-3.5 py-1 rounded-full bg-[#1F1709]/95 border border-amber-400/50 text-xs font-bold text-amber-300 shadow-md">
+      <div className="absolute -top-3.5 right-4 z-20 px-3.5 py-1 rounded-full bg-white border border-amber-300 text-xs font-bold text-amber-800 shadow-md">
         💰 {language === "bn" ? "৬০% অপারেশনাল খরচ সাশ্রয়" : "60% Cost Saved"}
       </div>
 
       <div className="flex items-center justify-between mb-3">
         <div>
-          <div className="text-[11px] text-amber-400 font-mono uppercase tracking-wider flex items-center gap-1.5">
+          <div className="text-[11px] text-amber-700 font-mono uppercase tracking-wider font-semibold flex items-center gap-1.5">
             <Calculator className="w-3.5 h-3.5" />
             <span>{language === "bn" ? "ROI লাইভ ক্যালকুলেটর" : "Interactive ROI Calculator"}</span>
           </div>
-          <div className="text-base font-bold text-white">
+          <div className="text-base font-bold text-slate-900">
             {language === "bn" ? "আপনার প্রতিষ্ঠানের সাশ্রয় হিসাব করুন" : "Calculate Your Savings"}
           </div>
         </div>
         <div className="text-right">
-          <div className="text-lg font-extrabold text-emerald-400 font-mono">+২৪৫%</div>
-          <div className="text-[10px] text-slate-400 font-mono">Net ROI</div>
+          <div className="text-lg font-extrabold text-emerald-700 font-mono">+২৪৫%</div>
+          <div className="text-[10px] text-slate-500 font-mono">Net ROI</div>
         </div>
       </div>
 
       {/* Interactive Range Slider */}
-      <div className="p-3 rounded-2xl bg-slate-950/80 border border-slate-800 mb-3">
+      <div className="p-3 rounded-2xl bg-slate-50 border border-slate-200 mb-3">
         <div className="flex items-center justify-between text-xs mb-1.5">
-          <span className="text-slate-300">
+          <span className="text-slate-700 font-medium">
             {language === "bn" ? "শিক্ষার্থী সংখ্যা:" : "Total Students:"}
           </span>
-          <span className="text-amber-400 font-bold font-mono text-sm">
+          <span className="text-amber-700 font-bold font-mono text-sm">
             {students.toLocaleString()} {language === "bn" ? "জন" : "Students"}
           </span>
         </div>
@@ -896,7 +886,7 @@ function InteractiveRoiCalculator({ language }) {
           step="50"
           value={students}
           onChange={(e) => setStudents(parseInt(e.target.value, 10))}
-          className="w-full accent-amber-400 cursor-pointer h-1.5 bg-slate-800 rounded-lg"
+          className="w-full accent-amber-600 cursor-pointer h-1.5 bg-slate-200 rounded-lg"
         />
         <div className="flex justify-between text-[10px] text-slate-500 font-mono mt-1">
           <span>100</span>
@@ -907,29 +897,29 @@ function InteractiveRoiCalculator({ language }) {
 
       {/* Real-time Computed Values */}
       <div className="grid grid-cols-3 gap-2 text-center mb-3">
-        <div className="p-2.5 rounded-xl bg-amber-500/10 border border-amber-400/25">
-          <div className="text-[10px] text-slate-400">
+        <div className="p-2.5 rounded-xl bg-amber-50 border border-amber-200">
+          <div className="text-[10px] text-slate-600 font-medium">
             {language === "bn" ? "মাসিক সময় সাশ্রয়" : "Hours Saved/mo"}
           </div>
-          <div className="text-sm sm:text-base font-extrabold text-amber-400 font-mono mt-0.5">
+          <div className="text-sm sm:text-base font-extrabold text-amber-800 font-mono mt-0.5">
             {hoursSavedMonth}h
           </div>
         </div>
 
-        <div className="p-2.5 rounded-xl bg-emerald-500/10 border border-emerald-400/25">
-          <div className="text-[10px] text-slate-400">
+        <div className="p-2.5 rounded-xl bg-emerald-50 border border-emerald-200">
+          <div className="text-[10px] text-slate-600 font-medium">
             {language === "bn" ? "কাগজ-কালি সাশ্রয়" : "Paper Cost/mo"}
           </div>
-          <div className="text-sm sm:text-base font-extrabold text-emerald-400 font-mono mt-0.5">
+          <div className="text-sm sm:text-base font-extrabold text-emerald-800 font-mono mt-0.5">
             ৳{paperSavingsMonth.toLocaleString()}
           </div>
         </div>
 
-        <div className="p-2.5 rounded-xl bg-cyan-500/10 border border-cyan-400/25">
-          <div className="text-[10px] text-slate-400">
+        <div className="p-2.5 rounded-xl bg-sky-50 border border-sky-200">
+          <div className="text-[10px] text-slate-600 font-medium">
             {language === "bn" ? "বার্ষিক মোট লাভ" : "Annual Net ROI"}
           </div>
-          <div className="text-sm sm:text-base font-extrabold text-cyan-300 font-mono mt-0.5">
+          <div className="text-sm sm:text-base font-extrabold text-sky-800 font-mono mt-0.5">
             ৳{annualNetRoi.toLocaleString()}
           </div>
         </div>
@@ -937,23 +927,23 @@ function InteractiveRoiCalculator({ language }) {
 
       {/* Dual Split-Voucher Status Strip */}
       <div className="grid grid-cols-2 gap-2.5">
-        <div className="p-2.5 rounded-xl bg-amber-500/10 border border-amber-400/20 flex items-center gap-2">
-          <Receipt className="w-4 h-4 text-amber-400 shrink-0" />
+        <div className="p-2.5 rounded-xl bg-amber-50 border border-amber-200 flex items-center gap-2">
+          <Receipt className="w-4 h-4 text-amber-700 shrink-0" />
           <div>
-            <div className="text-xs font-bold text-white">
+            <div className="text-xs font-bold text-slate-900">
               {language === "bn" ? "অটো ভাউচার" : "Auto Vouchers"}
             </div>
-            <div className="text-[10px] text-slate-400">১০০% অডিট রেডি</div>
+            <div className="text-[10px] text-slate-600">১০০% অডিট রেডি</div>
           </div>
         </div>
 
-        <div className="p-2.5 rounded-xl bg-emerald-500/10 border border-emerald-400/20 flex items-center gap-2">
-          <Wallet className="w-4 h-4 text-emerald-400 shrink-0" />
+        <div className="p-2.5 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center gap-2">
+          <Wallet className="w-4 h-4 text-emerald-700 shrink-0" />
           <div>
-            <div className="text-xs font-bold text-white">
-              {language === "bn" ? "দ্রুত ফি কালেকশন" : "Fast Fee Portal"}
+            <div className="text-xs font-bold text-slate-900">
+              {language === "bn" ? "ইনস্ট্যান্ট পেমেন্ট" : "Instant Pay"}
             </div>
-            <div className="text-[10px] text-slate-400">bKash / Nagad / Bank</div>
+            <div className="text-[10px] text-slate-600">বিকাশ/নগদ/কার্ড</div>
           </div>
         </div>
       </div>
@@ -962,10 +952,11 @@ function InteractiveRoiCalculator({ language }) {
 }
 
 // -------------------------------------------------------------
-// Slide-over Order / Demo Drawer Component
+// Interactive Order / Demo Slide-over Drawer
 // -------------------------------------------------------------
 function OrderDemoDrawer({ isOpen, onClose, language }) {
-  const t = (HERO_DATA[language] || HERO_DATA.en).drawer;
+  const t = HERO_DATA[language]?.drawer || HERO_DATA.bn.drawer;
+
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -981,16 +972,8 @@ function OrderDemoDrawer({ isOpen, onClose, language }) {
     setTimeout(() => {
       setIsSubmitting(false);
       setIsDone(true);
-    }, 900);
+    }, 800);
   };
-
-  useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (e.key === "Escape" && isOpen) onClose();
-    };
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [isOpen, onClose]);
 
   return (
     <AnimatePresence>
@@ -1002,7 +985,7 @@ function OrderDemoDrawer({ isOpen, onClose, language }) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md cursor-pointer"
+            className="fixed inset-0 z-50 bg-slate-900/50 backdrop-blur-sm cursor-pointer"
           />
 
           {/* Drawer Panel */}
@@ -1011,17 +994,17 @@ function OrderDemoDrawer({ isOpen, onClose, language }) {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "spring", damping: 28, stiffness: 260 }}
-            className="fixed top-0 right-0 bottom-0 z-50 w-full max-w-md bg-[#090F1E]/95 border-l border-cyan-400/30 p-6 sm:p-8 overflow-y-auto shadow-[0_0_80px_rgba(0,0,0,0.9)] backdrop-blur-2xl flex flex-col justify-between"
+            className="fixed top-0 right-0 bottom-0 z-50 w-full max-w-md bg-white border-l border-slate-200 p-6 sm:p-8 overflow-y-auto shadow-2xl backdrop-blur-2xl flex flex-col justify-between"
           >
             <div>
               {/* Top Bar with Close Button */}
-              <div className="flex items-center justify-between pb-4 border-b border-white/[0.08] mb-6">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-400/25 text-cyan-300 text-xs font-mono font-bold">
+              <div className="flex items-center justify-between pb-4 border-b border-slate-200 mb-6">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 border border-sky-200 text-sky-800 text-xs font-mono font-bold">
                   <span>{t.tag}</span>
                 </div>
                 <button
                   onClick={onClose}
-                  className="w-9 h-9 rounded-full bg-white/[0.05] hover:bg-white/[0.1] border border-white/10 text-slate-300 hover:text-white flex items-center justify-center transition-colors cursor-pointer"
+                  className="w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 border border-slate-200 text-slate-600 hover:text-slate-900 flex items-center justify-center transition-colors cursor-pointer"
                   aria-label="Close drawer"
                 >
                   <X className="w-5 h-5" />
@@ -1031,12 +1014,12 @@ function OrderDemoDrawer({ isOpen, onClose, language }) {
               {/* Form or Done Box */}
               {!isDone ? (
                 <div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-1.5">{t.title}</h3>
-                  <p className="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6">{t.subtitle}</p>
+                  <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-1.5">{t.title}</h3>
+                  <p className="text-slate-600 text-xs sm:text-sm leading-relaxed mb-6">{t.subtitle}</p>
 
                   <form onSubmit={handleSubmit} className="space-y-4">
                     <div>
-                      <label className="block text-xs font-mono uppercase text-slate-300 mb-1.5">
+                      <label className="block text-xs font-mono uppercase text-slate-700 mb-1.5 font-semibold">
                         {t.nameLabel}
                       </label>
                       <input
@@ -1045,12 +1028,12 @@ function OrderDemoDrawer({ isOpen, onClose, language }) {
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         placeholder={t.namePlaceholder}
-                        className="w-full px-4 py-2.5 rounded-xl bg-[#060B14] border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-colors"
+                        className="theme-input"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-xs font-mono uppercase text-slate-300 mb-1.5">
+                      <label className="block text-xs font-mono uppercase text-slate-700 mb-1.5 font-semibold">
                         {t.phoneLabel}
                       </label>
                       <input
@@ -1059,22 +1042,22 @@ function OrderDemoDrawer({ isOpen, onClose, language }) {
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         placeholder={t.phonePlaceholder}
-                        className="w-full px-4 py-2.5 rounded-xl bg-[#060B14] border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-colors"
+                        className="theme-input"
                         dir="ltr"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-xs font-mono uppercase text-slate-300 mb-1.5">
+                      <label className="block text-xs font-mono uppercase text-slate-700 mb-1.5 font-semibold">
                         {t.typeLabel}
                       </label>
                       <select
                         value={formData.type}
                         onChange={(e) => setFormData({ ...formData, type: e.target.value })}
-                        className="w-full px-4 py-2.5 rounded-xl bg-[#060B14] border border-white/10 text-white text-sm focus:outline-none focus:border-cyan-400 cursor-pointer"
+                        className="theme-input cursor-pointer"
                       >
                         {t.typeOptions.map((opt) => (
-                          <option key={opt} value={opt} className="bg-[#0B1222] text-white">
+                          <option key={opt} value={opt} className="bg-white text-slate-900">
                             {opt}
                           </option>
                         ))}
@@ -1082,16 +1065,16 @@ function OrderDemoDrawer({ isOpen, onClose, language }) {
                     </div>
 
                     <div>
-                      <label className="block text-xs font-mono uppercase text-slate-300 mb-1.5">
+                      <label className="block text-xs font-mono uppercase text-slate-700 mb-1.5 font-semibold">
                         {t.studentsLabel}
                       </label>
                       <select
                         value={formData.students}
                         onChange={(e) => setFormData({ ...formData, students: e.target.value })}
-                        className="w-full px-4 py-2.5 rounded-xl bg-[#060B14] border border-white/10 text-white text-sm focus:outline-none focus:border-cyan-400 cursor-pointer"
+                        className="theme-input cursor-pointer"
                       >
                         {t.studentsOptions.map((opt) => (
-                          <option key={opt} value={opt} className="bg-[#0B1222] text-white">
+                          <option key={opt} value={opt} className="bg-white text-slate-900">
                             {opt}
                           </option>
                         ))}
@@ -1101,7 +1084,7 @@ function OrderDemoDrawer({ isOpen, onClose, language }) {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full mt-4 py-3.5 px-6 rounded-xl bg-gradient-to-r from-cyan-400 via-sky-500 to-indigo-500 hover:brightness-110 text-[#070B14] font-extrabold text-sm shadow-[0_0_25px_rgba(6,182,212,0.4)] transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+                      className="theme-btn-primary w-full mt-4 py-3.5 shadow-md shadow-sky-500/20 disabled:opacity-50"
                     >
                       {isSubmitting ? (
                         <span>{t.submitting}</span>
@@ -1116,17 +1099,17 @@ function OrderDemoDrawer({ isOpen, onClose, language }) {
                 </div>
               ) : (
                 <div className="text-center py-12 space-y-4">
-                  <div className="w-16 h-16 rounded-full bg-emerald-500/20 border border-emerald-400/40 text-emerald-400 flex items-center justify-center text-3xl mx-auto shadow-[0_0_30px_rgba(16,185,129,0.3)]">
+                  <div className="w-16 h-16 rounded-full bg-emerald-100 border border-emerald-300 text-emerald-700 flex items-center justify-center text-3xl mx-auto shadow-md">
                     <CheckCircle2 className="w-8 h-8" />
                   </div>
-                  <h4 className="text-xl font-bold text-white">{t.successTitle}</h4>
-                  <p className="text-slate-300 text-sm leading-relaxed max-w-sm mx-auto">{t.successDesc}</p>
+                  <h4 className="text-xl font-bold text-slate-900">{t.successTitle}</h4>
+                  <p className="text-slate-600 text-sm leading-relaxed max-w-sm mx-auto">{t.successDesc}</p>
                   <button
                     onClick={() => {
                       setIsDone(false);
                       onClose();
                     }}
-                    className="mt-4 px-6 py-2.5 rounded-xl bg-white/[0.08] hover:bg-white/[0.15] text-white text-sm font-semibold transition-colors cursor-pointer"
+                    className="mt-4 px-6 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 border border-slate-200 text-slate-800 text-sm font-semibold transition-colors cursor-pointer"
                   >
                     {t.closeBtn}
                   </button>
@@ -1135,8 +1118,8 @@ function OrderDemoDrawer({ isOpen, onClose, language }) {
             </div>
 
             {/* Bottom Footer Assurance */}
-            <div className="pt-6 border-t border-white/[0.08] flex items-center justify-center gap-2 text-xs text-slate-400">
-              <ShieldCheck className="w-4 h-4 text-emerald-400" />
+            <div className="pt-6 border-t border-slate-200 flex items-center justify-center gap-2 text-xs text-slate-500 font-medium">
+              <ShieldCheck className="w-4 h-4 text-emerald-600" />
               <span>100% Confidential • Zero Spam Guarantee</span>
             </div>
           </motion.div>
@@ -1221,21 +1204,21 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative pt-28 pb-14 sm:pt-32 sm:pb-20 overflow-hidden bg-gradient-to-b from-[#060913] via-[#0B162C]/70 to-[#070B14]"
+      className="relative site-section pt-28 pb-14 sm:pt-32 sm:pb-20 overflow-hidden bg-gradient-to-b from-[#F8FAFC] via-[#F1F5F9] to-[#F8FAFC]"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
-      {/* Blueprint Grid, Ambient Aurora Glow & Starfield Background */}
+      {/* Blueprint Grid, Ambient Aurora Glow & Light Starfield Background */}
       <StarfieldBackground glowPosition="both" variant="hero" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 site-container">
         {/* Main Glassmorphic Hero Carousel Frame */}
-        <div className="relative rounded-[28px] sm:rounded-[36px] bg-gradient-to-b from-[#0E172B]/80 via-[#0A1122]/85 to-[#070D1C]/90 border border-cyan-400/20 p-6 sm:p-10 lg:p-12 shadow-[0_25px_60px_rgba(0,0,0,0.8)] backdrop-blur-xl overflow-hidden">
+        <div className="relative rounded-[28px] sm:rounded-[36px] bg-white/90 border border-slate-200/90 p-6 sm:p-10 lg:p-12 shadow-[0_20px_50px_rgba(15,23,42,0.06)] backdrop-blur-xl overflow-hidden">
           
           {/* Subtle Top Accent Glow Line */}
-          <div className="absolute top-0 left-1/4 right-1/4 h-[2px] bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-80" />
+          <div className="absolute top-0 left-1/4 right-1/4 h-[2px] bg-gradient-to-r from-transparent via-sky-500 to-transparent opacity-60" />
 
           {/* Carousel Slide Area */}
           <div className="relative min-h-[540px] sm:min-h-[500px] lg:min-h-[460px] flex items-center">
@@ -1253,22 +1236,22 @@ export default function Hero() {
                   {/* LEFT COLUMN: Kinetic Content */}
                   <div className="lg:col-span-6 space-y-5 text-center lg:text-left">
                     {/* Badge */}
-                    <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-400/30 text-cyan-300 text-xs sm:text-sm font-semibold shadow-[0_0_15px_rgba(6,182,212,0.15)]">
-                      <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
+                    <div className="site-badge">
+                      <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
                       <span>{currentSlideData.badge}</span>
                     </div>
 
                     {/* Headline */}
-                    <h1 className="text-3xl sm:text-4xl lg:text-[42px] xl:text-[46px] font-extrabold leading-[1.22] text-white tracking-tight">
+                    <h1 className="text-3xl sm:text-4xl lg:text-[42px] xl:text-[46px] font-extrabold leading-[1.22] text-slate-900 tracking-tight">
                       <span>{currentSlideData.title1} </span>
-                      <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-sky-300 to-emerald-400">
+                      <span className="bg-clip-text text-transparent bg-gradient-to-r from-sky-600 via-blue-600 to-indigo-600">
                         {currentSlideData.titleHighlight}
                       </span>
                       {currentSlideData.title2 && <span> {currentSlideData.title2}</span>}
                     </h1>
 
                     {/* Subheading / Description */}
-                    <p className="text-slate-300 text-sm sm:text-base lg:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0">
+                    <p className="text-slate-600 text-sm sm:text-base lg:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0 font-normal">
                       {currentSlideData.description}
                     </p>
 
@@ -1280,10 +1263,10 @@ export default function Hero() {
                           return (
                             <div
                               key={i}
-                              className={`flex items-center justify-center lg:justify-start gap-2 px-3 py-2 rounded-xl border backdrop-blur-md ${pill.bg}`}
+                              className={`flex items-center justify-center lg:justify-start gap-2 px-3 py-2 rounded-xl border shadow-xs ${pill.bg}`}
                             >
                               <IconComp className={`w-4 h-4 ${pill.color}`} />
-                              <span className="text-xs sm:text-sm font-bold text-white">{pill.label}</span>
+                              <span className="text-xs sm:text-sm font-bold text-slate-800">{pill.label}</span>
                             </div>
                           );
                         })}
@@ -1298,12 +1281,12 @@ export default function Hero() {
                           return (
                             <div
                               key={i}
-                              className={`p-3.5 rounded-2xl bg-[#091224]/80 border ${feat.color} flex items-start gap-3 backdrop-blur-md`}
+                              className={`p-3.5 rounded-2xl border ${feat.color} flex items-start gap-3 shadow-xs`}
                             >
                               <IconComp className="w-5 h-5 mt-0.5 shrink-0" />
                               <div>
-                                <div className="text-sm font-bold text-white">{feat.title}</div>
-                                <div className="text-xs text-slate-400 mt-0.5 leading-relaxed">{feat.desc}</div>
+                                <div className="text-sm font-bold text-slate-900">{feat.title}</div>
+                                <div className="text-xs text-slate-600 mt-0.5 leading-relaxed">{feat.desc}</div>
                               </div>
                             </div>
                           );
@@ -1315,7 +1298,7 @@ export default function Hero() {
                     <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 pt-2">
                       <button
                         onClick={() => setIsDrawerOpen(true)}
-                        className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-gradient-to-r from-cyan-400 via-sky-500 to-emerald-500 hover:brightness-110 text-[#070B14] font-extrabold text-sm sm:text-base shadow-[0_0_25px_rgba(6,182,212,0.4)] transition-all flex items-center justify-center gap-2.5 cursor-pointer hover:scale-[1.02] active:scale-[0.98]"
+                        className="theme-btn-primary w-full sm:w-auto px-7 py-3.5 text-sm sm:text-base shadow-md shadow-sky-500/20"
                       >
                         <span>{currentSlideData.ctaPrimary}</span>
                         <Rocket className="w-4 h-4" />
@@ -1323,10 +1306,10 @@ export default function Hero() {
 
                       <a
                         href="#mmis"
-                        className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-white/[0.04] hover:bg-white/[0.09] border border-white/10 hover:border-cyan-400/40 text-slate-200 hover:text-white font-semibold text-sm sm:text-base transition-all flex items-center justify-center gap-2"
+                        className="theme-btn-secondary w-full sm:w-auto px-6 py-3.5 text-sm sm:text-base"
                       >
                         <span>{currentSlideData.ctaSecondary}</span>
-                        <ArrowRight className="w-4 h-4 text-cyan-400" />
+                        <ArrowRight className="w-4 h-4 text-sky-600" />
                       </a>
                     </div>
                   </div>
@@ -1345,7 +1328,7 @@ export default function Hero() {
           </div>
 
           {/* Carousel Navigation & Progress Controls */}
-          <div className="mt-8 pt-5 border-t border-white/[0.08] flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="mt-8 pt-5 border-t border-slate-200 flex flex-col md:flex-row items-center justify-between gap-4">
             
             {/* 4 Tab Selector Buttons */}
             <div className="flex flex-wrap items-center justify-center gap-2">
@@ -1357,13 +1340,13 @@ export default function Hero() {
                     onClick={() => goToSlide(idx)}
                     className={`px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold border transition-all cursor-pointer flex items-center gap-2 ${
                       isActive
-                        ? "border-cyan-400/50 bg-cyan-500/15 text-white shadow-[0_0_15px_rgba(6,182,212,0.25)]"
-                        : "border-white/[0.08] bg-[#0A1224]/60 text-slate-400 hover:text-white hover:border-white/20"
+                        ? "border-sky-500 bg-sky-50 text-sky-800 shadow-xs"
+                        : "border-slate-200 bg-white text-slate-600 hover:text-slate-900 hover:border-slate-300"
                     }`}
                   >
                     <span
                       className={`w-2 h-2 rounded-full transition-colors ${
-                        isActive ? "bg-cyan-400 shadow-[0_0_8px_rgba(6,182,212,0.9)]" : "bg-slate-600"
+                        isActive ? "bg-sky-600 shadow-xs" : "bg-slate-400"
                       }`}
                     />
                     <span>{tab.label}</span>
@@ -1374,20 +1357,20 @@ export default function Hero() {
 
             {/* Slide Counter & Prev/Next Chevrons */}
             <div className="flex items-center gap-3">
-              <span className="font-mono text-xs font-bold tracking-wider text-slate-400 mr-1">
+              <span className="font-mono text-xs font-bold tracking-wider text-slate-500 mr-1">
                 0{activeSlide + 1} / 04
               </span>
               <button
                 onClick={handlePrevSlide}
                 aria-label="Previous Slide"
-                className="w-10 h-10 rounded-xl bg-white/[0.04] hover:bg-cyan-400 hover:text-[#070B14] border border-white/10 hover:border-cyan-400 text-slate-200 flex items-center justify-center transition-all cursor-pointer"
+                className="w-10 h-10 rounded-xl bg-white hover:bg-sky-50 hover:text-sky-700 border border-slate-200 text-slate-700 flex items-center justify-center transition-all cursor-pointer shadow-xs"
               >
                 <ChevronLeft className="w-4 h-4" />
               </button>
               <button
                 onClick={handleNextSlide}
                 aria-label="Next Slide"
-                className="w-10 h-10 rounded-xl bg-white/[0.04] hover:bg-cyan-400 hover:text-[#070B14] border border-white/10 hover:border-cyan-400 text-slate-200 flex items-center justify-center transition-all cursor-pointer"
+                className="w-10 h-10 rounded-xl bg-white hover:bg-sky-50 hover:text-sky-700 border border-slate-200 text-slate-700 flex items-center justify-center transition-all cursor-pointer shadow-xs"
               >
                 <ChevronRight className="w-4 h-4" />
               </button>
@@ -1395,9 +1378,9 @@ export default function Hero() {
           </div>
 
           {/* Smooth Auto-play Progress Bar */}
-          <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/[0.04]">
+          <div className="absolute bottom-0 left-0 right-0 h-1 bg-slate-100">
             <div
-              className="h-full bg-gradient-to-r from-cyan-400 via-emerald-400 to-amber-400 transition-all duration-75"
+              className="h-full bg-gradient-to-r from-sky-500 via-indigo-500 to-emerald-500 transition-all duration-75"
               style={{ width: `${progress}%` }}
             />
           </div>

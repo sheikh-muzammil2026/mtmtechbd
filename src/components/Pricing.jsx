@@ -177,14 +177,11 @@ export default function Pricing() {
   const [billingModel, setBillingModel] = useState("project");
 
   return (
-    <section
-      id="pricing"
-      className="relative py-28 sm:py-32 bg-gradient-to-b from-[#070B14] via-[#0B162C]/80 to-[#070B14] overflow-hidden"
-    >
+    <section id="pricing" className="site-section relative overflow-hidden">
       {/* Background Aurora Glows, Blueprint Grid & Starfield */}
       <StarfieldBackground glowPosition="both" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 site-container">
         {/* Section Header */}
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
           <motion.div
@@ -192,12 +189,10 @@ export default function Pricing() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.03] border border-[#00E5FF]/30 backdrop-blur-md mb-4"
+            className="site-badge"
           >
-            <Sparkles className="w-3.5 h-3.5 text-[#00E5FF]" />
-            <span className="text-xs font-semibold tracking-wider uppercase bg-gradient-to-r from-[#00E5FF] to-[#38bdf8] bg-clip-text text-transparent">
-              {dict.pricing.badge}
-            </span>
+            <span className="w-2 h-2 rounded-full bg-sky-600 animate-pulse" />
+            <span>{dict.pricing.badge}</span>
           </motion.div>
 
           <motion.h2
@@ -205,10 +200,10 @@ export default function Pricing() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight"
+            className="site-heading"
           >
             {dict.pricing.titlePrefix}{" "}
-            <span className="bg-gradient-to-r from-[#00E5FF] via-[#38bdf8] to-[#0066FF] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-sky-600 via-blue-600 to-indigo-600 bg-clip-text text-transparent">
               {dict.pricing.titleHighlight}
             </span>
           </motion.h2>
@@ -218,7 +213,7 @@ export default function Pricing() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mt-4 text-base sm:text-lg text-slate-400 leading-relaxed"
+            className="site-subheading"
           >
             {dict.pricing.description}
           </motion.p>
@@ -229,21 +224,21 @@ export default function Pricing() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="mt-10 inline-flex items-center p-1 rounded-full bg-white/[0.03] border border-white/[0.08] backdrop-blur-md"
+            className="mt-8 sm:mt-10 inline-flex items-center p-1 rounded-full bg-slate-100 border border-slate-200/90 shadow-xs"
           >
             <button
               type="button"
               onClick={() => setBillingModel("project")}
-              className={`relative px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 ${
+              className={`relative px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 cursor-pointer ${
                 billingModel === "project"
-                  ? "text-[#0B0E17]"
-                  : "text-slate-300 hover:text-white"
+                  ? "text-sky-800"
+                  : "text-slate-600 hover:text-slate-900"
               }`}
             >
               {billingModel === "project" && (
                 <motion.div
                   layoutId="billing-pill"
-                  className="absolute inset-0 rounded-full bg-gradient-to-r from-[#00E5FF] to-[#0066FF] shadow-[0_0_15px_rgba(0,229,255,0.4)]"
+                  className="absolute inset-0 rounded-full bg-white shadow-xs border border-slate-200/90"
                   transition={{ type: "spring", stiffness: 400, damping: 30 }}
                 />
               )}
@@ -255,16 +250,16 @@ export default function Pricing() {
             <button
               type="button"
               onClick={() => setBillingModel("retainer")}
-              className={`relative px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 ${
+              className={`relative px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 cursor-pointer ${
                 billingModel === "retainer"
-                  ? "text-[#0B0E17]"
-                  : "text-slate-300 hover:text-white"
+                  ? "text-sky-800"
+                  : "text-slate-600 hover:text-slate-900"
               }`}
             >
               {billingModel === "retainer" && (
                 <motion.div
                   layoutId="billing-pill"
-                  className="absolute inset-0 rounded-full bg-gradient-to-r from-[#00E5FF] to-[#0066FF] shadow-[0_0_15px_rgba(0,229,255,0.4)]"
+                  className="absolute inset-0 rounded-full bg-white shadow-xs border border-slate-200/90"
                   transition={{ type: "spring", stiffness: 400, damping: 30 }}
                 />
               )}
@@ -276,7 +271,7 @@ export default function Pricing() {
         </div>
 
         {/* 3-Tier Pricing Grid */}
-        <div className="mt-16 grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+        <div className="mt-14 sm:mt-16 grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
           {BASE_TIERS.map((tier, idx) => {
             const name =
               language === "ar"
@@ -340,33 +335,33 @@ export default function Pricing() {
                   delay: 0.1 + idx * 0.1,
                   ease: [0.16, 1, 0.3, 1],
                 }}
-                className={`relative rounded-3xl p-8 sm:p-10 flex flex-col justify-between backdrop-blur-md transition-all duration-300 ${
+                className={`relative rounded-3xl p-8 sm:p-10 flex flex-col justify-between transition-all duration-300 ${
                   tier.popular
-                    ? "bg-[#132242]/95 border-2 border-cyan-400 shadow-[0_0_40px_rgba(34,211,238,0.25)] lg:-translate-y-2"
-                    : "bg-[#111C33]/70 hover:bg-[#152442]/90 border border-white/[0.08] hover:border-cyan-400/35 hover:shadow-[0_15px_30px_rgba(0,0,0,0.5)]"
+                    ? "bg-white border-2 border-sky-600 shadow-[0_15px_40px_rgba(2,132,199,0.12)] lg:-translate-y-2"
+                    : "theme-card"
                 }`}
               >
                 {/* Popular Ribbon */}
                 {tier.popular && (
-                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-[#00E5FF] to-[#0066FF] text-[#0B0E17] text-xs font-extrabold uppercase tracking-wider shadow-[0_0_20px_rgba(0,229,255,0.5)] flex items-center gap-1.5 whitespace-nowrap">
+                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-sky-600 via-blue-600 to-indigo-600 text-white text-xs font-extrabold uppercase tracking-wider shadow-sm flex items-center gap-1.5 whitespace-nowrap">
                     <Sparkles className="w-3 h-3" />
                     <span>{dict.pricing.mostPopular}</span>
                   </div>
                 )}
 
                 <div>
-                  <h3 className="text-xl font-bold text-white">{name}</h3>
-                  <p className="mt-2 text-xs sm:text-sm text-slate-400 leading-relaxed min-h-[40px]">
+                  <h3 className="text-xl font-bold text-slate-900">{name}</h3>
+                  <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed min-h-[40px] font-normal">
                     {tagline}
                   </p>
 
                   {/* Price Block */}
-                  <div className="mt-6 pb-6 border-b border-white/[0.08]">
+                  <div className="mt-6 pb-6 border-b border-slate-100">
                     <div className="flex items-baseline gap-2">
-                      <span className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight">
+                      <span className="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
                         {price}
                       </span>
-                      <span className="text-xs font-mono uppercase text-slate-400">
+                      <span className="text-xs font-mono uppercase text-slate-500 font-medium">
                         {period}
                       </span>
                     </div>
@@ -374,15 +369,15 @@ export default function Pricing() {
 
                   {/* Feature Checklist */}
                   <div className="mt-6 space-y-3">
-                    <div className="text-xs font-mono uppercase text-slate-400 tracking-wider">
+                    <div className="text-xs font-mono uppercase text-slate-500 tracking-wider font-semibold">
                       {dict.pricing.capabilitiesTitle}
                     </div>
                     {features.map((feature, fIdx) => (
                       <div
                         key={fIdx}
-                        className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300"
+                        className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700"
                       >
-                        <CheckCircle2 className="w-4 h-4 text-[#00E5FF] shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-4 h-4 text-sky-600 shrink-0 mt-0.5" />
                         <span>{feature}</span>
                       </div>
                     ))}
@@ -390,13 +385,13 @@ export default function Pricing() {
                 </div>
 
                 {/* CTA Button */}
-                <div className="mt-8 pt-6 border-t border-white/[0.06]">
+                <div className="mt-8 pt-6 border-t border-slate-100">
                   <Link
                     href={tier.href}
-                    className={`w-full flex items-center justify-center gap-2 py-3.5 px-6 rounded-full font-bold text-sm tracking-wide transition-all duration-300 ${
+                    className={`w-full flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl font-bold text-sm tracking-wide transition-all duration-300 ${
                       tier.popular
-                        ? "bg-gradient-to-r from-[#00E5FF] to-[#0066FF] text-[#0B0E17] shadow-[0_0_25px_rgba(0,229,255,0.4)] hover:brightness-110 active:scale-95"
-                        : "bg-white/[0.05] hover:bg-white/[0.1] text-white border border-white/[0.12] hover:border-[#00E5FF]/40 active:scale-95"
+                        ? "theme-btn-primary shadow-md shadow-sky-500/20"
+                        : "theme-btn-secondary"
                     }`}
                   >
                     <span>{cta}</span>
@@ -409,20 +404,20 @@ export default function Pricing() {
         </div>
 
         {/* Guarantees Strip */}
-        <div className="mt-16 pt-10 border-t border-white/[0.08] grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="mt-16 pt-10 border-t border-slate-200 grid grid-cols-1 md:grid-cols-3 gap-6">
           {dict.pricing.guarantees.map((item, idx) => {
             const IconComp = GUARANTEE_ICONS[idx % GUARANTEE_ICONS.length];
             return (
               <div
                 key={idx}
-                className="flex items-start gap-4 p-5 rounded-2xl bg-[#111C33]/60 border border-white/[0.06]"
+                className="flex items-start gap-4 p-5 rounded-2xl bg-white border border-slate-200/80 shadow-xs"
               >
-                <div className="w-10 h-10 rounded-xl bg-[#00E5FF]/10 border border-[#00E5FF]/20 flex items-center justify-center text-[#00E5FF] shrink-0">
+                <div className="w-10 h-10 rounded-xl bg-sky-50 border border-sky-200 flex items-center justify-center text-sky-700 shrink-0">
                   <IconComp className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-white">{item.title}</h4>
-                  <p className="text-xs text-slate-400 mt-1 leading-relaxed">
+                  <h4 className="text-sm font-bold text-slate-900">{item.title}</h4>
+                  <p className="text-xs text-slate-600 mt-1 leading-relaxed font-normal">
                     {item.desc}
                   </p>
                 </div>

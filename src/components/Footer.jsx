@@ -151,26 +151,19 @@ export default function Footer() {
         ];
 
   return (
-    <footer className="relative bg-[#060911] border-t border-white/[0.08] text-slate-400 overflow-hidden">
-      {/* Top Ambient Glow Line */}
-      <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-cyan-400/40 to-transparent pointer-events-none" />
-
-      {/* Ambient Lighting at Base */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[700px] h-[250px] bg-gradient-to-b from-cyan-500/10 via-indigo-500/5 to-transparent blur-[120px] rounded-full" />
-      </div>
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-12">
+    <footer className="relative bg-[#F1F5F9] border-t border-slate-200 text-slate-600 overflow-hidden">
+      <div className="relative z-10 site-container pt-16 sm:pt-20 pb-12">
         {/* Top Newsletter & Architecture Subscription Box */}
-        <div className="p-8 sm:p-10 rounded-3xl bg-[#0F1B33]/80 border border-white/[0.08] backdrop-blur-md mb-16 flex flex-col lg:flex-row items-center justify-between gap-8 shadow-[0_15px_40px_rgba(0,0,0,0.4)]">
+        <div className="p-8 sm:p-10 rounded-3xl bg-white border border-slate-200 shadow-sm mb-16 flex flex-col lg:flex-row items-center justify-between gap-8">
           <div className="max-w-xl text-center lg:text-left">
-            <div className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-cyan-400 mb-2">
+            <div className="site-badge mb-2">
+              <span className="w-2 h-2 rounded-full bg-sky-600" />
               <span>{dict.footer.newsletterBadge}</span>
             </div>
-            <h3 className="text-2xl font-bold text-white">
+            <h3 className="text-2xl font-bold text-slate-900">
               {dict.footer.newsletterTitle}
             </h3>
-            <p className="text-sm text-slate-400 mt-1.5 leading-relaxed">
+            <p className="text-sm text-slate-600 mt-1.5 leading-relaxed font-normal">
               {dict.footer.newsletterDesc}
             </p>
           </div>
@@ -185,41 +178,38 @@ export default function Footer() {
               value={newsletterEmail}
               onChange={(e) => setNewsletterEmail(e.target.value)}
               placeholder={dict.footer.newsletterPlaceholder}
-              className="w-full sm:w-80 px-4 py-3 rounded-full bg-[#070D1A] border border-white/10 text-white placeholder-slate-400 text-sm focus:outline-none focus:border-cyan-400 transition-colors"
+              className="w-full sm:w-80 px-4 py-3 rounded-full bg-slate-50 border border-slate-300 text-slate-900 placeholder-slate-400 text-sm focus:outline-none focus:border-sky-600 transition-colors"
               dir="ltr"
             />
             <button
               type="submit"
-              className="w-full sm:w-auto relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-semibold rounded-full group focus:outline-none shrink-0 cursor-pointer"
+              className="theme-btn-primary w-full sm:w-auto px-6 py-3 rounded-full shadow-md shadow-sky-500/20"
             >
-              <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-cyan-400 to-indigo-500 rounded-full filter blur-[4px] opacity-75 group-hover:opacity-100 transition-opacity" />
-              <span className="relative flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-cyan-400 to-indigo-500 text-[#070B14] font-bold text-sm tracking-wide transition-all group-hover:brightness-110 active:scale-95 shadow-[0_0_15px_rgba(6,182,212,0.4)]">
-                {subscribed ? (
-                  <>
-                    <CheckCircle2 className="w-4 h-4" />
-                    <span>{dict.footer.subscribedBtn}</span>
-                  </>
-                ) : (
-                  <>
-                    <span>{dict.footer.subscribeBtn}</span>
-                    <Send className="w-3.5 h-3.5" />
-                  </>
-                )}
-              </span>
+              {subscribed ? (
+                <>
+                  <CheckCircle2 className="w-4 h-4" />
+                  <span>{dict.footer.subscribedBtn}</span>
+                </>
+              ) : (
+                <>
+                  <span>{dict.footer.subscribeBtn}</span>
+                  <Send className="w-3.5 h-3.5" />
+                </>
+              )}
             </button>
           </form>
         </div>
 
         {/* 4-Column Main Footer Links */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 pb-16 border-b border-white/[0.08]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 pb-16 border-b border-slate-200">
           {/* Brand Column (Span 2 on Large) */}
           <div className="lg:col-span-2 flex flex-col justify-between">
             <div>
               {/* Brand Logo & Name */}
               <Link href="#home" className="flex items-center gap-3 group">
-                <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-400 to-indigo-500 p-[1.5px] transition-transform duration-300 group-hover:scale-105">
-                  <div className="w-full h-full bg-[#0B162C] rounded-[10px] flex items-center justify-center">
-                    <span className="font-extrabold text-base tracking-wider bg-gradient-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent">
+                <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-sky-600 to-indigo-600 p-[1.5px] transition-transform duration-300 group-hover:scale-105 shadow-xs">
+                  <div className="w-full h-full bg-white rounded-[10px] flex items-center justify-center">
+                    <span className="font-extrabold text-base tracking-wider bg-gradient-to-r from-sky-600 to-indigo-600 bg-clip-text text-transparent">
                       M
                     </span>
                   </div>
@@ -227,28 +217,28 @@ export default function Footer() {
 
                 <div className="flex flex-col">
                   <div className="flex items-center gap-1.5" dir="ltr">
-                    <span className="text-xl font-bold tracking-tight text-white">
+                    <span className="text-xl font-bold tracking-tight text-slate-900">
                       MTM
                     </span>
-                    <span className="text-xl font-extrabold tracking-tight bg-gradient-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent">
+                    <span className="text-xl font-extrabold tracking-tight bg-gradient-to-r from-sky-600 to-indigo-600 bg-clip-text text-transparent">
                       TECH
                     </span>
                   </div>
-                  <span className="text-[9px] tracking-[0.18em] uppercase font-semibold text-slate-400">
+                  <span className="text-[9px] tracking-[0.18em] uppercase font-semibold text-slate-500">
                     {dict.footer.tagline}
                   </span>
                 </div>
               </Link>
 
-              <p className="mt-5 text-sm text-slate-400 leading-relaxed max-w-sm">
+              <p className="mt-5 text-sm text-slate-600 leading-relaxed max-w-sm font-normal">
                 {dict.footer.elevatorPitch}
               </p>
 
               {/* Live Operational Status */}
-              <div className="mt-6 inline-flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-xs text-emerald-400">
+              <div className="mt-6 inline-flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-emerald-50 border border-emerald-300 text-xs text-emerald-800 font-semibold">
                 <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75" />
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-600" />
                 </span>
                 <span className="font-mono">
                   {dict.footer.operationalStatus}
@@ -266,7 +256,7 @@ export default function Footer() {
                     href={soc.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2.5 rounded-xl bg-white/[0.03] hover:bg-white/[0.08] border border-white/[0.08] hover:border-cyan-400/40 text-slate-400 hover:text-cyan-400 transition-all"
+                    className="p-2.5 rounded-xl bg-white hover:bg-sky-50 border border-slate-200 hover:border-sky-300 text-slate-600 hover:text-sky-700 transition-all shadow-xs"
                     aria-label={soc.name}
                   >
                     <IconComponent className="w-4 h-4" />
@@ -278,15 +268,15 @@ export default function Footer() {
 
           {/* Links Column 1: Services */}
           <div>
-            <h4 className="text-xs font-mono uppercase tracking-wider text-white font-bold mb-4">
+            <h4 className="text-xs font-mono uppercase tracking-wider text-slate-900 font-bold mb-4">
               {dict.footer.col1Title}
             </h4>
-            <ul className="space-y-2.5 text-sm">
+            <ul className="space-y-2.5 text-sm font-medium">
               {servicesLinks.map((item) => (
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-slate-400 hover:text-cyan-400 transition-colors"
+                    className="text-slate-600 hover:text-sky-700 transition-colors"
                   >
                     {item.name}
                   </Link>
@@ -297,15 +287,15 @@ export default function Footer() {
 
           {/* Links Column 2: Company */}
           <div>
-            <h4 className="text-xs font-mono uppercase tracking-wider text-white font-bold mb-4">
+            <h4 className="text-xs font-mono uppercase tracking-wider text-slate-900 font-bold mb-4">
               {dict.footer.col2Title}
             </h4>
-            <ul className="space-y-2.5 text-sm">
+            <ul className="space-y-2.5 text-sm font-medium">
               {companyLinks.map((item) => (
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-slate-400 hover:text-cyan-400 transition-colors"
+                    className="text-slate-600 hover:text-sky-700 transition-colors"
                   >
                     {item.name}
                   </Link>
@@ -316,15 +306,15 @@ export default function Footer() {
 
           {/* Links Column 3: Resources & Trust */}
           <div>
-            <h4 className="text-xs font-mono uppercase tracking-wider text-white font-bold mb-4">
+            <h4 className="text-xs font-mono uppercase tracking-wider text-slate-900 font-bold mb-4">
               {dict.footer.col3Title}
             </h4>
-            <ul className="space-y-2.5 text-sm">
+            <ul className="space-y-2.5 text-sm font-medium">
               {standardsLinks.map((item) => (
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-slate-400 hover:text-cyan-400 transition-colors"
+                    className="text-slate-600 hover:text-sky-700 transition-colors"
                   >
                     {item.name}
                   </Link>
@@ -340,19 +330,19 @@ export default function Footer() {
             <span>
               &copy; {new Date().getFullYear()} {dict.footer.copyright}
             </span>
-            <span className="hidden sm:inline text-white/20">•</span>
-            <span className="text-slate-400">{dict.footer.builtWith}</span>
+            <span className="hidden sm:inline text-slate-300">•</span>
+            <span className="text-slate-600">{dict.footer.builtWith}</span>
           </div>
 
           {/* Back to top button */}
           <button
             type="button"
             onClick={scrollToTop}
-            className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/[0.03] hover:bg-white/[0.08] border border-white/[0.08] hover:border-cyan-400/40 text-slate-400 hover:text-white transition-all cursor-pointer"
+            className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 hover:text-sky-700 transition-all cursor-pointer shadow-xs"
             aria-label="Scroll to top"
           >
             <span>{dict.footer.backToTop}</span>
-            <ArrowUp className="w-3.5 h-3.5 text-cyan-400" />
+            <ArrowUp className="w-3.5 h-3.5 text-sky-600" />
           </button>
         </div>
       </div>

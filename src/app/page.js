@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import MmIsFeaturesSection from "@/components/home/MmIsFeaturesSection";
+import MmIsFeaturesSection from "@/components/MmIsFeaturesSection";
 import Services from "@/components/Services";
 import About from "@/components/About";
 import Portfolio from "@/components/Portfolio";
@@ -11,7 +11,7 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen bg-[#070B14] text-white selection:bg-[#00E5FF]/20 selection:text-[#00E5FF] overflow-x-hidden">
+    <div className="relative min-h-screen bg-[var(--bg-primary)] text-slate-800 selection:bg-sky-500/20 selection:text-sky-700 overflow-x-hidden">
       {/* 1. Header / Navigation Bar */}
       <Navbar />
 

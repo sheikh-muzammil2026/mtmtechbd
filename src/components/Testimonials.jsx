@@ -7,7 +7,6 @@ import {
   ChevronLeft,
   ChevronRight,
   CheckCircle2,
-  Sparkles,
 } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import StarfieldBackground from "@/components/shared/StarfieldBackground";
@@ -37,7 +36,7 @@ const BASE_TESTIMONIALS = [
     contentAr:
       "قبل تطبيق نظام MTM Tech BD، كان تجميع كشوف الدرجات والشهادات لأكثر من 1500 طالب يستغرق أسابيع من الإرهاق للمعلمين. الآن يتم احتساب المعدلات التراكمية تلقائياً ويطّلع أولياء الأمور على النتائج إلكترونياً وفورياً.",
     avatarInitial: "MK",
-    accent: "from-[#00E5FF] to-[#0066FF]",
+    accent: "from-sky-500 to-indigo-600",
   },
   {
     id: 2,
@@ -63,7 +62,7 @@ const BASE_TESTIMONIALS = [
     contentAr:
       "كانت إدارة رسوم الإقامة وسكن الطلاب وحسابات الإطعام ومسيرات رواتب المعلمين عبر فروع متعددة مهمة شاقة. نظام المحاسبة المزدوج وقسائم الرسوم التلقائية وفّرا للجنة الإدارة شفافية تامة وراحة بال.",
     avatarInitial: "AR",
-    accent: "from-[#0066FF] to-[#38bdf8]",
+    accent: "from-blue-600 to-sky-500",
   },
   {
     id: 3,
@@ -89,7 +88,7 @@ const BASE_TESTIMONIALS = [
     contentAr:
       "يستطيع أولياء الأمور الآن تقديم طلبات الالتحاق ورفع المستندات ودفع رسوم التسجيل مباشرة من هواتفهم. كما أصبحت مراجعة الطلبات وإصدار بطاقات الاختبار أمراً في غاية السهولة للموظفين.",
     avatarInitial: "TI",
-    accent: "from-[#00E5FF] to-[#38bdf8]",
+    accent: "from-sky-500 to-teal-500",
   },
   {
     id: 4,
@@ -115,7 +114,7 @@ const BASE_TESTIMONIALS = [
     contentAr:
       "يقوم النظام التلقائي بإرسال رسائل SMS فورية لأولياء الأمور بمجرد وصول الطالب أو تسجيل غيابه. كما تصل الواجبات المدرسية ومواعيد الاختبارات في الوقت الفعلي، مما وفر الكثير من الاستفسارات المتكررة.",
     avatarInitial: "FA",
-    accent: "from-[#38bdf8] to-[#0066FF]",
+    accent: "from-teal-500 to-indigo-600",
   },
 ];
 
@@ -186,14 +185,11 @@ export default function Testimonials() {
       : current.contentEn;
 
   return (
-    <section
-      id="testimonials"
-      className="relative py-28 sm:py-32 bg-gradient-to-b from-[#070B14] via-[#0B162C]/60 to-[#070B14] overflow-hidden"
-    >
+    <section id="testimonials" className="site-section-alt relative overflow-hidden">
       {/* Background Aurora Glows, Blueprint Grid & Starfield */}
       <StarfieldBackground glowPosition="left" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 site-container">
         {/* Section Header */}
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
           <motion.div
@@ -201,12 +197,10 @@ export default function Testimonials() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.03] border border-[#00E5FF]/30 backdrop-blur-md mb-4"
+            className="site-badge"
           >
-            <Sparkles className="w-3.5 h-3.5 text-[#00E5FF]" />
-            <span className="text-xs font-semibold tracking-wider uppercase bg-gradient-to-r from-[#00E5FF] to-[#38bdf8] bg-clip-text text-transparent">
-              {dict.testimonials.badge}
-            </span>
+            <span className="w-2 h-2 rounded-full bg-sky-600 animate-pulse" />
+            <span>{dict.testimonials.badge}</span>
           </motion.div>
 
           <motion.h2
@@ -214,10 +208,10 @@ export default function Testimonials() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight"
+            className="site-heading"
           >
             {dict.testimonials.titlePrefix}{" "}
-            <span className="bg-gradient-to-r from-[#00E5FF] via-[#38bdf8] to-[#0066FF] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-sky-600 via-blue-600 to-indigo-600 bg-clip-text text-transparent">
               {dict.testimonials.titleHighlight}
             </span>
           </motion.h2>
@@ -227,7 +221,7 @@ export default function Testimonials() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mt-4 text-base sm:text-lg text-slate-400 leading-relaxed"
+            className="site-subheading"
           >
             {dict.testimonials.description}
           </motion.p>
@@ -239,27 +233,25 @@ export default function Testimonials() {
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
           viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-16 max-w-4xl mx-auto"
+          className="mt-14 sm:mt-16 max-w-4xl mx-auto"
         >
-          <div className="relative rounded-3xl bg-[#111C33]/80 border border-white/[0.08] p-8 sm:p-12 backdrop-blur-md shadow-[0_20px_60px_rgba(0,0,0,0.7)] overflow-hidden">
-            <div className="absolute -top-24 -right-24 w-64 h-64 bg-[#00E5FF]/10 rounded-full blur-3xl pointer-events-none" />
-
+          <div className="relative rounded-3xl bg-white border border-slate-200/90 p-8 sm:p-12 shadow-[0_15px_40px_rgba(15,23,42,0.06)] overflow-hidden">
             {/* Top Row: Stars + Project Tag */}
-            <div className="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/[0.06]">
-              <div className="flex items-center gap-1.5 text-amber-400">
+            <div className="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-slate-100">
+              <div className="flex items-center gap-1.5 text-amber-500">
                 {[...Array(current.rating)].map((_, i) => (
                   <Star
                     key={i}
-                    className="w-5 h-5 fill-amber-400 text-amber-400"
+                    className="w-5 h-5 fill-amber-400 text-amber-500"
                   />
                 ))}
-                <span className="ml-2 text-xs font-bold text-white tracking-wider">
+                <span className="ml-2 text-xs font-bold text-slate-800 tracking-wider">
                   {dict.testimonials.verifiedRating}
                 </span>
               </div>
 
-              <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.08] text-xs text-slate-300">
-                <CheckCircle2 className="w-3.5 h-3.5 text-[#00E5FF]" />
+              <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 border border-sky-200 text-xs text-sky-800 font-medium">
+                <CheckCircle2 className="w-3.5 h-3.5 text-sky-600" />
                 <span>{project}</span>
               </div>
             </div>
@@ -274,10 +266,10 @@ export default function Testimonials() {
                   exit={{ opacity: 0, y: -12, scale: 0.98 }}
                   transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
                 >
-                  <div className="text-lg sm:text-xl font-semibold text-[#00E5FF] mb-3">
+                  <div className="text-lg sm:text-xl font-bold text-sky-700 mb-3">
                     &ldquo;{highlight}&rdquo;
                   </div>
-                  <p className="text-base sm:text-lg text-slate-300 leading-relaxed italic">
+                  <p className="text-base sm:text-lg text-slate-700 leading-relaxed italic font-normal">
                     &ldquo;{content}&rdquo;
                   </p>
                 </motion.div>
@@ -285,22 +277,22 @@ export default function Testimonials() {
             </div>
 
             {/* Client Info & Controls */}
-            <div className="mt-10 pt-6 border-t border-white/[0.08] flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div className="mt-10 pt-6 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-6">
               <div className="flex items-center gap-4">
                 <div
-                  className={`w-12 h-12 rounded-xl bg-gradient-to-br ${current.accent} p-[1.5px] shadow-[0_0_15px_rgba(0,229,255,0.3)]`}
+                  className={`w-12 h-12 rounded-xl bg-gradient-to-br ${current.accent} p-[1.5px] shadow-xs`}
                 >
-                  <div className="w-full h-full bg-[#0B0E17] rounded-[10px] flex items-center justify-center font-bold text-white text-sm">
+                  <div className="w-full h-full bg-white rounded-[10px] flex items-center justify-center font-bold text-sky-700 text-sm">
                     {current.avatarInitial}
                   </div>
                 </div>
 
                 <div>
-                  <h4 className="text-base font-bold text-white">
+                  <h4 className="text-base font-bold text-slate-900">
                     {current.name}
                   </h4>
-                  <div className="text-xs text-slate-400">
-                    <span className="text-slate-300 font-medium">{role}</span>{" "}
+                  <div className="text-xs text-slate-500">
+                    <span className="text-slate-800 font-semibold">{role}</span>{" "}
                     • {current.company} ({location})
                   </div>
                 </div>
@@ -316,10 +308,10 @@ export default function Testimonials() {
                         setIsAutoPlay(false);
                         setCurrentIndex(idx);
                       }}
-                      className={`h-2 rounded-full transition-all duration-300 ${
+                      className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
                         currentIndex === idx
-                          ? "w-6 bg-gradient-to-r from-[#00E5FF] to-[#0066FF]"
-                          : "w-2 bg-white/20 hover:bg-white/40"
+                          ? "w-6 bg-sky-600"
+                          : "w-2 bg-slate-300 hover:bg-slate-400"
                       }`}
                       aria-label={`Go to slide ${idx + 1}`}
                     />
@@ -329,7 +321,7 @@ export default function Testimonials() {
                 <button
                   type="button"
                   onClick={handlePrev}
-                  className="p-2.5 rounded-xl bg-white/[0.03] hover:bg-white/[0.08] border border-white/[0.08] hover:border-[#00E5FF]/40 text-slate-300 hover:text-white transition-colors"
+                  className="p-2.5 rounded-xl bg-slate-50 hover:bg-sky-50 border border-slate-200 hover:border-sky-300 text-slate-600 hover:text-sky-700 transition-colors shadow-xs cursor-pointer"
                   aria-label="Previous Testimonial"
                 >
                   <ChevronLeft className="w-5 h-5" />
@@ -338,7 +330,7 @@ export default function Testimonials() {
                 <button
                   type="button"
                   onClick={handleNext}
-                  className="p-2.5 rounded-xl bg-white/[0.03] hover:bg-white/[0.08] border border-white/[0.08] hover:border-[#00E5FF]/40 text-slate-300 hover:text-white transition-colors"
+                  className="p-2.5 rounded-xl bg-slate-50 hover:bg-sky-50 border border-slate-200 hover:border-sky-300 text-slate-600 hover:text-sky-700 transition-colors shadow-xs cursor-pointer"
                   aria-label="Next Testimonial"
                 >
                   <ChevronRight className="w-5 h-5" />
@@ -349,16 +341,16 @@ export default function Testimonials() {
         </motion.div>
 
         {/* Brand Strip */}
-        <div className="mt-20 pt-10 border-t border-white/[0.06] text-center">
-          <p className="text-xs font-mono uppercase tracking-[0.2em] text-slate-400 mb-8">
+        <div className="mt-16 sm:mt-20 pt-10 border-t border-slate-200 text-center">
+          <p className="text-xs font-mono uppercase tracking-[0.2em] text-slate-500 font-semibold mb-8">
             {dict.testimonials.trustSubtitle}
           </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-14 opacity-60 hover:opacity-100 transition-opacity">
+          <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-14 opacity-70 hover:opacity-100 transition-opacity">
             {TRUST_BRANDS.map((brand) => (
               <div
                 key={brand}
-                className="font-mono text-sm sm:text-base font-extrabold tracking-widest text-slate-400 hover:text-[#00E5FF] transition-colors cursor-default"
+                className="font-mono text-sm sm:text-base font-bold tracking-widest text-slate-500 hover:text-sky-700 transition-colors cursor-default"
               >
                 {brand}
               </div>

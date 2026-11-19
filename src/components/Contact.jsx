@@ -99,14 +99,11 @@ export default function Contact() {
   };
 
   return (
-    <section
-      id="contact"
-      className="relative py-28 sm:py-32 bg-gradient-to-b from-[#070B14] via-[#0B162C]/60 to-[#070B14] overflow-hidden"
-    >
-      {/* Hero-grade Blueprint Grid, Ambient Aurora Glow & Twinkling Starfield */}
+    <section id="contact" className="site-section-alt relative overflow-hidden">
+      {/* Blueprint Grid, Ambient Aurora Glow & Starfield */}
       <StarfieldBackground glowPosition="right" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 site-container">
         {/* Section Header */}
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
           <motion.div
@@ -114,11 +111,10 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-white/10 backdrop-blur-md mb-4 shadow-[0_0_20px_rgba(6,182,212,0.15)]"
+            className="site-badge"
           >
-            <span className="text-xs font-semibold tracking-wider uppercase bg-gradient-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent">
-              {dict.contact.badge}
-            </span>
+            <span className="w-2 h-2 rounded-full bg-sky-600 animate-pulse" />
+            <span>{dict.contact.badge}</span>
           </motion.div>
 
           <motion.h2
@@ -126,10 +122,10 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight"
+            className="site-heading"
           >
             {dict.contact.titlePrefix}{" "}
-            <span className="bg-gradient-to-r from-cyan-400 via-sky-300 to-indigo-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-sky-600 via-blue-600 to-indigo-600 bg-clip-text text-transparent">
               {dict.contact.titleHighlight}
             </span>
           </motion.h2>
@@ -139,49 +135,50 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mt-4 text-base sm:text-lg text-slate-400 leading-relaxed"
+            className="site-subheading"
           >
             {dict.contact.description}
           </motion.p>
         </div>
 
         {/* 2-Column Layout */}
-        <div className="mt-16 sm:mt-20 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-start">
+        <div className="mt-14 sm:mt-16 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-10 items-start">
           {/* LEFT: Contact Coordinates & Guarantees */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="lg:col-span-5 flex flex-col justify-between space-y-8"
+            className="lg:col-span-5 flex flex-col justify-between space-y-6"
           >
             {/* Tagline Card */}
-            <div className="p-6 rounded-2xl bg-[#111C33]/70 border border-white/[0.08] hover:border-cyan-400/35 hover:bg-[#152442]/90 backdrop-blur-md transition-all duration-300">
-              <div className="flex items-center gap-2 text-xs font-semibold text-cyan-400 mb-2">
+            <div className="theme-card p-6">
+              <div className="site-badge mb-2">
+                <span className="w-2 h-2 rounded-full bg-sky-600" />
                 <span>{dict.contact.promiseBadge}</span>
               </div>
-              <h3 className="text-xl font-bold text-white tracking-tight">
+              <h3 className="text-xl font-bold text-slate-900 tracking-tight">
                 {dict.contact.promiseTitle}
               </h3>
-              <p className="text-xs sm:text-sm text-slate-400 mt-2 leading-relaxed">
+              <p className="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed font-normal">
                 {dict.contact.promiseDesc}
               </p>
             </div>
 
             {/* Direct Contact Channels */}
-            <div className="space-y-4">
-              <div className="p-4 rounded-xl bg-[#111C33]/70 border border-white/[0.08] hover:border-cyan-400/35 hover:bg-[#152442]/90 transition-all duration-300 flex items-center justify-between group backdrop-blur-md">
+            <div className="space-y-3.5">
+              <div className="p-4 rounded-2xl bg-white border border-slate-200/90 shadow-xs flex items-center justify-between group hover:border-sky-300 transition-all">
                 <div className="flex items-center gap-3.5">
-                  <div className="w-10 h-10 rounded-lg bg-cyan-400/10 border border-cyan-400/20 flex items-center justify-center text-cyan-400">
+                  <div className="w-10 h-10 rounded-xl bg-sky-50 border border-sky-200 flex items-center justify-center text-sky-700">
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
-                    <div className="text-[11px] font-mono text-slate-400">
+                    <div className="text-[11px] font-mono text-slate-500 font-semibold">
                       {dict.contact.directInquiries}
                     </div>
                     <a
                       href="mailto:contact@mtmtechbd.com"
-                      className="text-sm font-semibold text-white group-hover:text-cyan-400 transition-colors"
+                      className="text-sm font-semibold text-slate-900 group-hover:text-sky-700 transition-colors"
                       dir="ltr"
                     >
                       contact@mtmtechbd.com
@@ -192,50 +189,50 @@ export default function Contact() {
                 <button
                   type="button"
                   onClick={handleCopyEmail}
-                  className="p-2 rounded-lg bg-white/[0.04] hover:bg-white/[0.1] text-slate-400 hover:text-white transition-colors cursor-pointer"
+                  className="p-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600 hover:text-slate-900 transition-colors cursor-pointer"
                   aria-label="Copy email address"
                   title="Copy email"
                 >
                   {copiedEmail ? (
-                    <Check className="w-4 h-4 text-emerald-400" />
+                    <Check className="w-4 h-4 text-emerald-600" />
                   ) : (
                     <Copy className="w-4 h-4" />
                   )}
                 </button>
               </div>
 
-              <div className="p-4 rounded-xl bg-[#111C33]/70 border border-white/[0.08] hover:border-cyan-400/35 hover:bg-[#152442]/90 transition-all duration-300 flex items-center justify-between group backdrop-blur-md">
+              <div className="p-4 rounded-2xl bg-white border border-slate-200/90 shadow-xs flex items-center justify-between group hover:border-sky-300 transition-all">
                 <div className="flex items-center gap-3.5">
-                  <div className="w-10 h-10 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400">
+                  <div className="w-10 h-10 rounded-xl bg-indigo-50 border border-indigo-200 flex items-center justify-center text-indigo-700">
                     <Phone className="w-5 h-5" />
                   </div>
                   <div>
-                    <div className="text-[11px] font-mono text-slate-400">
+                    <div className="text-[11px] font-mono text-slate-500 font-semibold">
                       {dict.contact.technicalAdvisory}
                     </div>
                     <a
                       href="tel:+8801836376174"
-                      className="text-sm font-semibold text-white group-hover:text-cyan-400 transition-colors"
+                      className="text-sm font-semibold text-slate-900 group-hover:text-sky-700 transition-colors"
                       dir="ltr"
                     >
                       +880 (18) 3637-6174
                     </a>
                   </div>
                 </div>
-                <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 font-semibold">
                   {dict.contact.availableBadge}
                 </span>
               </div>
 
-              <div className="p-4 rounded-xl bg-[#111C33]/70 border border-white/[0.08] hover:border-cyan-400/35 hover:bg-[#152442]/90 transition-all duration-300 flex items-center gap-3.5 backdrop-blur-md">
-                <div className="w-10 h-10 rounded-lg bg-white/[0.04] border border-white/[0.08] flex items-center justify-center text-slate-300">
-                  <MapPin className="w-5 h-5 text-cyan-400" />
+              <div className="p-4 rounded-2xl bg-white border border-slate-200/90 shadow-xs flex items-center gap-3.5 hover:border-sky-300 transition-all">
+                <div className="w-10 h-10 rounded-xl bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-600">
+                  <MapPin className="w-5 h-5 text-sky-600" />
                 </div>
                 <div>
-                  <div className="text-[11px] font-mono text-slate-400">
+                  <div className="text-[11px] font-mono text-slate-500 font-semibold">
                     {dict.contact.engineeringBase}
                   </div>
-                  <div className="text-sm font-semibold text-white">
+                  <div className="text-sm font-semibold text-slate-900">
                     {dict.contact.baseLocation}
                   </div>
                 </div>
@@ -243,13 +240,13 @@ export default function Contact() {
             </div>
 
             {/* SLA & NDA Badges */}
-            <div className="p-5 rounded-2xl bg-[#111C33]/70 border border-white/[0.08] backdrop-blur-md space-y-3">
-              <div className="flex items-center gap-2.5 text-xs text-slate-300">
-                <Clock className="w-4 h-4 text-cyan-400 shrink-0" />
+            <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3">
+              <div className="flex items-center gap-2.5 text-xs text-slate-700 font-medium">
+                <Clock className="w-4 h-4 text-sky-600 shrink-0" />
                 <span>{dict.contact.slaNotice}</span>
               </div>
-              <div className="flex items-center gap-2.5 text-xs text-slate-300">
-                <ShieldCheck className="w-4 h-4 text-cyan-400 shrink-0" />
+              <div className="flex items-center gap-2.5 text-xs text-slate-700 font-medium">
+                <ShieldCheck className="w-4 h-4 text-sky-600 shrink-0" />
                 <span>{dict.contact.ndaNotice}</span>
               </div>
             </div>
@@ -267,7 +264,7 @@ export default function Contact() {
             }}
             className="lg:col-span-7"
           >
-            <div className="relative rounded-3xl bg-[#111C33]/90 border border-white/[0.1] p-8 sm:p-10 backdrop-blur-md shadow-[0_20px_60px_rgba(0,0,0,0.8)]">
+            <div className="relative rounded-3xl bg-white border border-slate-200/90 p-8 sm:p-10 shadow-lg">
               <AnimatePresence mode="wait">
                 {isSubmitted ? (
                   <motion.div
@@ -277,13 +274,13 @@ export default function Contact() {
                     exit={{ opacity: 0, scale: 0.95 }}
                     className="py-12 flex flex-col items-center text-center"
                   >
-                    <div className="w-16 h-16 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-6 shadow-[0_0_30px_rgba(16,185,129,0.3)]">
+                    <div className="w-16 h-16 rounded-2xl bg-emerald-50 border border-emerald-300 flex items-center justify-center text-emerald-700 mb-6 shadow-md">
                       <CheckCircle2 className="w-8 h-8" />
                     </div>
-                    <h3 className="text-2xl font-bold text-white">
+                    <h3 className="text-2xl font-bold text-slate-900">
                       {dict.contact.successTitle}
                     </h3>
-                    <p className="mt-3 text-sm text-slate-400 max-w-md leading-relaxed">
+                    <p className="mt-3 text-sm text-slate-600 max-w-md leading-relaxed font-normal">
                       {dict.contact.successDesc}
                     </p>
                     <button
@@ -297,7 +294,7 @@ export default function Contact() {
                           message: "",
                         });
                       }}
-                      className="mt-8 px-6 py-2.5 rounded-full bg-white/[0.05] hover:bg-white/[0.1] border border-white/[0.1] text-xs font-semibold text-white transition-colors cursor-pointer"
+                      className="mt-8 px-6 py-2.5 rounded-full bg-slate-100 hover:bg-slate-200 border border-slate-200 text-xs font-semibold text-slate-800 transition-colors cursor-pointer"
                     >
                       {dict.contact.sendAnother}
                     </button>
@@ -306,7 +303,7 @@ export default function Contact() {
                   <form onSubmit={handleSubmit} className="space-y-6">
                     {/* Services Chips */}
                     <div>
-                      <label className="block text-xs font-mono uppercase text-slate-400 tracking-wider mb-2.5">
+                      <label className="block text-xs font-mono uppercase text-slate-700 tracking-wider mb-2.5 font-semibold">
                         {dict.contact.servicesLabel}
                       </label>
                       <div className="flex flex-wrap gap-2">
@@ -314,19 +311,20 @@ export default function Contact() {
                           const isSelected = selectedServices.includes(srv.en);
                           const label =
                             language === "ar"
-                                ? srv.ar
-                                : language === "bn"
-                                ? srv.bn
-                                : srv.en;
+                              ? srv.ar
+                              : language === "bn"
+                              ? srv.bn
+                              : srv.en;
+
                           return (
                             <button
                               key={srv.en}
                               type="button"
                               onClick={() => toggleService(srv.en)}
-                              className={`px-3.5 py-1.5 rounded-full text-xs font-medium transition-all cursor-pointer ${
+                              className={`px-3.5 py-1.5 rounded-full text-xs transition-all cursor-pointer ${
                                 isSelected
-                                  ? "bg-gradient-to-r from-cyan-400 to-indigo-500 text-[#070B14] font-semibold shadow-[0_0_15px_rgba(6,182,212,0.4)]"
-                                  : "bg-white/[0.04] text-slate-300 hover:text-white border border-white/[0.08] hover:border-white/20"
+                                  ? "bg-sky-600 text-white font-semibold shadow-xs"
+                                  : "bg-slate-100 text-slate-700 hover:bg-slate-200 border border-slate-200/80 font-medium"
                               }`}
                             >
                               {label}
@@ -338,7 +336,7 @@ export default function Contact() {
 
                     {/* Estimated Budget Selector */}
                     <div>
-                      <label className="block text-xs font-mono uppercase text-slate-400 tracking-wider mb-2.5">
+                      <label className="block text-xs font-mono uppercase text-slate-700 tracking-wider mb-2.5 font-semibold">
                         {dict.contact.budgetLabel}
                       </label>
                       <div className="grid grid-cols-2 sm:grid-cols-4 gap-2" dir="ltr">
@@ -351,8 +349,8 @@ export default function Contact() {
                               onClick={() => setSelectedBudget(bgt)}
                               className={`py-2 px-3 rounded-xl text-xs font-semibold text-center transition-all cursor-pointer ${
                                 isSelected
-                                  ? "bg-cyan-400 text-[#070B14] shadow-[0_0_15px_rgba(6,182,212,0.35)]"
-                                  : "bg-[#0A1224]/80 text-slate-300 hover:text-white border border-white/[0.08] hover:border-white/20"
+                                  ? "bg-sky-600 text-white shadow-xs"
+                                  : "bg-slate-50 text-slate-700 hover:bg-slate-100 border border-slate-200/80"
                               }`}
                             >
                               {bgt}
@@ -365,7 +363,7 @@ export default function Contact() {
                     {/* Inputs: Name & Email */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-xs font-mono uppercase text-slate-400 mb-1.5">
+                        <label className="block text-xs font-mono uppercase text-slate-700 mb-1.5 font-semibold">
                           {dict.contact.nameLabel}
                         </label>
                         <input
@@ -376,12 +374,12 @@ export default function Contact() {
                             setFormData({ ...formData, name: e.target.value })
                           }
                           placeholder={dict.contact.namePlaceholder}
-                          className="w-full px-4 py-3 rounded-xl bg-[#0A1224] border border-white/10 text-white placeholder-slate-400 text-sm focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-colors"
+                          className="theme-input"
                         />
                       </div>
 
                       <div>
-                        <label className="block text-xs font-mono uppercase text-slate-400 mb-1.5">
+                        <label className="block text-xs font-mono uppercase text-slate-700 mb-1.5 font-semibold">
                           {dict.contact.emailLabel}
                         </label>
                         <input
@@ -392,7 +390,7 @@ export default function Contact() {
                             setFormData({ ...formData, email: e.target.value })
                           }
                           placeholder={dict.contact.emailPlaceholder}
-                          className="w-full px-4 py-3 rounded-xl bg-[#0A1224] border border-white/10 text-white placeholder-slate-400 text-sm focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-colors"
+                          className="theme-input"
                           dir="ltr"
                         />
                       </div>
@@ -400,7 +398,7 @@ export default function Contact() {
 
                     {/* Institution Name / Website */}
                     <div>
-                      <label className="block text-xs font-mono uppercase text-slate-400 mb-1.5">
+                      <label className="block text-xs font-mono uppercase text-slate-700 mb-1.5 font-semibold">
                         {dict.contact.companyLabel}
                       </label>
                       <input
@@ -410,13 +408,13 @@ export default function Contact() {
                           setFormData({ ...formData, company: e.target.value })
                         }
                         placeholder={dict.contact.companyPlaceholder}
-                        className="w-full px-4 py-3 rounded-xl bg-[#0A1224] border border-white/10 text-white placeholder-slate-400 text-sm focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-colors"
+                        className="theme-input"
                       />
                     </div>
 
                     {/* Requirements Message */}
                     <div>
-                      <label className="block text-xs font-mono uppercase text-slate-400 mb-1.5">
+                      <label className="block text-xs font-mono uppercase text-slate-700 mb-1.5 font-semibold">
                         {dict.contact.messageLabel}
                       </label>
                       <textarea
@@ -427,7 +425,7 @@ export default function Contact() {
                           setFormData({ ...formData, message: e.target.value })
                         }
                         placeholder={dict.contact.messagePlaceholder}
-                        className="w-full px-4 py-3 rounded-xl bg-[#0A1224] border border-white/10 text-white placeholder-slate-400 text-sm focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-colors resize-none"
+                        className="theme-input resize-none"
                       />
                     </div>
 
@@ -436,23 +434,20 @@ export default function Contact() {
                       <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="relative w-full inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-semibold rounded-full group focus:outline-none disabled:opacity-50 cursor-pointer"
+                        className="theme-btn-primary w-full py-4 text-sm font-bold shadow-md shadow-sky-500/20 disabled:opacity-50"
                       >
-                        <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-cyan-400 to-indigo-500 rounded-full filter blur-[8px] opacity-75 group-hover:opacity-100 group-hover:blur-[12px] transition-all duration-300" />
-                        <span className="relative w-full flex items-center justify-center gap-2 py-4 px-6 rounded-full bg-gradient-to-r from-cyan-400 to-indigo-500 text-[#070B14] font-bold text-sm tracking-wide transition-all duration-300 group-hover:brightness-110 active:scale-98 shadow-[0_0_25px_rgba(6,182,212,0.4)]">
-                          {isSubmitting ? (
-                            <span>{dict.contact.submittingBtn}</span>
-                          ) : (
-                            <>
-                              <span>{dict.contact.submitBtn}</span>
-                              <Send className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-                            </>
-                          )}
-                        </span>
+                        {isSubmitting ? (
+                          <span>{dict.contact.submittingBtn}</span>
+                        ) : (
+                          <>
+                            <span>{dict.contact.submitBtn}</span>
+                            <Send className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+                          </>
+                        )}
                       </button>
 
-                      <div className="mt-3 flex items-center justify-center gap-2 text-[11px] text-slate-400">
-                        <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
+                      <div className="mt-3 flex items-center justify-center gap-2 text-[11px] text-slate-500 font-medium">
+                        <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
                         <span>{dict.contact.privacyBadge}</span>
                       </div>
                     </div>

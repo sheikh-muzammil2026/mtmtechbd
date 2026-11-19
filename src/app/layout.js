@@ -40,7 +40,7 @@ export default function RootLayout({ children }) {
       lang="bn"
       className={`${fontRoboto.variable} ${fontBornomala.variable} h-full antialiased scroll-smooth`}
     >
-      <body className="min-h-full flex flex-col font-sans bg-[#070B14] text-white selection:bg-[#00E5FF]/20 selection:text-[#00E5FF]">
+      <body className="min-h-full flex flex-col font-sans bg-[var(--bg-primary)] text-slate-800 selection:bg-sky-500/20 selection:text-sky-700">
         <LanguageProvider>
           <CursorTrail />
           {children}
